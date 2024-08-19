@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body > #root > .container {
+  background-color: #252525;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+
+.container > header {
+  background-color: #252525;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.container > header > h2 {
+ color: #fff;
+ height: 100%;
+ margin-left: 3px;
+ letter-spacing: 0.8px;
+ display: flex;
+ align-items: center;
+}
+
+.container > header > #logo {
+  background-color: #fff;
+  height: 100%;
+  width: 100px;
+}
+
+.container > header > nav  {
+  width: 100%;
+}
+
+.container > header > nav  > ul {
+ height: 100%;
+ width: 100%;
+ list-style-type: none;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.container > header > nav  > ul > li{
+  margin: 8px;
+}
+
+.container > header > nav  > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+  transition: all .6s;
+}
+
+.container > header > nav  > ul > li > a:hover {
+  color: orangered;
+  text-decoration: underline;
+}
+
+.container > header > .area-button {
+  height: 100%;
+  width: 150px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: end;
 }
 
-.App-link {
-  color: #61dafb;
+.container > header > .area-button > #button-header {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container > header > .area-button > label {
+  height: 33px;
+  width: 30px;
+  position: relative;
+  display: block;
+}
+
+.container > header > .area-button > label > span {
+  background-color: #fff;
+  border-radius: 6px;
+  height: 5px;
+  width: 100%;
+  margin: 4px;
+  display: block;
+  position: absolute;
+  transition: all .4s;
+}
+
+.container > header > .area-button > label > span:nth-child(1) {
+  top: 0px;
+}
+.container > header > .area-button > label > span:nth-child(2) {
+  top: 9px;
+}
+
+.container > header > .area-button > label > span:nth-child(3) {
+  top: 18px;
+}
+
+.container > header > .area-button > #button-header:checked ~ label > span:nth-child(1) {
+  transform: rotate(40deg);
+  top: 9px;
+}
+
+.container > header > .area-button > #button-header:checked ~ label > span:nth-child(2) {
+  opacity: 0;
+}
+
+.container > header > .area-button > #button-header:checked ~ label > span:nth-child(3) {
+  transform: rotate(-40deg);
+  top: 9px;
+}
+
+.container > main {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+}
+
+.container > main > section#introduction {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+}
+
+.container > main > section#introduction > img {
+  background-color: #fff;
+  width: 300px;
 }
