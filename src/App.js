@@ -9,8 +9,10 @@ export default function App() {
  return (
   <>
   <div className="container">
+   <Header />
    <br/>
    <Main />
+   <Footer />
   </div>
   </>
  )
