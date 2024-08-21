@@ -12,6 +12,7 @@ export default function App() {
    <Header />
    <br/>
    <Main />
+   <Footer />
   </div>
   </>
  )
