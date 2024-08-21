@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/tcc-project/static/css/main.741ce8a5.css",
+    "main.js": "/tcc-project/static/js/main.c65d68f5.js",
+    "static/js/453.5e560239.chunk.js": "/tcc-project/static/js/453.5e560239.chunk.js",
+    "static/media/git-logo.png": "/tcc-project/static/media/git-logo.dcc8b2cb95d1b1261574.png",
+    "index.html": "/tcc-project/index.html",
+    "main.741ce8a5.css.map": "/tcc-project/static/css/main.741ce8a5.css.map",
+    "main.c65d68f5.js.map": "/tcc-project/static/js/main.c65d68f5.js.map",
+    "453.5e560239.chunk.js.map": "/tcc-project/static/js/453.5e560239.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.741ce8a5.css",
+    "static/js/main.c65d68f5.js"
+  ]
+}
