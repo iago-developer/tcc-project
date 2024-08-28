@@ -8,9 +8,9 @@ export default function Header() {
             <h2>Learning...</h2>
             <nav>
                 <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#contacts">Contact</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#header">Introdução</a></li>
+                    <li><a href="#contacts">Comandos</a></li>
+                    <li><a href="#projects"></a></li>
                 </ul>
             </nav>
             <div className="area-button">

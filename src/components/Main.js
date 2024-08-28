@@ -1,20 +1,33 @@
 import React from "react";
 import Logo from "./images/git-logo.png";
 
-
 export default function Main() {
- return(
-  <main>
-    <section id="introduction">
-      <div id="text">
-        <h2>Git</h2>
-        <p>
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ipsa! Ex doloremque itaque maxime voluptatem! Consequuntur similique omnis, quo ducimus illo cum labore, consectetur exercitationem ipsum, laudantium veniam corporis debitis!
-        </p>
-      </div>
-
-      <img src={ Logo } />
-    </section>
-  </main>
- )
+  return (
+    <main>
+      <section id="introduction">
+        <div id="text">
+          <h2>- Definição</h2>
+          <br />
+          <p>
+            O git é um versionador de código, Cujo principal objetivo é trazer
+            um melhor controle de versões que permite gerenciar alterações em
+            arquivos e colaborar em projetos de software.
+          </p>
+          <br />
+        </div>
+        <div id="text">
+          <h2>- Propósito</h2>
+          <br />
+          <p>
+            O git é um versionador de código, Cujo principal objetivo é trazer
+            um melhor controle de versões que permite gerenciar alterações em
+            arquivos e colaborar em projetos de software.
+          </p>
+        </div>
+        <div id="image">
+          <img src={Logo} />
+        </div>
+      </section>
+    </main>
+  );
 }
