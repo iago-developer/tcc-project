@@ -6,14 +6,13 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 
 export default function App() {
-    
-    const [num, setNum] = useState(10);
-    let n1 = 10;
-
  return (
   <>
-   <p>Valor do state: {num}</p>
-   <button onClick={() => {setNum(num + 100)}}>100</button>
+   <div className="container">   
+       <Header />
+       <Main />
+       <Footer />
+   </div>
   </>
  )
 }
