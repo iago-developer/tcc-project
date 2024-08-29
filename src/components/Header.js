@@ -1,26 +1,27 @@
 import React from "react";
 import Logo from "./images/git-logo.png";
+import Logo_git from "./images/logo_git.webp";
 
 export default function Header() {
-    return(
-        <header id="header">
-            <img src={Logo} id="logo"/>
-            <h2>Learning...</h2>
-            <nav>
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#contacts">Contact</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-            </nav>
-            <div className="area-button">
-             <input type='checkbox' name="button-header" id="button-header" />
-             <label htmlFor='button-header'>
-                <span></span>
-                <span></span>
-                <span></span>
-             </label>
-            </div>
-        </header>
-    )
+  return (
+    <header id="header">
+      <div id="header_title">
+        <img src={Logo} id="logo" />
+        <h2>Learning...</h2>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#container">Introdução</a>
+          </li>
+          <li>
+            <a href="#comands">Comandos</a>
+          </li>
+          <li>
+            <a href="#contacts">Contatos</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 }
