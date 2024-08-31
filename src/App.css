@@ -106,7 +106,7 @@ body > #root > .container {
 .container > main > section#introduction > #image {
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 2px 4px 7px rgba(224, 224, 224, 0.345);
+  box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.345);
   height: 300px;
   width: 100%;
   display: flex;
@@ -128,8 +128,8 @@ body > #root > .container {
 .container > main > section#introduction > #text {
   height: 300px;
   width: 100%;
-  background-color: #2a2a2a;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   border-radius: 10px;
   font-size: 1.4rem;
   grid-column: 1;
@@ -140,18 +140,65 @@ body > #root > .container {
   align-items: start;
   flex-direction: column;
   text-align: start;
-  box-shadow: 2px 3px 5px rgba(224, 224, 224, 0.345);
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.345);
   transition: all .6s;
 }
 
 .container > main > section#introduction > #text:hover ,
   .container > main > section#introduction > #image:hover { 
-  transform: scale(0.95);
+  transform: scale(1.04);
 }
 
 .container > main > section#comands {
+  height: 100%;
+  width: 100%;
   padding-top: 100px;
-  margin-top: 100px;
+  margin-top: 100px;  
+}
+
+.container > main > section#comands > div#area-comands-table {
+ height: 100%;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.container > main > section#comands > div#area-comands-table > div#comands-table {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  height: 500px;
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  overflow: hidden;
+}
+
+.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar {
+  background-color: rgb(152, 50, 13);
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > div#list-comands {
+ margin-left: 30px;
+}
+
+.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > div#list-comands > ul > li {
+ margin: 5px;
+}
+
+.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > div#list-comands > ul > li > a {
+ color: #fff;
+ text-decoration: none;
+ transition: all .6s;
+}
+
+.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > div#list-comands > ul > li > a:hover {
+ color: aqua;
 }
 
 .right {
