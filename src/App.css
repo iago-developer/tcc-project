@@ -168,7 +168,6 @@ body > #root > .container {
   background-color: #1a1a1a;
   border-radius: 30px;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  height: 500px;
   width: 95%;
   display: grid;
   grid-template-columns: 1fr 0.6fr;
@@ -183,22 +182,52 @@ body > #root > .container {
   padding: 10px;
 }
 
+.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > div#title {
+  text-align: start;
+  font-size: 1.1rem;
+}
+
 .container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > div#list-comands {
  margin-left: 30px;
 }
 
 .container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > div#list-comands > ul > li {
  margin: 5px;
-}
-
-.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > div#list-comands > ul > li > a {
  color: #fff;
  text-decoration: none;
  transition: all .6s;
 }
 
-.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > div#list-comands > ul > li > a:hover {
- color: aqua;
+.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > div#list-comands > ul > li:hover {
+ margin: 2px;
+ color: #1a1a1a;
+ font-weight: bold;
+ cursor: pointer;
+ text-decoration: underline;
+ 
+}
+
+.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > div#list-comands > ul > li > p {
+}
+
+.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar > hr {
+ background-color: #fff;
+ border-radius: 10px;
+ border: none;
+ height: 4px;
+}
+
+.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-comands {
+  height: 100%;
+  width: 100%;
+}
+
+.container > main > section#comands > div#area-comands-table > div#comands-table > section#table-comands > div#content-table {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  font-size: 1.3em;
 }
 
 .right {
