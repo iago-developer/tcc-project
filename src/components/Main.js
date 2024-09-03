@@ -6,7 +6,6 @@ import Logo_git from "./images/logo_git.webp";
 export default function Main() {
   const comand_info = (comand, comandName, info) => {
     const contentTable = document.getElementById("content-table");
-    contentTable.style.cssText = `display: flex; align-items: start; justify-content: center; flex-direction: column;`;
     const title = document.createElement("div");
     title.setAttribute("id", "title");
 
@@ -20,9 +19,9 @@ export default function Main() {
     contentTable.appendChild(content);
     contentTable.appendChild(codeArea);
     title.innerHTML = `<h1>${comand}</h1><br />`;
-    content.innerHTML = info;
+    content.innerHTML = `<p>${info}</p>`;
     content.innerHTML += `<hr style='margin-top: 40px; width: 100%;' />`;
-    codeArea.innerHTML = `<br /> <br /> <br /> <br /> <h1>Exemplo: </h1> <br /> <span style='background-color: #252525; padding: 5px; border-radius: 8px;'><span style='color: purple;'>- $</span> <code>${comandName}</code></span>`;
+    codeArea.innerHTML = `<p><br /> <br /> <br /> <br /> <h1>Exemplo: </h1> <br /> <span style='background-color: #252525; padding: 5px; border-radius: 8px;'><span style='color: purple;'>- $</span> <code>${comandName}</code></span></p>`;
   };
 
   return (
@@ -63,7 +62,9 @@ export default function Main() {
         <div id="area-comands-table">
           <div id="comands-table">
             <section id="table-comands">
-              <div id="content-table"></div>
+              <div id="content-table">
+                <h1>SELECIONE O COMANDO QUE DESEJA APRENDER ➡️</h1>
+              </div>
             </section>
             <section id="table-sidebar">
               <div id="title">
@@ -92,8 +93,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git clone [URL]",
-                          "git clone [URL]",
-                          "O <i>git clone [URL]</i> é o comando responsável pela clonagem de um repositório remoto para o diretório local."
+                          "git clone https://github.com/usuario/projeto.git",
+                          `O <i>git clone [URL]</i> é o comando responsável pela clonagem de um repositório remoto para o diretório local. <br></br> <strong>Obs: substitua [URL] pela URL de um repositório remoto.</strong>`
                         )
                       }
                     >
@@ -118,8 +119,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git add [arquivo]",
-                          "git add [arquivo]",
-                          "O <i>git add [arquivo]</i> é o comando responsável por adicionar arquivos ao stage (área de preparação) para o próximo commit."
+                          "git add index.html",
+                          "O <i>git add [arquivo]</i> é o comando responsável por adicionar arquivos ao stage (área de preparação) para o próximo commit.  <br></br> <strong>Obs: substitua [arquivo] pelo nome do arquivo ou caminho para um arquivo dentro do repositório.</strong>"
                         )
                       }
                     >
@@ -131,8 +132,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git commit -m &quot;[mensagem]&quot;",
-                          "git commit -m &quot;[mensagem]&quot;",
-                          "O <i>git commit -m &quot;[mensagem]&quot;</i> é o comando responsável por criar um commit com os arquivos do stage, Incluindo uma mensagem descritiva."
+                          "git commit -m &quot;Corrige bug na função de login&quot;",
+                          "O <i>git commit -m &quot;[mensagem]&quot;</i> é o comando responsável por criar um commit com os arquivos do stage, Incluindo uma mensagem descritiva. <br></br> <strong>Obs: substitua [mensagem] por um texto que descreva o que foi alterado no commit, Deve ser claro e conciso.</strong>"
                         )
                       }
                     >
@@ -144,8 +145,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git push [repositório] [branch]",
-                          "git push [repositório] [branch]",
-                          "O <i>git push [repositório] [branch]</i> é o comando responsável por enviar (fazer push) os commits locais para o repositório remoto."
+                          "git push origin main",
+                          "O <i>git push [repositório] [branch]</i> é o comando responsável por enviar (fazer push) os commits locais para o repositório remoto.   <br></br> <strong>Obs: substitua [repositório] pelo nome do repositório e substitua [branch] pelo nome de uma branch específica dentro do repositório.</strong>"
                         )
                       }
                     >
@@ -183,8 +184,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git checkout [branch]",
-                          "git checkout [branch]",
-                          "O <i>git checkout [branch]</i> é o comando responsável pela troca para uma branch existente."
+                          "git checkout main",
+                          "O <i>git checkout [branch]</i> é o comando responsável pela troca para uma branch existente.   <br></br> <strong>Obs: substitua [branch] pelo nome de uma branch específica dentro do repositório.</strong>"
                         )
                       }
                     >
@@ -196,8 +197,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git checkout -b [branch]",
-                          "git checkout -b [branch]",
-                          "O <i>git checkout -b [branch]</i> é o comando responsável pela criação de uma nova branch e troca para ela."
+                          "git checkout -b main",
+                          "O <i>git checkout -b [branch]</i> é o comando responsável pela criação de uma nova branch e troca para ela.   <br></br> <strong>Obs: substitua [branch] pelo nome de uma branch específica dentro do repositório.</strong>"
                         )
                       }
                     >
@@ -209,8 +210,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git merge [branch]",
-                          "git merge [branch]",
-                          "O <i>git merge [branch]</i> é o comando responsável pela mesclagem das alterações de uma branch específica na branch atual."
+                          "git merge main",
+                          "O <i>git merge [branch]</i> é o comando responsável pela mesclagem das alterações de uma branch específica na branch atual.    <br></br> <strong>Obs: substitua [branch] pelo nome de uma branch específica dentro do repositório.</strong>"
                         )
                       }
                     >
@@ -248,8 +249,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git reset [arquivo]",
-                          "git reset [arquivo]",
-                          "O <i>git reset [arquivo]</i> é o comando responsável pela remoção de arquivos do stage, Mas mantém as alterações no diretório de trabalho."
+                          "git reset index.html",
+                          "O <i>git reset [arquivo]</i> é o comando responsável pela remoção de arquivos do stage, Mas mantém as alterações no diretório de trabalho. <br></br> <strong>Obs: substitua [arquivo] pelo nome do arquivo ou caminho para um arquivo dentro do repositório.</strong>"
                         )
                       }
                     >
@@ -261,8 +262,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git rm [arquivo]",
-                          "git rm [arquivo]",
-                          "O <i>git rm [arquivo]</i> é o comando responsável pela remoção de um arquivo do repositório e da área de stage."
+                          "git rm src/main.js",
+                          "O <i>git rm [arquivo]</i> é o comando responsável pela remoção de um arquivo do repositório e da área de stage. <br></br> <strong>Obs: substitua [arquivo] pelo nome do arquivo ou caminho para um arquivo dentro do repositório.</strong>"
                         )
                       }
                     >
@@ -300,8 +301,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git remote add [nome] [URL]",
-                          "git remote add [nome] [URL]",
-                          "O <i>git remote add [nome] [URL]</i> é o comando responsável pela adição de um repositório remoto ao seu repositório local."
+                          "git remote add origin https://github.com/usuario/repositorio.git",
+                          "O <i>git remote add [nome] [URL]</i> é o comando responsável pela adição de um repositório remoto ao seu repositório local.  <br></br> <strong>Obs: substitue [nome] pelo nome do repositório e substitua [URL] pela URL de um repositório remoto.</strong>"
                         )
                       }
                     >
@@ -326,8 +327,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git rebase [branch]",
-                          "git rebase [branch]",
-                          "O <i>git rebase [branch]</i> é o comando responsável pela atualização do repositório local com as alterações do repositório remoto."
+                          "git rebase main",
+                          "O <i>git rebase [branch]</i> é o comando responsável pela atualização do repositório local com as alterações do repositório remoto.    <br></br> <strong>Obs: substitua [branch] pelo nome de uma branch específica dentro do repositório.</strong>"
                         )
                       }
                     >
@@ -339,8 +340,8 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git tag [nome]",
-                          "git tag [nome]",
-                          "O <i>git tag [nome]</i> é o comando responsável pela atualização do repositório local com as alterações do repositório remoto."
+                          "git tag v1.0.0",
+                          "O <i>git tag [nome]</i> é o comando responsável pela atualização do repositório local com as alterações do repositório remoto.    <br></br> <strong>Obs: substitua [nome] pelo nome da Tag.</strong>"
                         )
                       }
                     >
@@ -355,10 +356,10 @@ export default function Main() {
       </section>
       <section>
         <div id="text">
-          <br id="contacts" />
+          <br id="expressions" />
           <br />
           <br />
-          <h2 id="contacts">&bull; Definição</h2>
+          <h2 id="expressions">&bull; Definição</h2>
           <br />
           <p>
             O git é um versionador de código, Cujo principal objetivo é trazer

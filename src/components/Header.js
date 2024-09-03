@@ -18,7 +18,7 @@ export default function Header() {
             <a href="#comands">Comandos</a>
           </li>
           <li>
-            <a href="#contacts">Contatos</a>
+            <a href="#expressions">Expressões</a>
           </li>
         </ul>
       </nav>
