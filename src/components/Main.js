@@ -396,7 +396,7 @@ export default function Main() {
             </p>
           </div>
           <div id="text">
-            <h2>Isshues</h2>
+            <h2>Issues</h2>
             <br />
             <br />
             <p>
