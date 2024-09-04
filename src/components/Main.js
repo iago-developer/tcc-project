@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Logo from "./images/git-logo.png";
 import Logo_git from "./images/logo_git.webp";
+import Commit from "./images/commit.png";
 
 export default function Main() {
   const comand_info = (comand, comandName, info) => {
@@ -354,36 +355,56 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <section>
-        <div id="text">
-          <br id="expressions" />
-          <br />
-          <br />
-          <h2 id="expressions">&bull; Definição</h2>
-          <br />
-          <p>
-            O git é um versionador de código, Cujo principal objetivo é trazer
-            um melhor controle de versões que permite gerenciar alterações em
-            arquivos e colaborar em projetos de software.
-          </p>
-          <br />
+      <section id="expressions">
+        <br />
+        <br />
+        <br />
+        <div
+          id="title"
+          style={{
+            textAlign: "center",
+            color: "#fff",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
+          }}
+        >
+          <h1>Expressões utilizadas no Git</h1>
         </div>
-        <div id="text">
-          <h2>&bull; Origem</h2>
-          <br />
-          <p>
-            Desenvolvido no ano de 2005 pelo engenheiro de software finlandês
-            Linus Torvalds.
-          </p>
-        </div>
-        <div className="right" id="text">
-          <h2>&bull; Propósito</h2>
-          <br />
-          <p>
-            O git é um versionador de código, Cujo principal objetivo é trazer
-            um melhor controle de versões que permite gerenciar alterações em
-            arquivos e colaborar em projetos de software.
-          </p>
+        <br />
+        <br />
+        <div id="text-content">
+          <div id="text">
+            <div id="logo">
+              <img src={Commit} style={{ width: "100%" }} />
+            </div>
+            <h2>Branchs</h2>
+            <br />
+            <br />
+            <p>
+              O git é um versionador de código, Cujo principal objetivo é trazer
+              um melhor controle de versões que permite gerenciar alterações em
+              arquivos e colaborar em projetos de software.
+            </p>
+            <br />
+          </div>
+          <div id="text">
+            <h2>Commits</h2>
+            <br />
+            <br />
+            <p>
+              Desenvolvido no ano de 2005 pelo engenheiro de software finlandês
+              Linus Torvalds.
+            </p>
+          </div>
+          <div id="text">
+            <h2>Isshues</h2>
+            <br />
+            <br />
+            <p>
+              O git é um versionador de código, Cujo principal objetivo é trazer
+              um melhor controle de versões que permite gerenciar alterações em
+              arquivos e colaborar em projetos de software.
+            </p>
+          </div>
         </div>
       </section>
     </main>

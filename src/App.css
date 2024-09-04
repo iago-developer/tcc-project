@@ -144,11 +144,6 @@ body > #root > .container {
   transition: all .6s;
 }
 
-.container > main > section#introduction > #text:hover ,
-  .container > main > section#introduction > #image:hover { 
-  transform: scale(1.04);
-}
-
 .container > main > section#comands {
   height: 100%;
   width: 100%;
@@ -232,6 +227,44 @@ body > #root > .container {
   padding: 20px;
   color: #fff;
   font-size: 1.3em;
+}
+
+.container > main > section#expressions {
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+  margin-top: 100px;  
+}
+
+.container > main > section#expressions > div#text-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container > main > section#expressions > div#text-content > div#text {
+  height: 500px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  grid-column: 1;
+  margin: 6px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  text-align: start;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.345);
+  transition: all .6s;
+}
+
+.container > main > section#expressions > div#text-content > div#text > h2 {
+  text-align: center;
+  width: 100%;
 }
 
 .right {
