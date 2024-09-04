@@ -286,13 +286,13 @@ body > #root > .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px;
 }
 
 .container > footer > p > a {
   color: #fff;
   text-decoration: none;
   transition: all .6s;
-  padding: 30px;
 }
 
 .container > footer > p > a:hover {
