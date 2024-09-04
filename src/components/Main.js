@@ -3,6 +3,7 @@ import Header from "./Header";
 import Logo from "./images/git-logo.png";
 import Logo_git from "./images/logo_git.webp";
 import Commit from "./images/commit.png";
+import branch from "./images/branch.png";
 
 export default function Main() {
   const comand_info = (comand, comandName, info) => {
@@ -374,35 +375,36 @@ export default function Main() {
         <div id="text-content">
           <div id="text">
             <div id="logo">
-              <img src={Commit} style={{ height:'250px', width: "250px" }} />
+              <img src={Branch} style={{ height:'250px', width: "250px" }} />
             </div>
             <h2>Branchs</h2>
             <br />
             <br />
             <p>
-              O git é um versionador de código, Cujo principal objetivo é trazer
-              um melhor controle de versões que permite gerenciar alterações em
-              arquivos e colaborar em projetos de software.
+             Branches são "ramificações" no sistema de controle de versão (como o Git) que permitem que você trabalhe em diferentes versões de um projeto ao mesmo tempo. 
             </p>
             <br />
           </div>
           <div id="text">
+            <div id="logo">
+              <img src={Commit} style={{ height:'250px', width: "250px" }} />
+            </div>
             <h2>Commits</h2>
             <br />
             <br />
             <p>
-              Desenvolvido no ano de 2005 pelo engenheiro de software finlandês
-              Linus Torvalds.
+              Commits são "snapshots" do código em um determinado ponto no tempo. Cada commit inclui as mudanças feitas nos arquivos do projeto e uma mensagem explicativa sobre o que foi alterado.
             </p>
           </div>
           <div id="text">
+            <div id="logo">
+              <img src={Commit} style={{ height:'250px', width: "250px" }} />
+            </div>
             <h2>Issues</h2>
             <br />
             <br />
             <p>
-              O git é um versionador de código, Cujo principal objetivo é trazer
-              um melhor controle de versões que permite gerenciar alterações em
-              arquivos e colaborar em projetos de software.
+              Issues são relatórios ou tópicos criados em um repositório (por exemplo, no GitHub) para rastrear tarefas, bugs, melhorias ou discussões relacionadas ao projeto.
             </p>
           </div>
         </div>
