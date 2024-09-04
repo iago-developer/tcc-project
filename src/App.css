@@ -262,9 +262,10 @@ body > #root > .container {
   transition: all .6s;
 }
 
-.container > main > section#expressions > div#text-content > div#text > div#logo{
+.container > main > section#expressions > div#text-content > div#text > div#logo {
   height: 100%;
   width: 100%;
+  padding: 4px;
   display: flex;
   justify-content: center;
 }
