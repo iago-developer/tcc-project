@@ -374,7 +374,7 @@ export default function Main() {
         <div id="text-content">
           <div id="text">
             <div id="logo">
-              <img src={Commit} style={{ height: '100px', width: "100%" }} />
+              <img src={Commit} style={{ height: '250px', width: "100%" }} />
             </div>
             <h2>Branchs</h2>
             <br />
