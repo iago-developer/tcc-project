@@ -60,6 +60,76 @@ export default function Main() {
           <h1>Introdução</h1>
         </div>
       </section>
+      <section id="installation">
+        <br />
+        <br />
+        <br />
+        <div
+          id="title"
+          style={{
+            textAlign: "center",
+            color: "#fff",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
+          }}
+        >
+         <h1>Instalação do Git</h1>
+        </div>
+        <br />
+        <br />
+      </section>
+      <section id="expressions">
+        <br />
+        <br />
+        <br />
+        <div
+          id="title"
+          style={{
+            textAlign: "center",
+            color: "#fff",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
+          }}
+        >
+          <h1>Expressões utilizadas no Git</h1>
+        </div>
+        <br />
+        <br />
+        <div id="text-content">
+          <div id="text">
+            <div id="logo">
+              <img src={Branch} style={{ height:'250px', width: "250px" }} />
+            </div>
+            <h2>Branchs</h2>
+            <br />
+            <br />
+            <p>
+             Branches são "ramificações" no sistema de controle de versão (como o Git) que permitem que você trabalhe em diferentes versões de um projeto ao mesmo tempo. 
+            </p>
+            <br />
+          </div>
+          <div id="text">
+            <div id="logo">
+              <img src={Commit} style={{ height:'250px', width: "250px" }} />
+            </div>
+            <h2>Commits</h2>
+            <br />
+            <br />
+            <p>
+              Commits são "snapshots" do código em um determinado ponto no tempo. Cada commit inclui as mudanças feitas nos arquivos do projeto e uma mensagem explicativa sobre o que foi alterado.
+            </p>
+          </div>
+          <div id="text">
+            <div id="logo">
+              <img src={Commit} style={{ height:'250px', width: "250px" }} />
+            </div>
+            <h2>Issues</h2>
+            <br />
+            <br />
+            <p>
+              Issues são relatórios ou tópicos criados em um repositório (por exemplo, no GitHub) para rastrear tarefas, bugs, melhorias ou discussões relacionadas ao projeto.
+            </p>
+          </div>
+        </div>
+      </section>
       <section id="comands">
         <div id="area-comands-table">
           <div id="comands-table">
@@ -353,59 +423,6 @@ export default function Main() {
                 </ul>
               </div>
             </section>
-          </div>
-        </div>
-      </section>
-      <section id="expressions">
-        <br />
-        <br />
-        <br />
-        <div
-          id="title"
-          style={{
-            textAlign: "center",
-            color: "#fff",
-            textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
-          }}
-        >
-          <h1>Expressões utilizadas no Git</h1>
-        </div>
-        <br />
-        <br />
-        <div id="text-content">
-          <div id="text">
-            <div id="logo">
-              <img src={Branch} style={{ height:'250px', width: "250px" }} />
-            </div>
-            <h2>Branchs</h2>
-            <br />
-            <br />
-            <p>
-             Branches são "ramificações" no sistema de controle de versão (como o Git) que permitem que você trabalhe em diferentes versões de um projeto ao mesmo tempo. 
-            </p>
-            <br />
-          </div>
-          <div id="text">
-            <div id="logo">
-              <img src={Commit} style={{ height:'250px', width: "250px" }} />
-            </div>
-            <h2>Commits</h2>
-            <br />
-            <br />
-            <p>
-              Commits são "snapshots" do código em um determinado ponto no tempo. Cada commit inclui as mudanças feitas nos arquivos do projeto e uma mensagem explicativa sobre o que foi alterado.
-            </p>
-          </div>
-          <div id="text">
-            <div id="logo">
-              <img src={Commit} style={{ height:'250px', width: "250px" }} />
-            </div>
-            <h2>Issues</h2>
-            <br />
-            <br />
-            <p>
-              Issues são relatórios ou tópicos criados em um repositório (por exemplo, no GitHub) para rastrear tarefas, bugs, melhorias ou discussões relacionadas ao projeto.
-            </p>
           </div>
         </div>
       </section>
