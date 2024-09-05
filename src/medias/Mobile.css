@@ -275,11 +275,6 @@ body > #root > .container {
   width: 100%;
 }
 
-.right {
-  grid-column: 2 !important;
-  grid-row: 1 !important;
-}
-
 .container > footer {
   background-color: #1a1a1a;
   width: 100%;
