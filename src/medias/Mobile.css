@@ -238,8 +238,10 @@ body > #root > .container {
 
 .container > main > section#expressions > div#text-content {
   width: 100%;
-  display: flex;
+  display: grid;
   align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
 }
 
