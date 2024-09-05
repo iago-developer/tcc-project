@@ -18,10 +18,10 @@ export default function Header() {
             <a href="#installation">Instalação</a>
           </li>
           <li>
-            <a href="#comands">Comandos</a>
+            <a href="#expressions">Expressões</a>
           </li>
           <li>
-            <a href="#expressions">Expressões</a>
+            <a href="#comands">Comandos</a>
           </li>
         </ul>
       </nav>
