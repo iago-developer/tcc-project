@@ -29,7 +29,7 @@ export default function Main() {
   return (
     <main>
       <section id="introduction">
-        <div id="text">
+        <div className="txt01" id="text">
           <h2>&bull; Definição do Software</h2>
           <br />
           <p>
@@ -39,7 +39,7 @@ export default function Main() {
           </p>
           <br />
         </div>
-        <div id="text">
+        <div className="txt02" id="text">
           <h2>&bull; Origem do Software</h2>
           <br />
           <p>
@@ -47,7 +47,7 @@ export default function Main() {
             Linus Torvalds.
           </p>
         </div>
-        <div className="right" id="text">
+        <div className="right txt03" id="text">
           <h2>&bull; Finalidade do guia</h2>
           <br />
           <p>
@@ -74,8 +74,6 @@ export default function Main() {
         >
          <h1>Instalação do Git</h1>
         </div>
-        <br />
-        <br />
       </section>
       <section id="expressions">
         <br />
