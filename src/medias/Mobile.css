@@ -32,7 +32,9 @@ body > #root > .container {
   background-color: #1a1a1a;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding: 10px;
   position: fixed;
   z-index: 1;
