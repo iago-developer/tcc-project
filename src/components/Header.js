@@ -13,6 +13,8 @@ export default function Header() {
         <ul>
           <li>
             <a href="#container">Introdução</a>
+          </li>
+          <li>
             <a href="#installation">Instalação</a>
           </li>
           <li>
