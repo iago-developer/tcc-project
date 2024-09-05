@@ -299,3 +299,16 @@ body > #root > .container {
   color: orangered;
   text-decoration: underline;
 }
+
+@media (min-width: 100px) {
+  
+.container > footer {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+}
