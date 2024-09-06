@@ -4,6 +4,7 @@ import Logo from "./images/git-logo.png";
 import Logo_git from "./images/logo_git.webp";
 import Commit from "./images/commit.png";
 import Branch from "./images/branch.png";
+import Issue from "./images/issue.png";
 
 export default function Main() {
   const comand_info = (comand, comandName, info) => {
@@ -117,7 +118,7 @@ export default function Main() {
           </div>
           <div id="text">
             <div id="logo">
-              <img src={Commit} style={{ height:'250px', width: "250px" }} />
+              <img src={Issue} style={{ height:'250px', width: "250px" }} />
             </div>
             <h2>Issues</h2>
             <br />
