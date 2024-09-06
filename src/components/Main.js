@@ -118,7 +118,7 @@ export default function Main() {
           </div>
           <div id="text">
             <div id="logo">
-              <img src={Issue} style={{ height:'250px', width: "200px" }} />
+              <img src={Issue} style={{ height:'200px', width: "200px" }} />
             </div>
             <h2>Issues</h2>
             <br />
