@@ -8,6 +8,7 @@ import Issue from "./images/issue.png";
 
 export default function Main() {
   const comand_info = (comand, comandName, info) => {
+    window.location.href = '#comands';
     const contentTable = document.getElementById("content-table");
     const title = document.createElement("div");
     title.setAttribute("id", "title");
