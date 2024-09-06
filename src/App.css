@@ -245,7 +245,7 @@ body > #root > .container {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 10px;
+  padding: 20px;
 }
 
 .container > main > section#expressions > div#text-content > div#text {

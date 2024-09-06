@@ -1,4 +1,4 @@
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   * {
     margin: 0;
     padding: 0;
@@ -51,10 +51,15 @@
   .container > header > #header_title > h2 {
     color: #fff;
     height: 100%;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 30px;
     letter-spacing: 0.8px;
     display: flex;
     align-items: center;
+  }
+
+  .container > header > #header_title > br {
+    display: none;
   }
 
   .container > header > #header_title > #logo {
@@ -158,16 +163,17 @@
   .container > main > section#comands {
     height: 100%;
     width: 100%;
-    padding-top: 100px;
-    margin-top: 100px;
+    padding-top: 0px !important;
+    margin-top: 0px !important;
   }
 
   .container > main > section#comands > div#area-comands-table {
     height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    padding-top: 220px;
   }
 
   .container
@@ -176,11 +182,13 @@
     > div#area-comands-table
     > div#comands-table {
     background-color: #1a1a1a;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    height: 70%;
     width: 95%;
     display: grid;
-    grid-template-columns: 1fr 0.6fr;
+    grid-template-rows: 1fr 0.6fr;
+    grid-template-columns: 1fr;
     overflow: hidden;
   }
 
@@ -208,6 +216,7 @@
     height: 100%;
     width: 100%;
     padding: 10px;
+    grid-row: 2;
   }
 
   .container
@@ -303,7 +312,7 @@
     height: 100%;
     width: 100%;
     padding-top: 100px;
-    margin-top: 100px;
+    margin-top: 0px;
   }
 
   .container > main > section#expressions > div#text-content {
@@ -370,5 +379,10 @@
   .container > footer > p > a:hover {
     color: orangered;
     text-decoration: underline;
+  }
+
+  .container > main > section#installation {
+    height: 100%;
+    width: 100%;
   }
 }

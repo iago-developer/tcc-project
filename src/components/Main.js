@@ -73,7 +73,29 @@ export default function Main() {
             textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
           }}
         >
-         <h1>Instalação do Git</h1>
+          <h1>Instalação do Git</h1>
+        </div>
+        <br />
+        <br />
+        <div id="text-content">
+          <div id="text">
+            <h2>LINUX</h2>
+            <p>
+              Ola
+            </p>
+          </div>
+          <div id="text">
+            <h2>WINDOWS</h2>
+            <p>
+              Ola
+            </p>
+          </div>
+          <div id="text">
+            <h2>MAC</h2>
+            <p>
+              Ola
+            </p>
+          </div>
         </div>
       </section>
       <section id="expressions">
@@ -94,37 +116,64 @@ export default function Main() {
         <br />
         <div id="text-content">
           <div id="text">
-            <div id="logo">
-              <img src={Branch} style={{ height:'250px', width: "250px" }} />
+            <div
+              id="logo"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src={Branch} style={{ height: "100px", width: "100px" }} />
             </div>
             <h2>Branchs</h2>
             <br />
             <br />
             <p>
-             Branches são "ramificações" no sistema de controle de versão (como o Git) que permitem que você trabalhe em diferentes versões de um projeto ao mesmo tempo. 
+              Branches são "ramificações" no sistema de controle de versão (como
+              o Git) que permitem que você trabalhe em diferentes versões de um
+              projeto ao mesmo tempo.
             </p>
             <br />
           </div>
           <div id="text">
-            <div id="logo">
-              <img src={Commit} style={{ height:'250px', width: "250px" }} />
+            <div
+              id="logo"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src={Commit} style={{ height: "100px", width: "100px" }} />
             </div>
             <h2>Commits</h2>
             <br />
             <br />
             <p>
-              Commits são "snapshots" do código em um determinado ponto no tempo. Cada commit inclui as mudanças feitas nos arquivos do projeto e uma mensagem explicativa sobre o que foi alterado.
+              Commits são "snapshots" do código em um determinado ponto no
+              tempo. Cada commit inclui as mudanças feitas nos arquivos do
+              projeto e uma mensagem explicativa sobre o que foi alterado.
             </p>
           </div>
           <div id="text">
-            <div id="logo">
-              <img src={Issue} style={{ height:'250px', width: "250px" }} />
+            <div
+              id="logo"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src={Issue} style={{ height: "100px", width: "100px" }} />
             </div>
             <h2>Issues</h2>
             <br />
             <br />
             <p>
-              Issues são relatórios ou tópicos criados em um repositório (por exemplo, no GitHub) para rastrear tarefas, bugs, melhorias ou discussões relacionadas ao projeto.
+              Issues são relatórios ou tópicos criados em um repositório (por
+              exemplo, no GitHub) para rastrear tarefas, bugs, melhorias ou
+              discussões relacionadas ao projeto.
             </p>
           </div>
         </div>
@@ -134,7 +183,7 @@ export default function Main() {
           <div id="comands-table">
             <section id="table-comands">
               <div id="content-table">
-                <h1>SELECIONE O COMANDO QUE DESEJA APRENDER ➡️</h1>
+                <h1>SELECIONE O COMANDO QUE DESEJA APRENDER.</h1>
               </div>
             </section>
             <section id="table-sidebar">
