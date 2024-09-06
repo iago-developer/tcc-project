@@ -7,6 +7,7 @@ export default function Header() {
     <header id="header">
       <div id="header_title">
         <img src={Logo} id="logo" />
+        <br />
         <h2>Learning...</h2>
       </div>
       <nav>
