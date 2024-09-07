@@ -1,4 +1,4 @@
-@media (max-width: 481px) and (min-width: 768px) {
+@media (max-width: 481px) or (min-width: 768px) {
   * {
     margin: 0;
     padding: 0;
