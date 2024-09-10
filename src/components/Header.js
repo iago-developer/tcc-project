@@ -24,6 +24,9 @@ export default function Header() {
           <li>
             <a href="#comands">Comandos</a>
           </li>
+          <li>
+            <a href="#contacts">Contacts</a>
+          </li>
         </ul>
       </nav>
     </header>
