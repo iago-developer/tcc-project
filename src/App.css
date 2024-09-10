@@ -84,7 +84,7 @@ body > #root > .container {
 }
 
 .container > header > nav  > ul > li > a:hover {
-  color: orangered;
+  color: #E84D30;
   text-decoration: underline;
 }
 
@@ -182,7 +182,7 @@ body > #root > .container {
 }
 
 .container > main > section#comands > div#area-comands-table > div#comands-table > section#table-sidebar {
-  background-color: rgb(152, 50, 13);
+  background-color: #E84D30;
   color: #fff;
   height: 100%;
   width: 100%;
@@ -280,6 +280,52 @@ body > #root > .container {
   width: 100%;
 }
 
+.container > main > section#installations {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container > main > section#installations > #button-installation {
+  background-image: url('./components/images/fundo-git.png');
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 18px;
+  height: 300px;
+  width: 450px;
+}
+
+.container > main > section#installations > #button-installation > div#fundo {
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 18px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > main > section#installations > #button-installation > div#fundo > a {
+  background-color: #E84D30;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  border-radius: 4px;
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+  transition: all .6s;
+}
+
+.container > main > section#installations > #button-installation > div#fundo > a:hover {
+  border-radius: 12px;
+  transform: scale(0.93);
+  text-shadow: 2px 2px 4px black;
+  text-decoration: underline;
+}
+
 .container > footer {
   background-color: #1a1a1a;
   width: 100%;
@@ -296,6 +342,6 @@ body > #root > .container {
 }
 
 .container > footer > p > a:hover {
-  color: orangered;
+  color: #E84D30;
   text-decoration: underline;
 }

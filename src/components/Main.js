@@ -8,7 +8,7 @@ import Issue from "./images/issue.png";
 
 export default function Main() {
   const comand_info = (comand, comandName, info) => {
-    window.location.href = '#comands';
+    window.location.href = "#comands";
     const contentTable = document.getElementById("content-table");
     const title = document.createElement("div");
     title.setAttribute("id", "title");
@@ -62,10 +62,7 @@ export default function Main() {
           <h1>Introdução</h1>
         </div>
       </section>
-      <section id="installation">
-        <br />
-        <br />
-        <br />
+      <section id="installations">
         <div
           id="title"
           style={{
@@ -78,24 +75,14 @@ export default function Main() {
         </div>
         <br />
         <br />
-        <div id="text-content">
-          <div id="text">
-            <h2>LINUX</h2>
-            <p>
-              Ola
-            </p>
-          </div>
-          <div id="text">
-            <h2>WINDOWS</h2>
-            <p>
-              Ola
-            </p>
-          </div>
-          <div id="text">
-            <h2>MAC</h2>
-            <p>
-              Ola
-            </p>
+        <div id="button-installation">
+          <div id="fundo">
+            <a
+              href="https://git-scm.com/downloads"
+              target="_blank"
+            >
+              Página de Download
+            </a>
           </div>
         </div>
       </section>

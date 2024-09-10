@@ -16,7 +16,7 @@ export default function Header() {
             <a href="#container">Introdução</a>
           </li>
           <li>
-            <a href="#installation">Instalação</a>
+            <a href="#installations">Instalação</a>
           </li>
           <li>
             <a href="#expressions">Expressões</a>

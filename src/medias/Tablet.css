@@ -88,7 +88,7 @@
   }
 
   .container > header > nav > ul > li > a:hover {
-    color: orangered;
+    color: #E84D30;
     text-decoration: underline;
   }
 
@@ -211,7 +211,7 @@
     > div#area-comands-table
     > div#comands-table
     > section#table-sidebar {
-    background-color: rgb(152, 50, 13);
+    background-color: #E84D30;
     color: #fff;
     height: 100%;
     width: 100%;
@@ -377,7 +377,7 @@
   }
 
   .container > footer > p > a:hover {
-    color: orangered;
+    color: #E84D30;
     text-decoration: underline;
   }
 
