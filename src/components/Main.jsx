@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "./Header";
-import Logo from "./images/git-logo.png";
 import Logo_git from "./images/logo_git.webp";
 import Commit from "./images/commit.png";
 import Branch from "./images/branch.png";

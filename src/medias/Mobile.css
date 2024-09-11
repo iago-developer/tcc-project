@@ -85,11 +85,106 @@
     color: #fff;
     text-decoration: none;
     transition: all 0.6s;
+    position: absolute;
+    left: 42%;
+    top: 78%;
+    display: none;
   }
 
   .container > header > nav > ul > li > a:hover {
-    color: #E84D30;
+    color: #e84d30;
     text-decoration: underline;
+  }
+
+  .container > header > nav > ul > li > div#button-header > input {
+    display: none;
+  }
+
+  .container > header > nav > ul > li > div#button-header > label {
+    display: block;
+    height: 33px;
+    width: 30px;
+    position: relative;
+  }
+
+  .container > header > nav > ul > li > div#button-header > label > span {
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    transition: all 0.3s;
+  }
+
+  .container
+    > header
+    > nav
+    > ul
+    > li
+    > div#button-header
+    > label
+    > span:nth-child(1) {
+    top: 0px;
+  }
+
+  .container
+    > header
+    > nav
+    > ul
+    > li
+    > div#button-header
+    > label
+    > span:nth-child(2) {
+    top: 9px;
+  }
+
+  .container
+    > header
+    > nav
+    > ul
+    > li
+    > div#button-header
+    > label
+    > span:nth-child(3) {
+    top: 18px;
+  }
+
+  .container
+    > header
+    > nav
+    > ul
+    > li
+    > div#button-header
+    > input:checked
+    ~ label
+    > span:nth-child(1) {
+    transform: rotate(40deg);
+    top: 9px;
+  }
+
+  .container
+    > header
+    > nav
+    > ul
+    > li
+    > div#button-header
+    > input:checked
+    ~ label
+    > span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .container
+    > header
+    > nav
+    > ul
+    > li
+    > div#button-header
+    > input:checked
+    ~ label
+    > span:nth-child(3) {
+    transform: rotate(-40deg);
+    top: 9px;
   }
 
   .container > main {
@@ -211,7 +306,7 @@
     > div#area-comands-table
     > div#comands-table
     > section#table-sidebar {
-    background-color: #E84D30;
+    background-color: #e84d30;
     color: #fff;
     height: 100%;
     width: 100%;
@@ -377,7 +472,7 @@
   }
 
   .container > footer > p > a:hover {
-    color: #E84D30;
+    color: #e84d30;
     text-decoration: underline;
   }
 }
