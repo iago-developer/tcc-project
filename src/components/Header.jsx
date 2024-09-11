@@ -2,62 +2,79 @@ import React, { useState } from "react";
 import Logo from "./images/git-logo.png";
 
 export default function Header() {
-  // const button_header = document.querySelector("#button-header");
+  const button_header = document.querySelector("#button-header");
   // const button_installations = document.querySelector("a#button-installations");
   // const button_expressions = document.querySelector("a#button-expressions");
   // const button_comands = document.querySelector("a#button-comands");
   // const button_contacts = document.querySelector("a#button-contacts");
-
-  const [
-    estiloButtonInstallations,
-    setEstilos,
-  ] = useState({ });
-
-  const [
-    estiloButtonExpressions,
-    setEstilosExpressions,
-  ] = useState({ });
-
-  const [
-    estiloButtonComands,
-    setEstilosComands,
-  ] = useState({ });
-
-  const [
-    estiloButtonContacts,
-    setEstilosContacts,
-  ] = useState({ });
-
+  
+  const [estiloButtonInstallations, setEstilos] = useState({});
+  
+  const [estiloButtonExpressions, setEstilosExpressions] = useState({});
+  
+  const [estiloButtonComands, setEstilosComands] = useState({});
+  
+  const [estiloButtonContacts, setEstilosContacts] = useState({});
+  
+  const [estiloButtonHeader, setEstilosHeader] = useState({ display: "block" });
+  
   const alterarStyleButtonInstallations = () => {
-    setEstilos({
-      display: "block",
-      left: "15%",
-      //  button_expressions.style.cssText = "display: block; left: 30%;";
-      //  button_comands.style.cssText = "display: block; left: 60%;";
-      //  button_contacts.style.cssText = "display: block; left: 75%;";
-    
-    const alterarStyleButtonExpressions = () => {
+    if (estiloButtonHeader.display == "block") {
+      setEstilosHeader({
+        display: "block"
+      });
       setEstilos({
-        display: "block",
-        left: "35%",
+        opacity: "1",
+        marginLeft: "-200px",
+        padding: "10px",
+      });
+      setEstilosExpressions({
+        opacity: "1",
+        marginLeft: "-100px",
+        padding: "10px",
+      });
+      setEstilosComands({
+        opacity: "1",
+        marginLeft: "100px",
+        padding: "10px",
+      });
+      
+      setEstilosContacts({
+        opacity: "1",
+        marginLeft: "200px",
+        padding: "10px",
+      });
+    }else if(estiloButtonHeader.display == "block") {
+      console.log(estiloButtonHeader.display)
+      setEstilosHeader({
+        display: "flex"
+      });
+      setEstilos({
+        opacity: "0",
+        marginLeft: "0px",
+        padding: "0px",
+      });
+      setEstilosExpressions({
+        opacity: "0",
+        marginLeft: "0px",
+        padding: "0px",
+      });
+      setEstilosComands({
+        opacity: "0",
+        marginLeft: "0px",
+        padding: "0px",
+      });
+      
+      setEstilosContacts({
+        opacity: "0",
+        marginLeft: "0px",
+        padding: "0px",
       });
     }
-    const alterarStyleButtonComands = () => {
-      setEstilos({
-        display: "block",
-        left: "60%",
-      });
-    }
-    const alterarStyleButtonContacts = () => {
-      setEstilos({
-        display: "block",
-        left: "75%",
-      });
-    }
-  });
-    //  button_expressions.style.cssText = "display: block; left: 30%;";
-    //  button_comands.style.cssText = "display: block; left: 60%;";
-    //  button_contacts.style.cssText = "display: block; left: 75%;";
+  };
+  //  button_expressions.style.cssText = "display: block; left: 30%;";
+  //  button_comands.style.cssText = "display: block; left: 60%;";
+  //  button_contacts.style.cssText = "display: block; left: 75%;";
   return (
     <header id="header">
       <div id="header_title">
@@ -88,7 +105,11 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <div id="button-header" onClick={alterarStyleButtonInstallations}>
+            <div
+              id="button-header"
+              onClick={alterarStyleButtonInstallations}
+              style={estiloButtonHeader}
+            >
               <input type="checkbox" name="button" id="button" />
               <label htmlFor="button">
                 <span></span>
