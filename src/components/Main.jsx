@@ -199,7 +199,7 @@ export default function Main() {
                       onClick={() =>
                         comand_info(
                           "Git clone [URL]",
-                          "git clone https://github.com/usuario/projeto.git",
+                          "git clone  <span style='display: inline'>https://github.com/usuario/repositorio.git</span>",
                           `O <i>git clone [URL]</i> é o comando responsável pela clonagem de um repositório remoto para o diretório local. <br></br> <strong>Obs: substitua [URL] pela URL de um repositório remoto.</strong>`
                         )
                       }
