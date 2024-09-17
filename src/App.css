@@ -110,7 +110,7 @@ body > #root > .container {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   padding: 8px;
-  grid-gap: 5px 10px;
+  grid-gap: 10px 10px;
 }
 
 .container > main > section#introduction > #image {
@@ -125,7 +125,7 @@ body > #root > .container {
   flex-direction: column;
   grid-column: 2;
   margin: 6px;
-  padding: 10px;
+  padding: 30px;
   transition: all 0.6s;
 }
 
@@ -144,7 +144,7 @@ body > #root > .container {
   font-size: 1.4rem;
   grid-column: 1;
   margin: 6px;
-  padding: 10px;
+  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -206,7 +206,7 @@ body > #root > .container {
   color: #fff;
   height: 100%;
   width: 100%;
-  padding: 10px;
+  padding: 30px;
 }
 
 .container
@@ -293,7 +293,7 @@ body > #root > .container {
   > div#content-table {
   height: 100%;
   width: 100%;
-  padding: 20px;
+  padding: 30px;
   color: #fff;
   font-size: 1.3em;
 }
@@ -301,15 +301,13 @@ body > #root > .container {
 .container > main > section#expressions {
   height: 100%;
   width: 100%;
-  padding-top: 100px;
-  margin-top: 100px;
 }
 
 .container > main > section#expressions > div#text-content {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
 }
 
 .container > main > section#expressions > div#text-content > div#text {
@@ -321,7 +319,7 @@ body > #root > .container {
   font-size: 1.4rem;
   grid-column: 1;
   margin: 6px;
-  padding: 10px;
+  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: start;
