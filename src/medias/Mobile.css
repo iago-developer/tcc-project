@@ -46,7 +46,7 @@
   .container > header > #header_title {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
     gap: 10px;
   }
