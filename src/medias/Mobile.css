@@ -211,7 +211,7 @@
     align-items: start !important;
     justify-content: start !important;
     grid-template-rows: 1fr 0.5fr 1fr 1fr;
-    padding: 15px;
+    padding: 30px;
   }
 
   .container > main > section#introduction {
