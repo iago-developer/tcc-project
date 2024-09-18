@@ -13,7 +13,9 @@ export default function App() {
   <>
    <div className="container" id="container"> 
        <br />  
+       <Header />
        <Main />
+       <Footer />
    </div>
   </>
  )
