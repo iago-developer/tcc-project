@@ -208,6 +208,7 @@
     align-items: baseline !important;
     justify-content: baseline !important;
     grid-template-rows: repeat(4, 1fr);
+    padding: 15px;
   }
 
   .container > main > section#introduction {
@@ -272,7 +273,6 @@
     width: 100%;
     padding-top: 0px !important;
     margin-top: 0px !important;
-    padding: 30px !important;
   }
 
   .container > main > section#comands > div#area-comands-table {
@@ -467,10 +467,6 @@
   .container > main > section#expressions > div#text-content > div#text > h2 {
     text-align: center;
     width: 100%;
-  }
-  
-  .container > main > section#installations {
-    
   }
 
   .container > footer {

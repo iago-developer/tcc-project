@@ -140,7 +140,7 @@
     font-size: 1.4rem;
     grid-column: 1;
     margin: 6px;
-    padding: 10px;
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -153,8 +153,6 @@
   .container > main > section#comands {
     height: 100%;
     width: 100%;
-    padding-top: 100px;
-    margin-top: 100px;
   }
 
   .container > main > section#comands > div#area-comands-table {
@@ -297,8 +295,6 @@
   .container > main > section#expressions {
     height: 100%;
     width: 100%;
-    padding-top: 100px;
-    margin-top: 100px;
   }
 
   .container > main > section#expressions > div#text-content {
@@ -317,7 +313,7 @@
     font-size: 1.4rem;
     grid-column: 1;
     margin: 6px;
-    padding: 10px;
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: start;
