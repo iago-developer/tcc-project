@@ -38,17 +38,7 @@
     padding: 10px;
     position: fixed;
     z-index: 1;
-    animation: spin 5s;
-  }
-
-  @keyframes spin {
-    0% {
-      height: 100%;
-    }
-    100% {
-      height: 28.3%;
-    }
-  }
+}
 
   .container > header > #header_title {
     width: 100%;
@@ -477,6 +467,10 @@
     text-align: center;
     width: 100%;
   }
+  
+  .container > main > section#installations {
+    
+  }
 
   .container > footer {
     background-color: #1a1a1a;
@@ -497,4 +491,5 @@
     color: #e84d30;
     text-decoration: underline;
   }
+  
 }
