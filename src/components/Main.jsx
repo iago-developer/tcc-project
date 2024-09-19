@@ -60,30 +60,6 @@ export default function Main() {
           <h1>Introdução</h1>
         </div>
       </section>
-      <section id="installations">
-        <div
-          id="title"
-          style={{
-            textAlign: "center",
-            color: "#fff",
-            textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
-          }}
-        >
-          <h1>Instalação do Git</h1>
-        </div>
-        <br />
-        <br />
-        <div id="button-installation">
-          <div id="fundo">
-            <a
-              href="https://git-scm.com/downloads"
-              target="_blank"
-            >
-              Página de Download
-            </a>
-          </div>
-        </div>
-      </section>
       <section id="expressions">
         <br />
         <br />
