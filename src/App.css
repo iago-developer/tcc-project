@@ -79,14 +79,25 @@ body > #root > .container {
 }
 
 .container > header > nav > ul > li > a {
-  color: #fff;
+  color: #e84d30;
   text-decoration: none;
-  transition: all 0.6s;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.container > header > nav > ul > li > a:hover {
-  color: #e84d30;
-  text-decoration: underline;
+.container > header > nav > ul > li > a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #e84d30;
+  transition: width 0.3s ease;
+}
+
+.container > header > nav > ul > li > a:hover::after {
+  width: 100%;
 }
 
 .container > header > nav > ul > li > div#button-header > input {
@@ -168,10 +179,10 @@ body > #root > .container {
 }
 
 .container
-  > main
-  > section#comands
-  > div#area-comands-table
-  > div#comands-table {
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table {
   background-color: #1a1a1a;
   border-radius: 30px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -182,12 +193,12 @@ body > #root > .container {
 }
 
 .container
-  > main
-  > section#comands
-  > div#area-comands-table
-  > div#comands-table
-  > section#table-comands
-  > div#content-table {
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-comands
+> div#content-table {
   display: flex;
   align-items: start;
   justify-content: center;
@@ -195,11 +206,11 @@ body > #root > .container {
 }
 
 .container
-  > main
-  > section#comands
-  > div#area-comands-table
-  > div#comands-table
-  > section#table-sidebar {
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-sidebar {
   background-color: #e84d30;
   color: #fff;
   height: 100%;
@@ -208,35 +219,35 @@ body > #root > .container {
 }
 
 .container
-  > main
-  > section#comands
-  > div#area-comands-table
-  > div#comands-table
-  > section#table-sidebar
-  > div#title {
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-sidebar
+> div#title {
   text-align: start;
   font-size: 1.1rem;
 }
 
 .container
-  > main
-  > section#comands
-  > div#area-comands-table
-  > div#comands-table
-  > section#table-sidebar
-  > div#list-comands {
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-sidebar
+> div#list-comands {
   margin-left: 30px;
 }
 
 .container
-  > main
-  > section#comands
-  > div#area-comands-table
-  > div#comands-table
-  > section#table-sidebar
-  > div#list-comands
-  > ul
-  > li {
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-sidebar
+> div#list-comands
+> ul
+> li {
   margin: 5px;
   color: #fff;
   text-decoration: none;
@@ -244,14 +255,14 @@ body > #root > .container {
 }
 
 .container
-  > main
-  > section#comands
-  > div#area-comands-table
-  > div#comands-table
-  > section#table-sidebar
-  > div#list-comands
-  > ul
-  > li:hover {
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-sidebar
+> div#list-comands
+> ul
+> li:hover {
   margin: 2px;
   color: #1a1a1a;
   font-weight: bold;
@@ -260,12 +271,12 @@ body > #root > .container {
 }
 
 .container
-  > main
-  > section#comands
-  > div#area-comands-table
-  > div#comands-table
-  > section#table-sidebar
-  > hr {
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-sidebar
+> hr {
   background-color: #fff;
   border-radius: 10px;
   border: none;
@@ -273,22 +284,22 @@ body > #root > .container {
 }
 
 .container
-  > main
-  > section#comands
-  > div#area-comands-table
-  > div#comands-table
-  > section#table-comands {
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-comands {
   height: 100%;
   width: 100%;
 }
 
 .container
-  > main
-  > section#comands
-  > div#area-comands-table
-  > div#comands-table
-  > section#table-comands
-  > div#content-table {
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-comands
+> div#content-table {
   height: 100%;
   width: 100%;
   padding: 30px;
@@ -328,11 +339,11 @@ body > #root > .container {
 }
 
 .container
-  > main
-  > section#expressions
-  > div#text-content
-  > div#text
-  > div#logo {
+> main
+> section#expressions
+> div#text-content
+> div#text
+> div#logo {
   height: 100%;
   width: 100%;
   padding: 4px;
@@ -376,11 +387,11 @@ body > #root > .container {
 }
 
 .container
-  > main
-  > section#installations
-  > #button-installation
-  > div#fundo
-  > a {
+> main
+> section#installations
+> #button-installation
+> div#fundo
+> a {
   background-color: #e84d30;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
@@ -391,11 +402,11 @@ body > #root > .container {
 }
 
 .container
-  > main
-  > section#installations
-  > #button-installation
-  > div#fundo
-  > a:hover {
+> main
+> section#installations
+> #button-installation
+> div#fundo
+> a:hover {
   border-radius: 12px;
   transform: scale(0.93);
   text-shadow: 2px 2px 4px black;
@@ -412,12 +423,23 @@ body > #root > .container {
 }
 
 .container > footer > p > a {
-  color: #fff;
+  color: #e84d30;
   text-decoration: none;
-  transition: all 0.6s;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.container > footer > p > a:hover {
-  color: #e84d30;
-  text-decoration: underline;
+.container > footer > p > a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #e84d30;
+  transition: width 0.3s ease;
+}
+
+.container > footer > p > a:hover::after {
+  width: 100%;
 }
