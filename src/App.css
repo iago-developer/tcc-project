@@ -453,3 +453,11 @@ body > #root > .container {
 .container > footer > p > a:hover::after {
   width: 100%;
 }
+
+a {
+  font-weight: bold;
+}
+
+a:hover {
+  color: #e84d30;
+}
