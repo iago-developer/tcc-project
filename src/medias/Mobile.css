@@ -41,7 +41,7 @@
     padding: 10px;
     position: fixed;
     z-index: 1;
-}
+  }
 
   .container > header > #header_title {
     width: 100%;
@@ -132,72 +132,72 @@
   }
 
   .container
-    > header
-    > nav
-    > ul
-    > li
-    > div#button-header
-    > label
-    > span:nth-child(1) {
+  > header
+  > nav
+  > ul
+  > li
+  > div#button-header
+  > label
+  > span:nth-child(1) {
     top: 0px;
   }
 
   .container
-    > header
-    > nav
-    > ul
-    > li
-    > div#button-header
-    > label
-    > span:nth-child(2) {
+  > header
+  > nav
+  > ul
+  > li
+  > div#button-header
+  > label
+  > span:nth-child(2) {
     top: 9px;
   }
 
   .container
-    > header
-    > nav
-    > ul
-    > li
-    > div#button-header
-    > label
-    > span:nth-child(3) {
+  > header
+  > nav
+  > ul
+  > li
+  > div#button-header
+  > label
+  > span:nth-child(3) {
     top: 18px;
   }
 
   .container
-    > header
-    > nav
-    > ul
-    > li
-    > div#button-header
-    > input:checked
-    ~ label
-    > span:nth-child(1) {
+  > header
+  > nav
+  > ul
+  > li
+  > div#button-header
+  > input:checked
+  ~ label
+  > span:nth-child(1) {
     transform: rotate(40deg);
     top: 9px;
   }
 
   .container
-    > header
-    > nav
-    > ul
-    > li
-    > div#button-header
-    > input:checked
-    ~ label
-    > span:nth-child(2) {
+  > header
+  > nav
+  > ul
+  > li
+  > div#button-header
+  > input:checked
+  ~ label
+  > span:nth-child(2) {
     opacity: 0;
   }
 
   .container
-    > header
-    > nav
-    > ul
-    > li
-    > div#button-header
-    > input:checked
-    ~ label
-    > span:nth-child(3) {
+  > header
+  > nav
+  > ul
+  > li
+  > div#button-header
+  > input:checked
+  ~ label
+  > span:nth-child(3) {
     transform: rotate(-40deg);
     top: 9px;
   }
@@ -288,10 +288,10 @@
   }
 
   .container
-    > main
-    > section#comands
-    > div#area-comands-table
-    > div#comands-table {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table {
     background-color: #1a1a1a;
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -303,12 +303,12 @@
   }
 
   .container
-    > main
-    > section#comands
-    > div#area-comands-table
-    > div#comands-table
-    > section#table-comands
-    > div#content-table {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-comands
+  > div#content-table {
     display: flex;
     align-items: start;
     justify-content: center;
@@ -317,11 +317,11 @@
   }
 
   .container
-    > main
-    > section#comands
-    > div#area-comands-table
-    > div#comands-table
-    > section#table-sidebar {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar {
     background-color: #e84d30;
     color: #fff;
     height: 100%;
@@ -331,35 +331,35 @@
   }
 
   .container
-    > main
-    > section#comands
-    > div#area-comands-table
-    > div#comands-table
-    > section#table-sidebar
-    > div#title {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#title {
     text-align: start;
     font-size: 1.1rem;
   }
 
   .container
-    > main
-    > section#comands
-    > div#area-comands-table
-    > div#comands-table
-    > section#table-sidebar
-    > div#list-comands {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands {
     margin-left: 30px;
   }
 
   .container
-    > main
-    > section#comands
-    > div#area-comands-table
-    > div#comands-table
-    > section#table-sidebar
-    > div#list-comands
-    > ul
-    > li {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > ul
+  > li {
     margin: 5px;
     color: #fff;
     text-decoration: none;
@@ -367,14 +367,14 @@
   }
 
   .container
-    > main
-    > section#comands
-    > div#area-comands-table
-    > div#comands-table
-    > section#table-sidebar
-    > div#list-comands
-    > ul
-    > li:hover {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > ul
+  > li:hover {
     margin: 2px;
     color: #1a1a1a;
     font-weight: bold;
@@ -383,12 +383,12 @@
   }
 
   .container
-    > main
-    > section#comands
-    > div#area-comands-table
-    > div#comands-table
-    > section#table-sidebar
-    > hr {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > hr {
     background-color: #fff;
     border-radius: 10px;
     border: none;
@@ -396,22 +396,22 @@
   }
 
   .container
-    > main
-    > section#comands
-    > div#area-comands-table
-    > div#comands-table
-    > section#table-comands {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-comands {
     height: 100%;
     width: 100%;
   }
 
   .container
-    > main
-    > section#comands
-    > div#area-comands-table
-    > div#comands-table
-    > section#table-comands
-    > div#content-table {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-comands
+  > div#content-table {
     height: 100%;
     width: 100%;
     padding: 30px;
@@ -455,11 +455,11 @@
   }
 
   .container
-    > main
-    > section#expressions
-    > div#text-content
-    > div#text
-    > div#logo {
+  > main
+  > section#expressions
+  > div#text-content
+  > div#text
+  > div#logo {
     height: 100%;
     width: 100%;
     padding: 4px;
@@ -491,5 +491,16 @@
     color: #e84d30;
     text-decoration: underline;
   }
-  
+
+
+  .container > main > section#installations > #button-installation {
+    background-image: url("./components/images/fundo-git.png");
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 18px;
+    height: 280px;
+    width: 340px !important;
+  }
+
 }
