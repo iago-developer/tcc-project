@@ -4,7 +4,7 @@ export default function Footer() {
     return(
         <footer id="contacts">
             <p>
-                <a href="https://github.com/iago-developer/" target="_blank">Desenvolvido por &copy;Iago</a>
+            Desenvolvido por <a href="https://github.com/iago-developer/" target="_blank">&copy;Iago</a>
             </p>
         </footer>
     )
