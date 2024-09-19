@@ -79,7 +79,7 @@ body > #root > .container {
 }
 
 .container > header > nav > ul > li > a {
-  color: #e84d30;
+  color: #fff;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
@@ -93,10 +93,12 @@ body > #root > .container {
   width: 0;
   height: 2px;
   background-color: #e84d30;
+  color: #fff;
   transition: width 0.3s ease;
 }
 
 .container > header > nav > ul > li > a:hover::after {
+  color: #e84d30;
   width: 100%;
 }
 
