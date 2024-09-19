@@ -28,38 +28,6 @@ export default function Main() {
 
   return (
     <main>
-      <section id="introduction">
-        <div className="txt01" id="text">
-          <h2>&bull; Definição do Software</h2>
-          <br />
-          <p>
-            O git é um versionador de código, Cujo principal objetivo é trazer
-            um melhor controle de versões que permite gerenciar alterações em
-            arquivos e colaborar em projetos de software.
-          </p>
-          <br />
-        </div>
-        <div className="txt02" id="text">
-          <h2>&bull; Origem do Software</h2>
-          <br />
-          <p>
-            Desenvolvido no ano de 2005 pelo engenheiro de software finlandês
-            Linus Torvalds.
-          </p>
-        </div>
-        <div className="right txt03" id="text">
-          <h2>&bull; Finalidade do guia</h2>
-          <br />
-          <p>
-            O git learning tem como principal objetivo demonstrar alguns
-            comandos básicos do Git.
-          </p>
-        </div>
-        <div id="image">
-          <img src={Logo_git} />
-          <h1>Introdução</h1>
-        </div>
-      </section>
       <section id="installations">
         <div
           id="title"
@@ -81,6 +49,86 @@ export default function Main() {
             >
               Página de Download
             </a>
+          </div>
+        </div>
+      </section>
+      <section id="expressions">
+        <br />
+        <br />
+        <br />
+        <div
+          id="title"
+          style={{
+            textAlign: "center",
+            color: "#fff",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
+          }}
+        >
+          <h1>Expressões utilizadas no Git</h1>
+        </div>
+        <br />
+        <br />
+        <div id="text-content">
+          <div id="text">
+            <div
+              id="logo"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src={Branch} style={{ height: "100px", width: "100px" }} />
+            </div>
+            <h2>Branchs</h2>
+            <br />
+            <br />
+            <p>
+              Branches são "ramificações" no sistema de controle de versão (como
+              o Git) que permitem que você trabalhe em diferentes versões de um
+              projeto ao mesmo tempo.
+            </p>
+            <br />
+          </div>
+          <div id="text">
+            <div
+              id="logo"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src={Commit} style={{ height: "100px", width: "100px" }} />
+            </div>
+            <h2>Commits</h2>
+            <br />
+            <br />
+            <p>
+              Commits são "snapshots" do código em um determinado ponto no
+              tempo. Cada commit inclui as mudanças feitas nos arquivos do
+              projeto e uma mensagem explicativa sobre o que foi alterado.
+            </p>
+          </div>
+          <div id="text">
+            <div
+              id="logo"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src={Issue} style={{ height: "100px", width: "100px" }} />
+            </div>
+            <h2>Issues</h2>
+            <br />
+            <br />
+            <p>
+              Issues são relatórios ou tópicos criados em um repositório (por
+              exemplo, no GitHub) para rastrear tarefas, bugs, melhorias ou
+              discussões relacionadas ao projeto.
+            </p>
           </div>
         </div>
       </section>
