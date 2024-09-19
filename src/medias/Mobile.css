@@ -32,7 +32,7 @@
   }
 
   .container > header {
-    background-color: #1a1a1a;
+    background-color: red;
     width: 100%;
     display: flex;
     align-items: center;
@@ -501,5 +501,4 @@
     height: 280px;
     width: 280px !important;
   }
-* { margin:0 !important; padding:0 !important; }
 }
