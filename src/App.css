@@ -85,6 +85,10 @@ body > #root > .container {
   transition: color 0.3s ease;
 }
 
+.container > header > nav > ul > li > a:hover {
+  color: #e84d30;
+}
+
 .container > header > nav > ul > li > a::after {
   content: '';
   position: absolute;
@@ -425,10 +429,14 @@ body > #root > .container {
 }
 
 .container > footer > p > a {
-  color: #e84d30;
+  color: #fff;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
+}
+
+.container > footer > p > a:hover {
+  color: #e84d30;
 }
 
 .container > footer > p > a::after {
