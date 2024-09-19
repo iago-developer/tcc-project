@@ -493,7 +493,7 @@
 
 
   .container > main > section#installations > #button-installation {
-    background-image: url("./components/images/fundo-git.png");
+    background-image: url("../components/images/fundo-git.png");
     background-color: #fff;
     background-repeat: no-repeat;
     background-size: 100% 100%;
