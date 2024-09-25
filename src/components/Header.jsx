@@ -40,7 +40,7 @@ export default function Header() {
               href="#contacts"
               id="button-contacts"
             >
-              Contacts
+              Contatos
             </a>
           </li>
         </ul>
