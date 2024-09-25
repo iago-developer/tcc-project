@@ -3,8 +3,21 @@ import Logo_git from "./images/logo_git.webp";
 import Commit from "./images/commit.png";
 import Branch from "./images/branch.png";
 import Issue from "./images/issue.png";
+import { useSpring, animated } from "react-spring";
 
 export default function Main() {
+  const animationRight = useSpring({
+    from: { right: "1000px", opacity: 0 },
+    to: { right: "0px", opacity: 1 },
+    config: { duration: 1200 },
+  });
+
+  const animationLeft = useSpring({
+    from: { left: "1000px", opacity: 0},
+    to: { left: "0px", opacity: 1},
+    config: { duration: 1200 },
+  });
+
   const comand_info = (comand, comandName, info) => {
     window.location.href = "#comands";
     const contentTable = document.getElementById("content-table");
@@ -29,7 +42,7 @@ export default function Main() {
   return (
     <main>
       <section id="introduction">
-        <div className="txt01" id="text">
+        <animated.div className="txt01" id="text" style={animationRight}>
           <h2>&bull; Definição do Software</h2>
           <br />
           <p>
@@ -38,27 +51,27 @@ export default function Main() {
             arquivos e colaborar em projetos de software.
           </p>
           <br />
-        </div>
-        <div className="txt02" id="text">
+        </animated.div>
+        <animated.div className="txt02" id="text" style={animationRight}>
           <h2>&bull; Origem do Software</h2>
           <br />
           <p>
             Desenvolvido no ano de 2005 pelo engenheiro de software finlandês
             Linus Torvalds.
           </p>
-        </div>
-        <div className="right txt03" id="text">
+        </animated.div>
+        <animated.div className="right txt03" id="text" style={animationLeft}>
           <h2>&bull; Finalidade do guia</h2>
           <br />
           <p>
             O git learning tem como principal objetivo demonstrar alguns
             comandos básicos do Git.
           </p>
-        </div>
-        <div id="image">
+        </animated.div>
+        <animated.div id="image" style={animationLeft}>
           <img src={Logo_git} />
           <h1>Introdução</h1>
-        </div>
+        </animated.div>
       </section>
       <section id="installations">
         <div
@@ -75,10 +88,7 @@ export default function Main() {
         <br />
         <div id="button-installation">
           <div id="fundo">
-            <a
-              href="https://git-scm.com/downloads"
-              target="_blank"
-            >
+            <a href="https://git-scm.com/downloads" target="_blank">
               Página de Download
             </a>
           </div>
@@ -410,7 +420,8 @@ export default function Main() {
                           "git remote add origin <span style='display: inline'>https://github.com/usuario/repositorio.git</span>",
                           "O <i>git remote add [nome] [URL]</i> é o comando responsável pela adição de um repositório remoto ao seu repositório local.  <br></br> <strong>Obs: substitue [nome] pelo nome do repositório e substitua [URL] pela URL de um repositório remoto.</strong>"
                         )
-                      }>
+                      }
+                    >
                       Git remote add [nome] [URL]
                     </p>
                   </li>
