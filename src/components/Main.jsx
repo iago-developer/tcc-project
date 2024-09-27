@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { useSpring, animated } from "react-spring";
 import Logo_git from "./images/logo_git.webp";
 import Commit from "./images/commit.png";
 import Branch from "./images/branch.png";
 import Issue from "./images/issue.png";
-import { useSpring, animated } from "react-spring";
 
 export default function Main() {
   const animationRight = useSpring({
