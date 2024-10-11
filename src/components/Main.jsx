@@ -10,7 +10,7 @@ export default function Main() {
 
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 1500,
       easing: 'ease-in-out',
       once: false,
     });
@@ -70,7 +70,7 @@ export default function Main() {
           <h1>Introdução</h1>
         </div>
       </section>
-      <section id="installations" data-aos="fade-up">
+      <section id="installations">
         <div
           id="title"
           style={{
@@ -83,7 +83,7 @@ export default function Main() {
         </div>
         <br />
         <br />
-        <div id="button-installation">
+        <div id="button-installation" data-aos="fade-up">
           <div id="fundo">
             <a href="https://git-scm.com/downloads" target="_blank">
               Página de Download
