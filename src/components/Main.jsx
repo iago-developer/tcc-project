@@ -1,23 +1,20 @@
-import React, { useState } from "react";
-import { useSpring, animated } from "react-spring";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 import Logo_git from "./images/logo_git.webp";
 import Commit from "./images/commit.png";
 import Branch from "./images/branch.png";
 import Issue from "./images/issue.png";
 
 export default function Main() {
-  const animationRight = useSpring({
-    from: { right: "1000px", opacity: 0 },
-    to: { right: "0px", opacity: 1 },
-    config: { duration: 1200 },
-  });
 
-  const animationLeft = useSpring({
-    from: { left: "1000px", opacity: 0},
-    to: { left: "0px", opacity: 1},
-    config: { duration: 1200 },
-  });
-
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false,
+    });
+  }, []);
   const comand_info = (comand, comandName, info) => {
     window.location.href = "#comands";
     const contentTable = document.getElementById("content-table");
@@ -42,7 +39,7 @@ export default function Main() {
   return (
     <main>
       <section id="introduction">
-        <animated.div className="txt01" id="text" style={animationRight}>
+        <div data-aos="fade-right" className="txt01" id="text">
           <h2>&bull; Definição do Software</h2>
           <br />
           <p>
@@ -51,29 +48,29 @@ export default function Main() {
             arquivos e colaborar em projetos de software.
           </p>
           <br />
-        </animated.div>
-        <animated.div className="txt02" id="text" style={animationRight}>
+        </div>
+        <div data-aos="fade-left" className="txt02" id="text">
           <h2>&bull; Origem do Software</h2>
           <br />
           <p>
             Desenvolvido no ano de 2005 pelo engenheiro de software finlandês
             Linus Torvalds.
           </p>
-        </animated.div>
-        <animated.div className="right txt03" id="text" style={animationLeft}>
+        </div>
+        <div data-aos="fade-right" className="right txt03" id="text">
           <h2>&bull; Finalidade do guia</h2>
           <br />
           <p>
             O git learning tem como principal objetivo demonstrar alguns
             comandos básicos do Git.
           </p>
-        </animated.div>
-        <animated.div id="image" style={animationLeft}>
+        </div>
+        <div id="image" data-aos="fade-left">
           <img src={Logo_git} />
           <h1>Introdução</h1>
-        </animated.div>
+        </div>
       </section>
-      <section id="installations">
+      <section id="installations" data-aos="fade-up">
         <div
           id="title"
           style={{
@@ -111,7 +108,7 @@ export default function Main() {
         <br />
         <br />
         <div id="text-content">
-          <div id="text">
+          <div id="text" data-aos="fade-down">
             <div
               id="logo"
               style={{
@@ -132,7 +129,7 @@ export default function Main() {
             </p>
             <br />
           </div>
-          <div id="text">
+          <div id="text" data-aos="fade-down">
             <div
               id="logo"
               style={{
@@ -152,7 +149,7 @@ export default function Main() {
               projeto e uma mensagem explicativa sobre o que foi alterado.
             </p>
           </div>
-          <div id="text">
+          <div id="text" data-aos="fade-down">
             <div
               id="logo"
               style={{
@@ -175,7 +172,7 @@ export default function Main() {
         </div>
       </section>
       <section id="comands">
-        <div id="area-comands-table">
+        <div id="area-comands-table" data-aos="fade">
           <div id="comands-table">
             <section id="table-comands">
               <div id="content-table">
