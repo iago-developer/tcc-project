@@ -15,6 +15,7 @@ export default function Main() {
       once: false,
     });
   }, []);
+
   const comand_info = (comand, comandName, info) => {
     window.location.href = "#comands";
     const contentTable = document.getElementById("content-table");
@@ -172,7 +173,7 @@ export default function Main() {
         </div>
       </section>
       <section id="comands">
-        <div id="area-comands-table" data-aos="fade">
+        <div id="area-comands-table" data-aos="fade-down">
           <div id="comands-table">
             <section id="table-comands">
               <div id="content-table">

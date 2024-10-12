@@ -533,3 +533,40 @@ a {
 a:hover {
   color: #e84d30;
 }
+
+button#chatbot-button {
+  background-color:  #e84d30;
+  border: none;
+  border-radius: 50%;
+  text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  color: #fff;
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  transition: all .4s;
+  font-size: 1.7em;
+}
+
+button#chatbot-button:hover {
+  transform: scale(0.90);
+  color: #000;
+  text-shadow: 2px 2px 4px #fff;
+}
+
+button#chatbot-button:active {
+  transform: scale(0.85);
+}
+
+#button-chatbot02:hover {
+  transform: scale(0.90);
+}
+#button-chatbot02:active {
+  transform: scale(0.85);
+}
