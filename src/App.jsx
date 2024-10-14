@@ -9,10 +9,10 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 
 export default function App() {
-  function chatbot() {
+  function pop_up(Interface) {
     const body = document.querySelector("body");
-    const chat_area = document.createElement("div");
-    const style_chat_area = `
+    const area = document.createElement("div");
+    const style_area = `
          background-color: rgba(0,0,0,0.9);
          color: #fff;
          height: 100vh;
@@ -24,12 +24,12 @@ export default function App() {
          justify-content: center;
         `;
     body.style.overflowY = "hidden";
-    chat_area.setAttribute("style", style_chat_area);
-    chat_area.setAttribute("id", "chat_area");
-    body.prepend(chat_area);
+    area.setAttribute("style", style_area);
+    area.setAttribute("id", "area");
+    body.prepend(area);
 
-    const chatbot = document.createElement("div");
-    const style_chatbot = `
+    const box = document.createElement("div");
+    const style_box = `
          background-color: #fff;
          border-radius: 20px;
          height: 600px;
@@ -40,9 +40,9 @@ export default function App() {
          overflow: hidden;
          position: relative;
         `;
-    chatbot.setAttribute("style", style_chatbot);
-    chatbot.setAttribute("id", "chatbot");
-    chat_area.prepend(chatbot);
+    box.setAttribute("style", style_box);
+    box.setAttribute("id", "box");
+    area.prepend(box);
 
     const header = document.createElement("div");
     const style_header = `
@@ -65,18 +65,18 @@ export default function App() {
         `;
 
     button.setAttribute("style", style_button);
-    button.setAttribute("id", "button-chatbot02");
+    button.setAttribute("id", "button-box02");
     button.innerHTML = "<i class='fi fi-br-cross'></i>";
     button.addEventListener("click", () => {
       body.style.overflowY = "";
-      body.removeChild(document.querySelector("#chat_area"));
+      body.removeChild(document.querySelector("div#area"));
     });
 
     header.setAttribute("style", style_header);
-    header.setAttribute("id", "header-chatbot");
-    header.innerHTML = "Git Teacher";
+    header.setAttribute("id", "header-box");
+    header.innerHTML = `Git Teacher *${Interface}*`;
     header.appendChild(button);
-    chatbot.appendChild(header);
+    box.appendChild(header);
 
     const main = document.createElement("div");
     const style_main = `
@@ -84,7 +84,7 @@ export default function App() {
     padding: 30px;
     `;
     main.setAttribute("style", style_main);
-    main.setAttribute("id", "main-chatbot");
+    main.setAttribute("id", "main-box");
 
     const iframe = document.createElement("iframe");
     const style_iframe = `
@@ -94,13 +94,19 @@ export default function App() {
      top: 0%;
      left: 0%;
     `;
-    iframe.src = "https://console.dialogflow.com/api-client/demo/embedded/ef44a967-0b0f-44e0-9cc1-8a9ff66ae145";
+
+    if(Interface == "Chatbot") {
+       iframe.src = "https://console.dialogflow.com/api-client/demo/embedded/ef44a967-0b0f-44e0-9cc1-8a9ff66ae145";
+      }else if(Interface == "Tutorial") {
+      iframe.src = "https://www.youtube.com/embed/Zwv9qRyVeU4?si=ybj3p2o-N9amYdm8";
+    }
+
     iframe.allow = "microphone;";
     iframe.setAttribute("style", style_iframe);
-    iframe.setAttribute("id", "iframe");
+    iframe.setAttribute("id", "iframe-box");
     main.appendChild(iframe);
 
-    chatbot.appendChild(main);
+    box.appendChild(main);
   }
 
   return (
@@ -110,9 +116,14 @@ export default function App() {
         <Header />
         <Main />
         <Footer />
-        <button id="chatbot-button" onClick={() => chatbot()}>
-          <i class="fi fi-ss-robot"></i>
-        </button>
+        <div className="buttons">
+          <button id="tutorial-button" onClick={() => pop_up("Tutorial")}>
+            <i className="fi fi-sc-play"></i>
+          </button>
+          <button id="chatbot-button" onClick={() => pop_up("Chatbot")}>
+            <i className="fi fi-ss-robot"></i>
+          </button>
+        </div>
       </div>
     </>
   );

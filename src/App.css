@@ -90,7 +90,7 @@ body > #root > .container {
 }
 
 .container > header > nav > ul > li > a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -145,7 +145,7 @@ body > #root > .container {
   padding: 30px;
   transition: all 0.6s;
   position: relative;
-  transition: all .6s;
+  transition: all 0.6s;
 }
 
 .container > main > section#introduction > #image > img {
@@ -171,7 +171,7 @@ body > #root > .container {
   text-align: start;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.345);
   transition: all 0.6s;
-  transition: all .6s;
+  transition: all 0.6s;
   position: relative;
 }
 
@@ -189,10 +189,10 @@ body > #root > .container {
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table {
   background-color: #1a1a1a;
   border-radius: 30px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -203,12 +203,12 @@ body > #root > .container {
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-comands
-> div#content-table {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-comands
+  > div#content-table {
   display: flex;
   align-items: start;
   justify-content: center;
@@ -216,11 +216,11 @@ body > #root > .container {
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar {
   background-color: #e84d30;
   color: #fff;
   height: 100%;
@@ -229,46 +229,47 @@ body > #root > .container {
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#title {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#title {
   text-align: start;
   font-size: 1.1rem;
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#list-comands {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands {
   margin-left: 30px;
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#list-comands
-> ul {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > ul {
   list-style: disc !important;
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#list-comands
-> ul
-> li > p {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > ul
+  > li
+  > p {
   width: 100%;
   display: block;
   margin: 5px;
@@ -280,28 +281,30 @@ body > #root > .container {
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#list-comands
-> ul
-> li > p:hover {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > ul
+  > li
+  > p:hover {
   color: #000000;
   font-weight: bold;
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#list-comands
-> ul
-> li > p::after {
-  content: '';
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > ul
+  > li
+  > p::after {
+  content: "";
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -313,7 +316,7 @@ body > #root > .container {
 }
 
 li {
-  transition: all .6s;
+  transition: all 0.6s;
 }
 
 li:hover {
@@ -321,38 +324,40 @@ li:hover {
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#list-comands
-> ul
-> li > p:hover::after {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > ul
+  > li
+  > p:hover::after {
   color: #000000 !important;
   width: 100%;
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#list-comands
-> ul
-> li > p:hover::after {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > ul
+  > li
+  > p:hover::after {
   color: #000000 !important;
   width: 100%;
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> hr {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > hr {
   background-color: #fff;
   border-radius: 10px;
   border: none;
@@ -360,22 +365,22 @@ li:hover {
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-comands {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-comands {
   height: 100%;
   width: 100%;
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-comands
-> div#content-table {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-comands
+  > div#content-table {
   height: 100%;
   width: 100%;
   padding: 30px;
@@ -415,11 +420,11 @@ li:hover {
 }
 
 .container
-> main
-> section#expressions
-> div#text-content
-> div#text
-> div#logo {
+  > main
+  > section#expressions
+  > div#text-content
+  > div#text
+  > div#logo {
   height: 100%;
   width: 100%;
   padding: 4px;
@@ -463,11 +468,11 @@ li:hover {
 }
 
 .container
-> main
-> section#installations
-> #button-installation
-> div#fundo
-> a {
+  > main
+  > section#installations
+  > #button-installation
+  > div#fundo
+  > a {
   background-color: #e84d30;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
@@ -478,11 +483,11 @@ li:hover {
 }
 
 .container
-> main
-> section#installations
-> #button-installation
-> div#fundo
-> a:hover {
+  > main
+  > section#installations
+  > #button-installation
+  > div#fundo
+  > a:hover {
   border-radius: 12px;
   transform: scale(0.93);
   text-shadow: 2px 2px 4px black;
@@ -511,7 +516,7 @@ li:hover {
 }
 
 .container > footer > p > a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -534,8 +539,23 @@ a:hover {
   color: #e84d30;
 }
 
+div.buttons {
+  margin-bottom: 10px;
+  height: 150px;
+  width: 180px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
 button#chatbot-button {
-  background-color:  #e84d30;
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #e84d30;
   border: none;
   border-radius: 50%;
   text-shadow: 2px 2px 4px black;
@@ -546,16 +566,12 @@ button#chatbot-button {
   height: 60px;
   width: 60px;
   padding: 10px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  transition: all .4s;
+  transition: all 0.4s;
   font-size: 1.7em;
 }
 
 button#chatbot-button:hover {
-  transform: scale(0.90);
+  transform: scale(0.9);
   color: #000;
   text-shadow: 2px 2px 4px #fff;
 }
@@ -564,9 +580,40 @@ button#chatbot-button:active {
   transform: scale(0.85);
 }
 
-#button-chatbot02:hover {
-  transform: scale(0.90);
+#button-box02:hover {
+  transform: scale(0.9);
 }
-#button-chatbot02:active {
+#button-box02:active {
+  transform: scale(0.85);
+}
+
+button#tutorial-button {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: #e84d30;
+  border: none;
+  border-radius: 50%;
+  text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  color: #fff;
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+  transition: all 0.4s;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+button#tutorial-button:hover {
+  transform: scale(0.9);
+  color: #000;
+  text-shadow: 2px 2px 4px #fff;
+}
+
+button#tutorial-button:active {
   transform: scale(0.85);
 }
