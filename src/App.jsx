@@ -116,15 +116,6 @@ export default function App() {
         <Header />
         <Main />
         <Footer />
-        <div className="buttons">
-          <button id="tutorial-button" onClick={() => pop_up("Tutorial")}>
-            <i className="fi fi-sc-play"></i>
-          </button>
-          <button id="chatbot-button" onClick={() => pop_up("Chatbot")}>
-            <i className="fi fi-ss-robot"></i>
-          </button>
-        </div>
-      </div>
     </>
   );
 }
