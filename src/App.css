@@ -11,7 +11,7 @@ html {
 
 body {
   background-color: #252525;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow-x: hidden;
 }
@@ -22,8 +22,7 @@ body {
 }
 
 #root {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
 }
 
 body > #root > .container {
