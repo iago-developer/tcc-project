@@ -81,6 +81,8 @@ export default function App() {
     const main = document.createElement("div");
     const style_main = `
     background-color: #fff;
+    height: 100%;
+    width: 100%;
     padding: 30px;
     display: flex;
     align-items:center;
