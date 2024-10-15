@@ -82,6 +82,9 @@ export default function App() {
     const style_main = `
     background-color: #fff;
     padding: 30px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
     `;
     main.setAttribute("style", style_main);
     main.setAttribute("id", "main-box");
