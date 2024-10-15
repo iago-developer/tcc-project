@@ -98,6 +98,7 @@ export default function App() {
 
     if (Interface == "Chatbot") {
       iframe.src = "https://console.dialogflow.com/api-client/demo/embedded/ef44a967-0b0f-44e0-9cc1-8a9ff66ae145";
+      iframe.style.height = "100%";
     } else if (Interface == "Tutorial") {
       iframe.src = "https://www.youtube.com/embed/Zwv9qRyVeU4?si=ybj3p2o-N9amYdm8";
     }
