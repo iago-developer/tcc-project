@@ -549,7 +549,7 @@
     height: 150px;
     width: 180px;
     position: fixed;
-    left: 100% !important;
+    left: 0% !important;
     bottom: 0;
     z-index: 1;
     display: grid;
