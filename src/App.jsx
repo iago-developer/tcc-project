@@ -83,22 +83,23 @@ export default function App() {
     background-color: #fff;
     height: 100%;
     width: 100%;
-    padding: 30px;
     display: flex;
     align-items:center;
     justify-content: center;
     `;
     main.setAttribute("style", style_main);
     main.setAttribute("id", "main-box");
-
+    
     const iframe = document.createElement("iframe");
-    const style_iframe = `
-     width: 100%;
+    let style_iframe = `
+    border: none; 
+    height: 100%;
+    width: 100%;
     `;
 
     if (Interface == "Chatbot") {
       iframe.src = "https://console.dialogflow.com/api-client/demo/embedded/ef44a967-0b0f-44e0-9cc1-8a9ff66ae145";
-      iframe.style.height = "100%";
+      style_iframe = `height:100%; width: 100%; position: absolute; top: 0;`;
     } else if (Interface == "Tutorial") {
       iframe.src = "https://www.youtube.com/embed/Zwv9qRyVeU4?si=ybj3p2o-N9amYdm8";
     }
