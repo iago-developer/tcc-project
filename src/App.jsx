@@ -92,9 +92,9 @@ export default function App() {
     
     const iframe = document.createElement("iframe");
     let style_iframe = `
-    border: none; 
     height: 100%;
     width: 100%;
+    border: none; 
     `;
 
     if (Interface == "Chatbot") {
