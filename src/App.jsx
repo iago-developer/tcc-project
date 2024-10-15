@@ -88,7 +88,6 @@ export default function App() {
 
     const iframe = document.createElement("iframe");
     const style_iframe = `
-    height: 100%;
     width: 100%;
     position: absolute;
     top: 0%;
