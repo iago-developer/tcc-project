@@ -89,7 +89,7 @@ export default function App() {
     `;
     main.setAttribute("style", style_main);
     main.setAttribute("id", "main-box");
-    
+
     const iframe = document.createElement("iframe");
     let style_iframe = `
     height: 100%;
@@ -98,10 +98,12 @@ export default function App() {
     `;
 
     if (Interface == "Chatbot") {
-      iframe.src = "https://console.dialogflow.com/api-client/demo/embedded/ef44a967-0b0f-44e0-9cc1-8a9ff66ae145";
+      iframe.src =
+        "https://console.dialogflow.com/api-client/demo/embedded/ef44a967-0b0f-44e0-9cc1-8a9ff66ae145";
       style_iframe = `height:100%; width: 100%; position: absolute; top: 0;`;
     } else if (Interface == "Tutorial") {
-      iframe.src = "https://www.youtube.com/embed/Zwv9qRyVeU4?si=ybj3p2o-N9amYdm8";
+      iframe.src =
+        "https://www.youtube.com/embed/Zwv9qRyVeU4?si=ybj3p2o-N9amYdm8";
     }
 
     iframe.allow = "microphone;";
@@ -116,18 +118,18 @@ export default function App() {
     <>
       <div className="container" id="container">
         <br />
-      <Header />
-      <Main />
-      <Footer />
-      <div className="buttons">
-        <button id="tutorial-button" onClick={() => pop_up("Tutorial")}>
-          <i className="fi fi-sc-play"></i>
-        </button>
-        <button id="chatbot-button" onClick={() => pop_up("Chatbot")}>
-          <i className="fi fi-ss-robot"></i>
-        </button>
+        <Header />
+        <Main />
+        <Footer />
+        <div className="buttons">
+          <button id="tutorial-button" onClick={() => pop_up("Tutorial")}>
+            <i className="fi fi-sc-play"></i>
+          </button>
+          <button id="chatbot-button" onClick={() => pop_up("Chatbot")}>
+            <i className="fi fi-ss-robot"></i>
+          </button>
+        </div>
       </div>
-    </div>
-  </>
-);
+    </>
+  );
 }
