@@ -40,7 +40,7 @@ export default function Main() {
   return (
     <main>
       <section id="introduction">
-        <div data-aos="fade-right" className="txt01" id="text">
+        <div data-aos="fade-down" className="txt01" id="text">
           <h2>&bull; Definição do Software</h2>
           <br />
           <p>
@@ -50,7 +50,7 @@ export default function Main() {
           </p>
           <br />
         </div>
-        <div data-aos="fade-left" className="txt02" id="text">
+        <div data-aos="fade-down" className="txt02" id="text">
           <h2>&bull; Origem do Software</h2>
           <br />
           <p>
@@ -58,7 +58,7 @@ export default function Main() {
             Linus Torvalds.
           </p>
         </div>
-        <div data-aos="fade-right" className="right txt03" id="text">
+        <div data-aos="fade-down" className="right txt03" id="text">
           <h2>&bull; Finalidade do guia</h2>
           <br />
           <p>
@@ -66,7 +66,7 @@ export default function Main() {
             comandos básicos do Git.
           </p>
         </div>
-        <div id="image" data-aos="fade-left">
+        <div id="image" data-aos="fade-down">
           <img src={Logo_git} />
           <h1>Introdução</h1>
         </div>
@@ -84,7 +84,7 @@ export default function Main() {
         </div>
         <br />
         <br />
-        <div id="button-installation" data-aos="fade-up">
+        <div id="button-installation" data-aos="fade">
           <div id="fundo">
             <a href="https://git-scm.com/downloads" target="_blank">
               Página de Download

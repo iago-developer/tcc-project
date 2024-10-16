@@ -84,8 +84,11 @@ export default function App() {
     height: 100%;
     width: 100%;
     display: flex;
-    align-items:center;
+    align-items: start;
     justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
     `;
     main.setAttribute("style", style_main);
     main.setAttribute("id", "main-box");
@@ -104,12 +107,61 @@ export default function App() {
     } else if (Interface == "Tutorial") {
       iframe.src =
         "https://www.youtube.com/embed/Zwv9qRyVeU4?si=ybj3p2o-N9amYdm8";
+        const text01 = document.createElement("div");
+        const text02 = document.createElement("div");
+        const text03 = document.createElement("div");
+        const text04 = document.createElement("div");
+
+        const style_text = `
+          background-color: #e84d30;
+          border-radius: 10px; 
+          color: #fff;
+          margin: 5px;
+          padding: 10px;
+        `;
+        text01.setAttribute("style", style_text);
+        text01.setAttribute("id", "text01");
+        text01.innerHTML = "Bem-vindo!";
+        main.prepend(text01);
+
+        text02.setAttribute("style", style_text);
+        text02.setAttribute("id", "text02");
+        text02.innerHTML = "Esta é a seção de Tutoriais, E nela você poderá acessar vídeos tutoriais diretamente da plataforma do YouTube!";
+        main.appendChild(text02);
     }
 
     iframe.allow = "microphone;";
     iframe.setAttribute("style", style_iframe);
     iframe.setAttribute("id", "iframe-box");
     main.appendChild(iframe);
+
+    if(Interface == "Tutorial") {
+      const text03 = document.createElement("div");
+      const text04 = document.createElement("div");
+
+        const style_text = `
+          background-color: #e84d30;
+          border-radius: 10px; 
+          color: #fff;
+          margin: 5px;
+          padding: 10px;
+        `;
+
+        text03.setAttribute("style", style_text);
+        text03.setAttribute("id", "text03");
+        text03.innerHTML = "Deseja Voltar?";
+
+        text04.setAttribute("style", style_text);
+        text04.setAttribute("id", "text04");
+        text04.innerHTML = "Fique à vontade!";
+
+        const iframe02 = document.createElement("iframe");
+
+        iframe02.setAttribute("style", style_iframe);
+        iframe02.setAttribute("id", "iframe02");
+        iframe02.src = "https://www.youtube.com/embed/RLx63VZ9wSc?si=chyqrYFtx_DbwCww"
+        main.appendChild(iframe02);
+    }
 
     box.appendChild(main);
   }
