@@ -121,12 +121,10 @@ export default function App() {
         text01.setAttribute("style", style_text);
         text01.setAttribute("id", "text01");
         text01.innerHTML = "Bem-vindo!";
-        main.prepend(text01);
 
         text02.setAttribute("style", style_text);
         text02.setAttribute("id", "text02");
         text02.innerHTML = "Esta é a seção de Tutoriais, E nela você poderá acessar vídeos tutoriais diretamente da plataforma do YouTube!";
-        main.appendChild(text02);
     }
 
     iframe.allow = "microphone;";

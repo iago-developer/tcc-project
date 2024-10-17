@@ -407,4 +407,8 @@
   .container > footer > p > a:hover::after {
     width: 100%;
   }
+
+  div#box {
+    width: 600px !important;
+  }
 }
