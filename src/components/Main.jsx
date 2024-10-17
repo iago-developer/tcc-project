@@ -92,7 +92,7 @@ export default function Main() {
      padding: 6px;
      cursor: pointer;
      color: #fff;
-     transition: all .6s color .9s;
+     transition: all .3s;
     `;
     icon_copy.setAttribute("style", style_icon_copy);
     icon_copy.setAttribute("class", "fi fi-ss-duplicate");

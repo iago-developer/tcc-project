@@ -88,7 +88,6 @@ export default function App() {
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    overflow-y: scroll;
     `;
     main.setAttribute("style", style_main);
     main.setAttribute("id", "main-box");
@@ -160,7 +159,6 @@ export default function App() {
         iframe02.setAttribute("style", style_iframe);
         iframe02.setAttribute("id", "iframe02");
         iframe02.src = "https://www.youtube.com/embed/RLx63VZ9wSc?si=chyqrYFtx_DbwCww"
-        main.appendChild(iframe02);
     }
 
     box.appendChild(main);
