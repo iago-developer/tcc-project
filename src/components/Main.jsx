@@ -1,17 +1,16 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 import Logo_git from "./images/logo_git.webp";
 import Commit from "./images/commit.png";
 import Branch from "./images/branch.png";
 import Issue from "./images/issue.png";
 
 export default function Main() {
-
   useEffect(() => {
     AOS.init({
       duration: 1500,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
       once: false,
     });
   }, []);
@@ -31,10 +30,97 @@ export default function Main() {
     contentTable.appendChild(title);
     contentTable.appendChild(content);
     contentTable.appendChild(codeArea);
-    title.innerHTML = `<h1>${comand}</h1><br />`;
-    content.innerHTML = `<p>${info}</p>`;
-    content.innerHTML += `<hr style='margin-top: 40px; width: 100%;' />`;
-    codeArea.innerHTML = `<p><br /> <br /> <br /> <br /> <h1>Exemplo: </h1> <br /> <span style='background-color: #252525; padding: 5px; border-radius: 8px;'><span style='color: purple;'>- $</span> <code>${comandName}</code></span></p>`;
+
+    const title_h1 = document.createElement("h1");
+    const style_title_h1 = `
+     color: #fff;
+    `;
+    title_h1.setAttribute("style", style_title_h1);
+    title_h1.setAttribute("id", "title_h1");
+    title_h1.innerHTML = `${comand} <br /> <br />`;
+    title.appendChild(title_h1);
+
+    const p = document.createElement("p");
+    p.setAttribute("id", "p");
+    p.innerHTML = `${info}`;
+    content.appendChild(p);
+
+    const hr = document.createElement("hr");
+    const style_hr = `
+     margin-top: 40px;
+     width: 100%;
+    `;
+    hr.setAttribute("style", style_hr);
+    hr.setAttribute("id", "hr");
+    content.appendChild(hr);
+
+    codeArea.innerHTML = `<p><br /> <br /> <br /> <br /> <h1>Exemplo: </h1> <br /> </p>`;
+
+    const code = document.createElement("span");
+    const style_code = `
+    background-color: #252525; 
+    padding: 5px; 
+    border-radius: 8px;
+    overflow: hidden;
+    `;
+    code.setAttribute("style", style_code);
+    code.setAttribute("id", "code");
+    codeArea.appendChild(code);
+
+    const code_content = document.createElement("span");
+    const style_code_content = `
+    color: purple;
+    `;
+    code_content.setAttribute("style", style_code_content);
+    code_content.setAttribute("id", "code_content");
+    code_content.innerHTML = "- $";
+    code.appendChild(code_content);
+
+    const code_tag = document.createElement("code");
+    const style_code_tag = `
+     color: #fff; 
+    `;
+    code_tag.setAttribute("style", style_code_tag);
+    code_tag.setAttribute("id", "code_tag");
+    code_tag.innerHTML = ` ${comandName}`;
+    code_content.appendChild(code_tag);
+
+    const icon_copy = document.createElement("i");
+    const style_icon_copy = `
+     border-left: 2px solid gray;
+     margin-left: 4px;
+     padding: 6px;
+     cursor: pointer;
+     color: #fff;
+     transition: all .6s color .9s;
+    `;
+    icon_copy.setAttribute("style", style_icon_copy);
+    icon_copy.setAttribute("class", "fi fi-ss-duplicate");
+    icon_copy.setAttribute("id", "icon_copy");
+    icon_copy.addEventListener("mouseover", () => {
+      icon_copy.style.color = "purple";
+    });
+    icon_copy.addEventListener("mouseout", () => {
+      icon_copy.style.color = "#fff";
+    });
+    icon_copy.addEventListener("click", async () => {
+      var textToCopy = document.getElementById('code_tag');
+      try {
+          await navigator.clipboard.writeText(textToCopy.textContent);
+      } catch (err) {
+          console.error('Erro ao copiar: ', err);
+      }
+
+      setTimeout(() => {
+        icon_copy.style.color = "green";
+        icon_copy.setAttribute("class", "fi fi-br-check");
+      }, 400);
+      setTimeout(() => {
+        icon_copy.style.color = "#fff";
+        icon_copy.setAttribute("class", "fi fi-ss-duplicate");
+      }, 1200);
+    });
+    code_content.appendChild(icon_copy);
   };
 
   return (

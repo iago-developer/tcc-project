@@ -618,3 +618,7 @@ button#tutorial-button:hover {
 button#tutorial-button:active {
   transform: scale(0.85);
 }
+
+.click:hover {
+  color: purple;
+}
