@@ -123,10 +123,47 @@ export default function Main() {
     code_content.appendChild(icon_copy);
   };
 
+  const timeline = (moment) => {
+    const box = document.createElement("div");
+    const style_box = `
+     background-color: #fff;
+     border-radius: 10px;
+     padding: 6px;
+     color: #000;
+     width: 100px;
+     display: block;
+    `;
+    box.setAttribute("style", style_box);
+    box.setAttribute("id", "box");
+    const moment01 = document.querySelector(".state-moment01");
+    const moment02 = document.querySelector(".state-moment02");
+
+    if(moment === "1999") {
+      box.innerHTML = "No ano de 1999 aconteceu isso...";
+      moment01.appendChild(box);
+      moment01.style.justifyContent = "start";
+    }else if(moment === "2005") {
+      box.innerHTML = "No ano de 2005 aconteceu aquilo...";
+      moment02.appendChild(box);
+      moment02.style.justifyContent = "center";
+    }else if(moment === "2010") {
+      box.innerHTML = "No ano de 2010 aconteceu isso e aquilo...";
+      moment01.appendChild(box);
+      moment01.style.justifyContent = "end";
+    }
+
+  };
+
+  const removeTimeline = (moment) => {
+    const momentSelected = document.querySelector(`.${moment}`);
+    const box = document.querySelector("#box");
+    momentSelected.removeChild(box);
+  };
+
   return (
     <main>
       <section id="introduction">
-        <div data-aos="fade-down" className="txt01" id="text">
+       <div data-aos="fade-down" className="txt01" id="text">
           <h2>&bull; Definição do Software</h2>
           <br />
           <p>
@@ -155,6 +192,24 @@ export default function Main() {
         <div id="image" data-aos="fade-down">
           <img src={Logo_git} />
           <h1>Introdução</h1>
+        </div> 
+      </section>
+      <section id="history">
+        <div className="history-title">
+          <h1 id="history-title"     style={{
+            textAlign: "center",
+            color: "#fff",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
+          }}>Timeline</h1>
+        </div>
+        <div className="area-timeline" data-aos="fade-up">
+          <div className="state-moment01"></div>
+          <div className="timeline">
+            <span className="moment" id="moment01" onMouseEnter={() => timeline("1999")} onMouseLeave={() => removeTimeline("state-moment01")}></span>
+            <span className="moment" id="moment02" onMouseEnter={() => timeline("2005")} onMouseLeave={() => removeTimeline("state-moment02")}></span>
+            <span className="moment" id="moment03" onMouseEnter={() => timeline("2010")} onMouseLeave={() => removeTimeline("state-moment01")}></span>
+          </div>
+          <div className="state-moment02"></div>
         </div>
       </section>
       <section id="installations">

@@ -16,6 +16,14 @@ export default function Header() {
         <ul>
           <li>
             <a
+              href="#history-title"
+              id="button-history"
+            >
+              História
+            </a>
+          </li>
+          <li>
+            <a
               href="#installations"
               id="button-installations"
             >
