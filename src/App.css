@@ -182,7 +182,6 @@ body > #root > .container {
   border-radius: 10px;
   height: 100%;
   width: 7px;
-  cursor: pointer;
   transition: all .6s;
   display: flex;
   align-items: center;
@@ -194,7 +193,6 @@ body > #root > .container {
   border-radius: 10px;
   height: 100%;
   width: 100%;
-  cursor: pointer;
   transition: all .6s;
   display: flex;
   align-items: end;
@@ -225,7 +223,6 @@ body > #root > .container {
   border-radius: 10px;
   height: 100%;
   width: 100%;
-  cursor: pointer;
   transition: all .6s;
   display: flex;
   align-items: start;
