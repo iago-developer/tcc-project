@@ -3,8 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Logo_git from "./images/logo_git.webp";
 import Commit from "./images/commit.png";
-import Branch from "./images/branch02.png";
-import Merge from "./images/merge.png";
+import Branch from "./images/branch.png";
+import Issue from "./images/issue.png";
 
 export default function Main() {
   useEffect(() => {
@@ -388,15 +388,18 @@ export default function Main() {
                 justifyContent: "center",
               }}
             >
-              <img src={Merge} style={{ height: "100px", width: "100px" }} />
+              <img src={Issue} style={{ height: "100px", width: "100px" }} />
             </div>
-            <h2>Merge</h2>
+            <h2>Issues</h2>
             <br />
             <br />
             <p>
               Merge refere-se ao processo de combinar diferentes sequências de
               commits em um único histórico. Essa operação é fundamental para
               integrar alterações feitas em diferentes branches.
+              Issues são relatórios ou tópicos criados em um repositório (por
+              exemplo, no GitHub) para rastrear tarefas, bugs, melhorias ou
+              discussões relacionadas ao projeto.
             </p>
           </div>
         </div>
