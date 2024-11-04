@@ -104,11 +104,11 @@ export default function Main() {
       icon_copy.style.color = "#fff";
     });
     icon_copy.addEventListener("click", async () => {
-      var textToCopy = document.getElementById('code_tag');
+      var textToCopy = document.getElementById("code_tag");
       try {
-          await navigator.clipboard.writeText(textToCopy.textContent);
+        await navigator.clipboard.writeText(textToCopy.textContent);
       } catch (err) {
-          console.error('Erro ao copiar: ', err);
+        console.error("Erro ao copiar: ", err);
       }
 
       setTimeout(() => {
@@ -130,40 +130,111 @@ export default function Main() {
      border-radius: 10px;
      padding: 6px;
      color: #000;
-     width: 100px;
+     width: 300px;
      display: block;
     `;
     box.setAttribute("style", style_box);
     box.setAttribute("id", "box");
+    box.setAttribute("class", "box");
     const moment01 = document.querySelector(".state-moment01");
     const moment02 = document.querySelector(".state-moment02");
 
-    if(moment === "1999") {
-      box.innerHTML = "No ano de 1999 aconteceu isso...";
-      moment01.appendChild(box);
+    const removeTimeline = (moment) => {
+      const momentSelected = document.querySelector(`.${moment}`);
+      const box = document.querySelector("#box");
+      momentSelected.removeChild(box);
+    };
+
+    if (moment === "2005") {
+      const header = document.createElement("div");
+      const style_header = `
+       padding: 5px;
+      `;
+      header.setAttribute("style", style_header);
+      header.setAttribute("id", "header");
+      header.innerHTML = "<h3>Criação do Git - 2005</h3>";
+      box.prepend(header);
+
+      const hr = document.createElement("hr");
+      const style_hr = `
+      background-color: black;
+       height: 1px;
+       width: 100%;
+       border: 2px solid black;
+       border-radius: 10px;
+       `;
+      hr.setAttribute("style", style_hr);
+      hr.setAttribute("id", "hr");
+      box.appendChild(hr);
+
+      const br = document.createElement("br");
+      box.appendChild(br);
+
+      const main = document.createElement("div");
+      const style_main = `
+        padding: 5px;
+       `;
+      main.setAttribute("style", style_main);
+      main.setAttribute("id", "main");
+      main.innerHTML =
+        "No ano de 2005 o engenheiro de software finlandês <a href='https://github.com/torvalds' target='_blank'>Linus Torvalds</a>";
+      box.appendChild(main);
+      box.style.borderTopRightRadius = "0%";
+      if(moment01.querySelector("#box")) {
+        const boxs = document.querySelectorAll(".box");
+        boxs.forEach((box) => {
+          moment01.removeChild(box);
+          moment02.removeChild(box);
+        });
+        moment01.appendChild(box);
+      }else {
+        moment01.appendChild(box);
+      }
       moment01.style.justifyContent = "start";
-    }else if(moment === "2005") {
+
+      box.addEventListener("mouseleave", () =>
+        removeTimeline("state-moment01")
+      );
+    } else if (moment === "2010") {
+      if(moment02.querySelector("#box")) {
+        const boxs = document.querySelectorAll(".box");
+        boxs.forEach((box) => {
+          moment01.removeChild(box);
+          moment02.removeChild(box);
+        });
+        moment02.appendChild(box);
+      }else {
+        moment02.appendChild(box);
+      }
       box.innerHTML = "No ano de 2005 aconteceu aquilo...";
-      moment02.appendChild(box);
+      box.style.borderTopLeftRadius = "0%";
       moment02.style.justifyContent = "center";
-    }else if(moment === "2010") {
+      box.addEventListener("mouseleave", () =>
+        removeTimeline("state-moment02")
+      );
+    } else if (moment === "2018") {
       box.innerHTML = "No ano de 2010 aconteceu isso e aquilo...";
-      moment01.appendChild(box);
+      box.style.borderBottomRightRadius = "0%";
+      if(moment01.querySelector("#box")) {
+        const boxs = document.querySelectorAll(".box");
+        boxs.forEach((box) => {
+          moment01.removeChild(box);
+        });
+        moment01.appendChild(box);
+      }else {
+        moment01.appendChild(box);
+      }
       moment01.style.justifyContent = "end";
-    }
-
-  };
-
-  const removeTimeline = (moment) => {
-    const momentSelected = document.querySelector(`.${moment}`);
-    const box = document.querySelector("#box");
-    momentSelected.removeChild(box);
+      box.addEventListener("mouseleave", () =>
+        removeTimeline("state-moment01")
+    );
+  }
   };
 
   return (
     <main>
       <section id="introduction">
-       <div data-aos="fade-down" className="txt01" id="text">
+        <div data-aos="fade-down" className="txt01" id="text">
           <h2>&bull; Definição do Software</h2>
           <br />
           <p>
@@ -192,22 +263,39 @@ export default function Main() {
         <div id="image" data-aos="fade-down">
           <img src={Logo_git} />
           <h1>Introdução</h1>
-        </div> 
+        </div>
       </section>
       <section id="history">
         <div className="history-title">
-          <h1 id="history-title"     style={{
-            textAlign: "center",
-            color: "#fff",
-            textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
-          }}>Timeline</h1>
+          <h1
+            id="history-title"
+            style={{
+              textAlign: "center",
+              color: "#fff",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
+            }}
+          >
+            Timeline
+          </h1>
         </div>
         <div className="area-timeline" data-aos="fade-up">
           <div className="state-moment01"></div>
           <div className="timeline">
-            <span className="moment" id="moment01" onMouseEnter={() => timeline("1999")} onMouseLeave={() => removeTimeline("state-moment01")}></span>
-            <span className="moment" id="moment02" onMouseEnter={() => timeline("2005")} onMouseLeave={() => removeTimeline("state-moment02")}></span>
-            <span className="moment" id="moment03" onMouseEnter={() => timeline("2010")} onMouseLeave={() => removeTimeline("state-moment01")}></span>
+            <span
+              className="moment"
+              id="moment01"
+              onClick={() => timeline("2005")}
+            ></span>
+            <span
+              className="moment"
+              id="moment02"
+              onClick={() => timeline("2010")}
+            ></span>
+            <span
+              className="moment"
+              id="moment03"
+              onClick={() => timeline("2018")}
+            ></span>
           </div>
           <div className="state-moment02"></div>
         </div>
@@ -306,7 +394,9 @@ export default function Main() {
             <br />
             <br />
             <p>
-           Merge refere-se ao processo de combinar diferentes sequências de commits em um único histórico. Essa operação é fundamental para integrar alterações feitas em diferentes branches.
+              Merge refere-se ao processo de combinar diferentes sequências de
+              commits em um único histórico. Essa operação é fundamental para
+              integrar alterações feitas em diferentes branches.
             </p>
           </div>
         </div>
