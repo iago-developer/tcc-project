@@ -265,7 +265,7 @@ export default function Main() {
           <h1>Introdução</h1>
         </div>
       </section>
-      <section id="history">
+      { /*<section id="history">
         <div className="history-title">
           <h1
             id="history-title"
@@ -299,7 +299,7 @@ export default function Main() {
           </div>
           <div className="state-moment02"></div>
         </div>
-      </section>
+      </section> */ } 
       <section id="installations">
         <div
           id="title"

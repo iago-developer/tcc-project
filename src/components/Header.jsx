@@ -14,14 +14,14 @@ export default function Header() {
       </div>
       <nav>
         <ul>
-          <li>
+          {/* <li>
             <a
               href="#history-title"
               id="button-history"
             >
               História
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               href="#installations"
