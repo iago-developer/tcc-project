@@ -180,14 +180,14 @@ export default function Main() {
         "No ano de 2005 o engenheiro de software finlandês <a href='https://github.com/torvalds' target='_blank'>Linus Torvalds</a>";
       box.appendChild(main);
       box.style.borderTopRightRadius = "0%";
-      if(moment01.querySelector("#box")) {
+      if (moment01.querySelector("#box")) {
         const boxs = document.querySelectorAll(".box");
         boxs.forEach((box) => {
           moment01.removeChild(box);
           moment02.removeChild(box);
         });
         moment01.appendChild(box);
-      }else {
+      } else {
         moment01.appendChild(box);
       }
       moment01.style.justifyContent = "start";
@@ -196,14 +196,14 @@ export default function Main() {
         removeTimeline("state-moment01")
       );
     } else if (moment === "2010") {
-      if(moment02.querySelector("#box")) {
+      if (moment02.querySelector("#box")) {
         const boxs = document.querySelectorAll(".box");
         boxs.forEach((box) => {
           moment01.removeChild(box);
           moment02.removeChild(box);
         });
         moment02.appendChild(box);
-      }else {
+      } else {
         moment02.appendChild(box);
       }
       box.innerHTML = "No ano de 2005 aconteceu aquilo...";
@@ -215,20 +215,20 @@ export default function Main() {
     } else if (moment === "2018") {
       box.innerHTML = "No ano de 2010 aconteceu isso e aquilo...";
       box.style.borderBottomRightRadius = "0%";
-      if(moment01.querySelector("#box")) {
+      if (moment01.querySelector("#box")) {
         const boxs = document.querySelectorAll(".box");
         boxs.forEach((box) => {
           moment01.removeChild(box);
         });
         moment01.appendChild(box);
-      }else {
+      } else {
         moment01.appendChild(box);
       }
       moment01.style.justifyContent = "end";
       box.addEventListener("mouseleave", () =>
         removeTimeline("state-moment01")
-    );
-  }
+      );
+    }
   };
 
   return (
@@ -265,7 +265,7 @@ export default function Main() {
           <h1>Introdução</h1>
         </div>
       </section>
-      { /*<section id="history">
+      {/*<section id="history">
         <div className="history-title">
           <h1
             id="history-title"
@@ -299,7 +299,7 @@ export default function Main() {
           </div>
           <div className="state-moment02"></div>
         </div>
-      </section> */ } 
+      </section> */}
       <section id="installations">
         <div
           id="title"
@@ -397,9 +397,6 @@ export default function Main() {
               Merge refere-se ao processo de combinar diferentes sequências de
               commits em um único histórico. Essa operação é fundamental para
               integrar alterações feitas em diferentes branches.
-              Issues são relatórios ou tópicos criados em um repositório (por
-              exemplo, no GitHub) para rastrear tarefas, bugs, melhorias ou
-              discussões relacionadas ao projeto.
             </p>
           </div>
         </div>
