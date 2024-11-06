@@ -7,6 +7,7 @@ import Commit from "./images/commit.png";
 import Branch from "./images/branch.png";
 import Issue from "./images/issue.png";
 import Merge from "./images/merge.png";
+import Linus from "./images/Linus Torvalds.jpeg";
 
 export default function Main() {
   useEffect(() => {
@@ -237,29 +238,34 @@ export default function Main() {
     <main>
       <section id="introduction">
         <div data-aos="fade-down" className="txt01" id="text">
-          <h2>&bull; Definição do Software</h2>
+          <h2>&bull; Definição do Git</h2>
           <br />
           <p>
-            O git é um versionador de código, Cujo principal objetivo é trazer
+            O git é um versionador de código e o seu principal objetivo é trazer
             um melhor controle de versões que permite gerenciar alterações em
             arquivos e colaborar em projetos de software.
+          </p>
+          <br />
+          <p>
+            Conhecimentos básicos sobre esta ferramenta podem ajudar à aprimorar o seu trabalho em equipe!
           </p>
           <br />
         </div>
         <div data-aos="fade-down" className="txt02" id="text">
           <h2>&bull; Origem do Software</h2>
-          <br />
-          <p>
-            Desenvolvido no ano de 2005 pelo engenheiro de software finlandês
-            Linus Torvalds.
-          </p>
+          <div className="secao-origin" style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
+            <p>
+              Desenvolvido no ano de 2005 pelo engenheiro de software finlandês
+              Linus Torvalds.
+            </p>
+              <img src={Linus} alt="Linus Torvalds" width="120" style={{ border: "1px solid black", borderRadius: "10px"}}/>
+          </div>
         </div>
         <div data-aos="fade-down" className="right txt03" id="text">
-          <h2>&bull; Finalidade do guia</h2>
+          <h2>&bull; Finalidade do Git Learning</h2>
           <br />
           <p>
-            O git learning tem como principal objetivo demonstrar alguns
-            comandos básicos do Git.
+            O git learning foi desenvolvido com a tática de ser um guia de estudos interativo e prático, Cujo foco é o aprendizado baseado em metodologias focadas para estudantes com conhecimentos básicos ou até mesmo sem nenhum conhecimento em controle de versão de software.
           </p>
         </div>
         <div id="image" data-aos="fade-down">

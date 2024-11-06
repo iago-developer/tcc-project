@@ -223,7 +223,7 @@
     align-items: center !important;
     justify-content: center !important;
     grid-template-columns: 1fr !important;
-    grid-template-rows: 1fr 0.5fr 0.5fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr 1fr;
     padding: 5px !important;
   }
 
