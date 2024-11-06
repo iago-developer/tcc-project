@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Logo_git from "./images/logo_git.webp";
+import Logo from "./images/fundo-git.png";
 import Commit from "./images/commit.png";
 import Branch from "./images/branch.png";
 import Issue from "./images/issue.png";
@@ -301,23 +302,31 @@ export default function Main() {
         </div>
       </section> */}
       <section id="installations">
-        <div
-          id="title"
-          style={{
-            textAlign: "center",
-            color: "#fff",
-            textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
-          }}
-        >
-          <h1>Instalação do Git</h1>
-        </div>
-        <br />
-        <br />
-        <div id="button-installation" data-aos="fade">
-          <div id="fundo">
-            <a href="https://git-scm.com/downloads" target="_blank">
-              Página de Download
-            </a>
+      <div className="box-installations" data-aos="fade-down">
+          <div className="text">
+            <div
+              id="title"
+              style={{
+                textAlign: "center",
+                color: "#fff",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
+                fontSize: ".90em",
+              }}
+            >
+              <h1>Instalação</h1>
+            </div>
+            <br />
+            <br />
+            <div>
+              <p>Para instalar o versionador de código git em sua máquina basta clicar no link:</p>
+            </div>
+          </div>
+          <div id="button-installation" data-aos="fade">
+            <h2 style={{ gridColumn: 2, textAlign:"center", color:"#fff", font: "Arial, Helvetica, sans-serif", fontSize:"1.6rem" ,textShadow:"2px 2px 4px #000" }}>Git</h2>
+            <div className="image-logo-installation" style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "end", gridRow: 3, gridColumn: 3}}><img src={Logo} alt="logo git" width="100" /></div>
+              <a href="https://git-scm.com/downloads" target="_blank">
+                Download
+              </a>
           </div>
         </div>
       </section>

@@ -31,7 +31,7 @@ export default function App() {
     const box = document.createElement("div");
     const style_box = `
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 16px;
     height: 600px;
     width: 90%;
     color: #000;

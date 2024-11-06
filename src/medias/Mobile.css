@@ -534,16 +534,32 @@
     width: 100%;
   }
 
-
-  .container > main > section#installations > #button-installation {
-    background-image: url("../components/images/fundo-git.png");
-    background-color: #fff;
+  .container > main > section#installations > .box-installations #button-installation {
+    background-color: #ffffff00;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 18px;
-    height: 280px;
-    width: 280px !important;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr;
+    grid-template-rows: 1fr 60px 1fr;
+    padding-top: 50px;
   }
+
+  
+.box-installations {
+  background-color: #1a1a1a;
+  border:1px solid gray;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.121); 
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px;
+}
 
   div.buttons {
     margin-bottom: 10px;
@@ -594,5 +610,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  .text {
+    width: 100% !important;
   }
 }

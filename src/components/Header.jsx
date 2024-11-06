@@ -25,7 +25,7 @@ export default function Header() {
           <li>
             <a
               href="#installations"
-              id="button-installations"
+              id="#installations"
             >
               Instalação
             </a>
