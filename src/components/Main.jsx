@@ -6,6 +6,7 @@ import Logo from "./images/fundo-git.png";
 import Commit from "./images/commit.png";
 import Branch from "./images/branch.png";
 import Issue from "./images/issue.png";
+import Merge from "./images/merge.png";
 
 export default function Main() {
   useEffect(() => {
@@ -397,9 +398,9 @@ export default function Main() {
                 justifyContent: "center",
               }}
             >
-              <img src={Issue} style={{ height: "100px", width: "100px" }} />
+              <img src={Merge} style={{ height: "100px", width: "100px" }} />
             </div>
-            <h2>Issues</h2>
+            <h2>Merges</h2>
             <br />
             <br />
             <p>
