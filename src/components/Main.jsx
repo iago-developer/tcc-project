@@ -253,12 +253,12 @@ export default function Main() {
         </div>
         <div data-aos="fade-down" className="txt02" id="text">
           <h2>&bull; Origem do Software</h2>
+          <br />
           <div className="secao-origin" style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
             <p>
               Desenvolvido no ano de 2005 pelo engenheiro de software finlandês
               Linus Torvalds.
             </p>
-              <img src={Linus} alt="Linus Torvalds" width="120" style={{ border: "1px solid black", borderRadius: "10px"}}/>
           </div>
         </div>
         <div data-aos="fade-down" className="right txt03" id="text">
