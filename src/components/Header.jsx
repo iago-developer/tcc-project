@@ -14,14 +14,6 @@ export default function Header() {
       </div>
       <nav>
         <ul>
-          {/* <li>
-            <a
-              href="#history-title"
-              id="button-history"
-            >
-              História
-            </a>
-          </li> */}
           <li>
             <a
               href="#installations"
