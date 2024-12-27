@@ -126,6 +126,54 @@ export default function Main() {
     code_content.appendChild(icon_copy);
   };
 
+  const up = () => {
+    const contentTable = document.querySelector("#content-table");
+    const contentList = [
+      comand_info(
+        "Git init",
+        "git init",
+        "O <i>git init</i> é o comando responsável pela inicialização de um novo repositório Git em um diretório."
+      ),
+      comand_info(
+        "Git clone [URL]",
+        "git clone  <span style='display: inline'>https://github.com/usuario/repositorio.git</span>",
+        `O <i>git clone [URL]</i> é o comando responsável pela clonagem de um repositório remoto para o diretório local. <br></br> <strong>Obs: substitua [URL] pela URL de um repositório remoto.</strong>`
+      ),
+      comand_info(
+        "Git clone [URL]",
+        "git clone  <span style='display: inline'>https://github.com/usuario/repositorio.git</span>",
+        `O <i>git clone [URL]</i> é o comando responsável pela clonagem de um repositório remoto para o diretório local. <br></br> <strong>Obs: substitua [URL] pela URL de um repositório remoto.</strong>`
+      )
+    ];
+
+    console.log("");
+    contentTable.remove("#content");
+    contentTable.add(contentList[0]);
+  };
+  const down = () => {
+    const contentTable = document.querySelector("#content-table");
+    const contentList = [
+      comand_info(
+        "Git init",
+        "git init",
+        "O <i>git init</i> é o comando responsável pela inicialização de um novo repositório Git em um diretório."
+      ),
+      comand_info(
+        "Git clone [URL]",
+        "git clone  <span style='display: inline'>https://github.com/usuario/repositorio.git</span>",
+        `O <i>git clone [URL]</i> é o comando responsável pela clonagem de um repositório remoto para o diretório local. <br></br> <strong>Obs: substitua [URL] pela URL de um repositório remoto.</strong>`
+      ),
+      comand_info(
+        "Git clone [URL]",
+        "git clone  <span style='display: inline'>https://github.com/usuario/repositorio.git</span>",
+        `O <i>git clone [URL]</i> é o comando responsável pela clonagem de um repositório remoto para o diretório local. <br></br> <strong>Obs: substitua [URL] pela URL de um repositório remoto.</strong>`
+      )
+    ];
+    
+    contentTable.remove("#content");
+    contentTable(contentList[1]);
+  };
+
   return (
     <main>
       <section id="introduction">
@@ -139,14 +187,22 @@ export default function Main() {
           </p>
           <br />
           <p>
-            Conhecimentos básicos sobre esta ferramenta podem ajudar à aprimorar o seu trabalho em equipe!
+            Conhecimentos básicos sobre esta ferramenta podem ajudar à aprimorar
+            o seu trabalho em equipe!
           </p>
           <br />
         </div>
         <div data-aos="fade-down" className="txt02" id="text">
           <h2>&bull; Origem do Software</h2>
           <br />
-          <div className="secao-origin" style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
+          <div
+            className="secao-origin"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <p>
               Desenvolvido no ano de 2005 pelo engenheiro de software finlandês
               Linus Torvalds.
@@ -157,7 +213,10 @@ export default function Main() {
           <h2>&bull; Finalidade do Git Learning</h2>
           <br />
           <p>
-            O git learning foi desenvolvido com a tática de ser um guia de estudos interativo e prático, Cujo foco é o aprendizado baseado em metodologias focadas para estudantes com conhecimentos básicos ou até mesmo sem nenhum conhecimento em controle de versão de software.
+            O git learning foi desenvolvido com a tática de ser um guia de
+            estudos interativo e prático, Cujo foco é o aprendizado baseado em
+            metodologias focadas para estudantes com conhecimentos básicos ou
+            até mesmo sem nenhum conhecimento em controle de versão de software.
           </p>
         </div>
         <div id="image" data-aos="fade-down">
@@ -166,7 +225,7 @@ export default function Main() {
         </div>
       </section>
       <section id="installations">
-      <div className="box-installations" data-aos="fade-down">
+        <div className="box-installations" data-aos="fade-down">
           <div className="text">
             <div
               id="title"
@@ -182,15 +241,41 @@ export default function Main() {
             <br />
             <br />
             <div>
-              <p>Para instalar o versionador de código git em sua máquina basta clicar no link:</p>
+              <p>
+                Para instalar o versionador de código git em sua máquina basta
+                clicar no link:
+              </p>
             </div>
           </div>
           <div id="button-installation" data-aos="fade">
-            <h2 style={{ gridColumn: 2, textAlign:"center", color:"#fff", font: "Arial, Helvetica, sans-serif", fontSize:"1.6rem" ,textShadow:"2px 2px 4px #000" }}>Git</h2>
-            <div className="image-logo-installation" style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "end", gridRow: 3, gridColumn: 3}}><img src={Logo} alt="logo git" width="100" /></div>
-              <a href="https://git-scm.com/downloads" target="_blank">
-                Download
-              </a>
+            <h2
+              style={{
+                gridColumn: 2,
+                textAlign: "center",
+                color: "#fff",
+                font: "Arial, Helvetica, sans-serif",
+                fontSize: "1.6rem",
+                textShadow: "2px 2px 4px #000",
+              }}
+            >
+              Git
+            </h2>
+            <div
+              className="image-logo-installation"
+              style={{
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "end",
+                gridRow: 3,
+                gridColumn: 3,
+              }}
+            >
+              <img src={Logo} alt="logo git" width="100" />
+            </div>
+            <a href="https://git-scm.com/downloads" target="_blank">
+              Download
+            </a>
           </div>
         </div>
       </section>
@@ -565,6 +650,14 @@ export default function Main() {
                     </p>
                   </li>
                 </ul>
+                <div className="buttons">
+                  <button onClick={() => up()}>
+                    <i class="fi fi-rr-angle-small-up"></i>
+                  </button>
+                  <button onClick={() => down()}>
+                    <i class="fi fi-rr-angle-small-down"></i>
+                  </button>
+                </div>
               </div>
             </section>
           </div>

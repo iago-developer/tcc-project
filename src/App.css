@@ -322,6 +322,64 @@ body > #root > .container {
   > section#table-sidebar
   > div#list-comands {
   margin-left: 30px;
+  position: relative;
+}
+
+.container
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-sidebar
+> div#list-comands > div.buttons {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-59%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-sidebar
+> div#list-comands > div.buttons > button {
+  background-color: #e84d30;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all, background, .3s, 3s;
+}
+
+.container
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-sidebar
+> div#list-comands > div.buttons > button:active {
+  background-color: #6e1100;
+}
+
+.container
+> main
+> section#comands
+> div#area-comands-table
+> div#comands-table
+> section#table-sidebar
+> div#list-comands > div.buttons > button:hover {
+  transform: scale(1.1);  
 }
 
 .container
@@ -709,4 +767,17 @@ button#tutorial-button:hover {
 
 button#tutorial-button:active {
   transform: scale(0.85);
+}
+
+
+.c1 {
+  background-color: red;
+}
+
+.c2 {
+  background-color: green;
+}
+
+.c3 {
+  background-color: blue;
 }

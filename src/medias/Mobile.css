@@ -11,24 +11,24 @@
   }
 
   body {
-    background-color: #1a1a1a;
-    height: 100vh;
-    width: 100vw;
+    background-color: #252525;
+    height: 100% !important;
+    width: 100% !important;
     overflow-x: hidden;
   }
 
   #root {
-    height: 100%;
-    width: 100%;
+    height: 100% !important;
+    width: 100% !important;
   }
 
   body > #root > .container {
     background-color: #252525;
-    height: 100%;
-    width: 100dvw;
-    position: relative;
+    height: 100% !important;
+    width: 100% !important;
+    position: relative !important;
     display: grid;
-    grid-template-rows: 300px 1fr;
+    grid-template-rows: 300px 100px;
     grid-template-columns: 1fr;
   }
 
@@ -42,6 +42,7 @@
     padding: 10px;
     position: fixed;
     z-index: 1;
+    top: -1px;
   }
 
   .container > header > #header_title {
@@ -216,7 +217,7 @@
 
   .container > main {
     height: 100%;
-    width: 100dvw;
+    width: 100%;
     background-color: #252525;
     color: #000;
     display: grid;
@@ -360,6 +361,17 @@
   > section#table-sidebar
   > div#list-comands {
     margin-left: 30px;
+    position: baseline !important;
+  }
+
+  .container
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands > div.buttons {
+    display: none;
   }
 
   .container
@@ -505,11 +517,13 @@
 
   .container > footer {
     background-color: #1a1a1a;
-    width: 100dvw;
+    width: 100% !important;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px;
+    position: fixed;
+    bottom: 0;
   }
 
   .container > footer > p > a {
@@ -532,6 +546,12 @@
 
   .container > footer > p > a:hover::after {
     width: 100%;
+  
+  }
+  .container > main > section#installations {
+    width: 100vw;
+    padding: 30px;
+    margin: 0px;
   }
 
   .container > main > section#installations > .box-installations #button-installation {
