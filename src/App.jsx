@@ -7,6 +7,7 @@ import "./medias/Smart.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import NaveIcone from "./naveIcone.avif";
 
 function pop_up(Interface) {
   const body = document.querySelector("body");
@@ -22,10 +23,15 @@ function pop_up(Interface) {
   align-items: center;
   justify-content: center;
   `;
+  const buttonSidebar = document.querySelector("button.buttonSidebar");
+  const reports = document.querySelector("section#reports");
+
   body.style.overflowY = "hidden";
   area.setAttribute("style", style_area);
   area.setAttribute("id", "area");
   body.prepend(area);
+  buttonSidebar.style.zIndex = "0";
+  reports.style.zIndex = "0";
 
   const box = document.createElement("div");
   const style_box = `
@@ -69,6 +75,8 @@ function pop_up(Interface) {
   button.addEventListener("click", () => {
     body.style.overflowY = "";
     body.removeChild(document.querySelector("div#area"));
+    buttonSidebar.style.zIndex = "";
+    reports.style.zIndex = "";
   });
 
   header.setAttribute("style", style_header);
@@ -105,25 +113,26 @@ function pop_up(Interface) {
   } else if (Interface == "Tutorial") {
     iframe.src =
       "https://www.youtube.com/embed/ts-H3W1uLMM?si=1lVHS_7ydnwM5GJz";
-      const text01 = document.createElement("div");
-      const text02 = document.createElement("div");
-      const text03 = document.createElement("div");
-      const text04 = document.createElement("div");
+    const text01 = document.createElement("div");
+    const text02 = document.createElement("div");
+    const text03 = document.createElement("div");
+    const text04 = document.createElement("div");
 
-      const style_text = `
+    const style_text = `
         background-color: #e84d30;
         border-radius: 10px; 
         color: #fff;
         margin: 5px;
         padding: 10px;
       `;
-      text01.setAttribute("style", style_text);
-      text01.setAttribute("id", "text01");
-      text01.innerHTML = "Bem-vindo!";
+    text01.setAttribute("style", style_text);
+    text01.setAttribute("id", "text01");
+    text01.innerHTML = "Bem-vindo!";
 
-      text02.setAttribute("style", style_text);
-      text02.setAttribute("id", "text02");
-      text02.innerHTML = "Esta é a seção de Tutoriais, E nela você poderá acessar vídeos tutoriais diretamente da plataforma do YouTube!";
+    text02.setAttribute("style", style_text);
+    text02.setAttribute("id", "text02");
+    text02.innerHTML =
+      "Esta é a seção de Tutoriais, E nela você poderá acessar vídeos tutoriais diretamente da plataforma do YouTube!";
   }
 
   iframe.allow = "microphone;";
@@ -131,11 +140,11 @@ function pop_up(Interface) {
   iframe.setAttribute("id", "iframe-box");
   main.appendChild(iframe);
 
-  if(Interface == "Tutorial") {
+  if (Interface == "Tutorial") {
     const text03 = document.createElement("div");
     const text04 = document.createElement("div");
 
-      const style_text = `
+    const style_text = `
         background-color: #e84d30;
         border-radius: 10px; 
         color: #fff;
@@ -143,23 +152,84 @@ function pop_up(Interface) {
         padding: 10px;
       `;
 
-      text03.setAttribute("style", style_text);
-      text03.setAttribute("id", "text03");
-      text03.innerHTML = "Deseja Voltar?";
+    text03.setAttribute("style", style_text);
+    text03.setAttribute("id", "text03");
+    text03.innerHTML = "Deseja Voltar?";
 
-      text04.setAttribute("style", style_text);
-      text04.setAttribute("id", "text04");
-      text04.innerHTML = "Fique à vontade!";
+    text04.setAttribute("style", style_text);
+    text04.setAttribute("id", "text04");
+    text04.innerHTML = "Fique à vontade!";
 
-      const iframe02 = document.createElement("iframe");
+    const iframe02 = document.createElement("iframe");
 
-      iframe02.setAttribute("style", style_iframe);
-      iframe02.setAttribute("id", "iframe02");
-      iframe02.src = "https://www.youtube.com/embed/RLx63VZ9wSc?si=chyqrYFtx_DbwCww"
+    iframe02.setAttribute("style", style_iframe);
+    iframe02.setAttribute("id", "iframe02");
+    iframe02.src =
+      "https://www.youtube.com/embed/RLx63VZ9wSc?si=chyqrYFtx_DbwCww";
   }
 
   box.appendChild(main);
 }
+
+const sidebar = () => {
+  const body = document.querySelector("body");
+  const buttonSidebar = document.querySelector("button.buttonSidebar");
+  const sidebar = document.querySelector("div.sidebar");
+  const area = document.createElement("div");
+  const style_area = `
+   background-color: rgba(0,0,0,0.8);
+   height: 1000dvh;
+   width: 1000dvw;
+   top: 0%;
+   position: absolute;
+   z-index: 1;
+  `;
+  area.setAttribute("style", style_area);
+  area.setAttribute("id", "area");
+  const reports = document.querySelector("section#reports");
+  const i = document.querySelector("button.buttonSidebar>i");
+  const pointers = [...document.querySelectorAll("div.pointer")];
+
+  const pointerSelected = pointers.find((pointer) =>
+    pointer.querySelector("img")
+  );
+  pointerSelected.style.opacity = 1;
+
+  if (sidebar.style.left == "") {
+    sidebar.style.left = "0%";
+    buttonSidebar.style.left = "300px";
+    body.style.overflowY = "hidden";
+    body.appendChild(area);
+    reports.style.zIndex = "0";
+    i.classList.remove("fi-rr-angle-right");
+    i.classList.add("fi-rr-angle-left");
+  } else {
+    sidebar.style.left = "";
+    buttonSidebar.style.left = "0%";
+    body.style.overflowY = "";
+    body.removeChild(document.querySelector("div#area"));
+    reports.style.zIndex = "";
+    i.classList.remove("fi-rr-angle-left");
+    i.classList.add("fi-rr-angle-right");
+  }
+};
+
+const naveMove = (event) => {
+  const line = document.querySelector("div.line");
+  const pointers = [...document.querySelectorAll("div.pointer")];
+  const img = document.createElement("img");
+  img.setAttribute("src", "./naveIcone.avif");
+  img.style.width = "50px";
+
+  const pointerSelected = pointers.find((pointer) =>
+    pointer.querySelector("img")
+  );
+  const pointerClicked = event.target;
+  pointerSelected.removeChild(pointerSelected.querySelector("img"));
+  pointerClicked.appendChild(img);
+
+  console.log(pointerClicked);
+};
 
 export default function App() {
   return (
@@ -169,6 +239,37 @@ export default function App() {
         <Header />
         <Main />
         <Footer />
+        <div className="sidebar">
+          <section>
+            <div className="line">
+              <div className="pointer" onClick={(event) => naveMove(event)}>
+                <h4>Instalação</h4>
+                <img src={ NaveIcone } width="50px" />
+                <h4>Instalação</h4>
+              </div>
+              <div className="pointer" onClick={(event) => naveMove(event)}>
+                <h4>Expressões</h4>
+                <h4>Expressões</h4>
+              </div>
+              <div className="pointer" onClick={(event) => naveMove(event)}>
+                <h4>Comandos</h4>
+                <h4>Comandos</h4>
+              </div>
+              <div className="pointer" onClick={(event) => naveMove(event)}>
+                <h4>Integrações</h4>
+                <h4>Integrações</h4>
+              </div>
+              <div className="pointer" onClick={(event) => naveMove(event)}>
+                <h4>Relatos</h4>
+                <h4 sty
+                >Relatos</h4>
+              </div>
+            </div>
+          </section>
+        </div>
+        <button className="buttonSidebar" onClick={() => sidebar()}>
+          <i class="fi fi-rr-angle-right"></i>
+        </button>
         <div className="buttons">
           <button id="tutorial-button" onClick={() => pop_up("Tutorial")}>
             <i className="fi fi-sc-play"></i>

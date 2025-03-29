@@ -16,6 +16,81 @@ body {
   overflow-x: hidden;
 }
 
+div.sidebar {
+  background-color: #1a1a1a;
+  height: 100%;
+  width: 300px;
+  z-index: 2;
+  padding: 18px;
+  position: fixed;
+  top: 0%;
+  left: -300px;
+  transition: all .6s;
+
+  & section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & section > div.line {
+    background-color: black;
+    border-radius: 6px;
+    height: 90%;
+    width: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    & div.pointer {
+      background-color: #e84d30;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      cursor: pointer;
+      transform: rotate(180deg);
+
+      & h4 {
+        color: #fff;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+button.buttonSidebar {
+  background-color: #e84d30;
+  border: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #fff;
+  padding: 8px;
+  font-size: 1.2rem;
+  position: fixed;
+  top: 50%;
+  left: 0%;
+  cursor: pointer;
+  transition: all .6s;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    transform: scale(0.94);
+  }
+}
+
 .right {
   grid-column: 2 !important;
   grid-row: 1 !important;
@@ -117,7 +192,7 @@ body > #root > .container {
   background-color: #252525;
   color: #000;
   display: grid;
-  grid-template-rows: 1fr 0fr 1.1fr 1fr 1fr;
+  grid-template-rows: 1fr 0fr 1.1fr 1fr 1fr 1fr;
   align-items: center;
 }
 
@@ -182,7 +257,7 @@ body > #root > .container {
   border-radius: 10px;
   height: 100%;
   width: 7px;
-  transition: all .6s;
+  transition: all 0.6s;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -193,29 +268,44 @@ body > #root > .container {
   border-radius: 10px;
   height: 100%;
   width: 100%;
-  transition: all .6s;
+  transition: all 0.6s;
   display: flex;
   align-items: end;
   justify-content: space-between;
   flex-direction: column;
 }
 
-.container > main > section#history > div.area-timeline > div.timeline > span.moment {
+.container
+  > main
+  > section#history
+  > div.area-timeline
+  > div.timeline
+  > span.moment {
   background-color: #e84d30;
   border-radius: 50%;
   height: 20px;
   width: 20px;
   cursor: pointer;
-  transition: all .6s;
+  transition: all 0.6s;
   display: block;
 }
 
-.container > main > section#history > div.area-timeline > div.timeline > span.moment:hover {
+.container
+  > main
+  > section#history
+  > div.area-timeline
+  > div.timeline
+  > span.moment:hover {
   background-color: #6e1100;
-  transform: scale(0.90);
+  transform: scale(0.9);
 }
 
-.container > main > section#history > div.area-timeline > div.timeline > span.moment:active {
+.container
+  > main
+  > section#history
+  > div.area-timeline
+  > div.timeline
+  > span.moment:active {
   transform: scale(1.1);
 }
 
@@ -223,7 +313,7 @@ body > #root > .container {
   border-radius: 10px;
   height: 100%;
   width: 100%;
-  transition: all .6s;
+  transition: all 0.6s;
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -326,12 +416,13 @@ body > #root > .container {
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#list-comands > div.buttons {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > div.buttons {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -344,12 +435,14 @@ body > #root > .container {
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#list-comands > div.buttons > button {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > div.buttons
+  > button {
   background-color: #e84d30;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   color: #fff;
@@ -359,27 +452,31 @@ body > #root > .container {
   padding: 10px;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: all, background, .3s, 3s;
+  transition: all, background, 0.3s, 3s;
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#list-comands > div.buttons > button:active {
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > div.buttons
+  > button:active {
   background-color: #6e1100;
 }
 
 .container
-> main
-> section#comands
-> div#area-comands-table
-> div#comands-table
-> section#table-sidebar
-> div#list-comands > div.buttons > button:hover {
-  transform: scale(1.1);  
+  > main
+  > section#comands
+  > div#area-comands-table
+  > div#comands-table
+  > section#table-sidebar
+  > div#list-comands
+  > div.buttons
+  > button:hover {
+  transform: scale(1.1);
 }
 
 .container
@@ -582,9 +679,9 @@ li:hover {
 
 .box-installations {
   background-color: #1a1a1a;
-  border:1px solid gray;
+  border: 1px solid gray;
   border-radius: 10px;
-  box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.121); 
+  box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.121);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -603,7 +700,11 @@ li:hover {
   flex-direction: column;
 }
 
-.container > main > section#installations > .box-installations > #button-installation {
+.container
+  > main
+  > section#installations
+  > .box-installations
+  > #button-installation {
   background-color: #ffffff00;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -611,7 +712,7 @@ li:hover {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr .5fr 1fr;
+  grid-template-columns: 1fr 0.5fr 1fr;
   grid-template-rows: 1fr 60px 1fr;
   padding-top: 10px;
 }
@@ -643,6 +744,108 @@ li:hover {
   transform: scale(0.93);
   text-shadow: 2px 2px 4px black;
   text-decoration: underline;
+}
+
+.container > main > section#integrations {
+  height: 100%;
+  width: 100%;
+}
+
+.container > main > section#integrations > div#text-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.container > main > section#integrations > div#text-content > div#text {
+  height: 500px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  grid-column: 1;
+  margin: 6px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  text-align: start;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.345);
+  transition: all 0.6s;
+}
+
+.container
+  > main
+  > section#integrations
+  > div#text-content
+  > div#text
+  > div#logo {
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.container > main > section#integrations > div#text-content > div#text > h2 {
+  text-align: center;
+  width: 100%;
+}
+
+.container > main > section#reports {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  z-index: 2;
+}
+
+.container > main > section#reports > div#reports-area {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.container > main > section#reports > div#reports-area > button {
+  background-color: #e84d30;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all .6s;
+}
+
+.container > main > section#reports > div#reports-area > button:hover {
+  transform: scale(1.1);
+  color: #000;
+}
+
+.container > main > section#reports > div#reports-area > #reports-table {
+  background-color: #e84d30;
+  width: 600px;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all .6s;
+}
+
+.container > main > section#reports > div#reports-area > #reports-table > #report {
+  background-color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all .6s;
 }
 
 .container > footer {
@@ -768,7 +971,6 @@ button#tutorial-button:hover {
 button#tutorial-button:active {
   transform: scale(0.85);
 }
-
 
 .c1 {
   background-color: red;

@@ -8,6 +8,9 @@ import Branch from "./images/branch.png";
 import Issue from "./images/issue.png";
 import Merge from "./images/merge.png";
 import Linus from "./images/Linus Torvalds.jpeg";
+import GithubLogo from "./images/github logo.png";
+import GithubDesktopLogo from "./images/github desktop logo.png";
+import Vercel from "./images/vercel logo.png";
 
 export default function Main() {
   useEffect(() => {
@@ -124,54 +127,6 @@ export default function Main() {
       }, 1200);
     });
     code_content.appendChild(icon_copy);
-  };
-
-  const up = () => {
-    const contentTable = document.querySelector("#content-table");
-    const contentList = [
-      comand_info(
-        "Git init",
-        "git init",
-        "O <i>git init</i> é o comando responsável pela inicialização de um novo repositório Git em um diretório."
-      ),
-      comand_info(
-        "Git clone [URL]",
-        "git clone  <span style='display: inline'>https://github.com/usuario/repositorio.git</span>",
-        `O <i>git clone [URL]</i> é o comando responsável pela clonagem de um repositório remoto para o diretório local. <br></br> <strong>Obs: substitua [URL] pela URL de um repositório remoto.</strong>`
-      ),
-      comand_info(
-        "Git clone [URL]",
-        "git clone  <span style='display: inline'>https://github.com/usuario/repositorio.git</span>",
-        `O <i>git clone [URL]</i> é o comando responsável pela clonagem de um repositório remoto para o diretório local. <br></br> <strong>Obs: substitua [URL] pela URL de um repositório remoto.</strong>`
-      )
-    ];
-
-    console.log("");
-    contentTable.remove("#content");
-    contentTable.add(contentList[0]);
-  };
-  const down = () => {
-    const contentTable = document.querySelector("#content-table");
-    const contentList = [
-      comand_info(
-        "Git init",
-        "git init",
-        "O <i>git init</i> é o comando responsável pela inicialização de um novo repositório Git em um diretório."
-      ),
-      comand_info(
-        "Git clone [URL]",
-        "git clone  <span style='display: inline'>https://github.com/usuario/repositorio.git</span>",
-        `O <i>git clone [URL]</i> é o comando responsável pela clonagem de um repositório remoto para o diretório local. <br></br> <strong>Obs: substitua [URL] pela URL de um repositório remoto.</strong>`
-      ),
-      comand_info(
-        "Git clone [URL]",
-        "git clone  <span style='display: inline'>https://github.com/usuario/repositorio.git</span>",
-        `O <i>git clone [URL]</i> é o comando responsável pela clonagem de um repositório remoto para o diretório local. <br></br> <strong>Obs: substitua [URL] pela URL de um repositório remoto.</strong>`
-      )
-    ];
-    
-    contentTable.remove("#content");
-    contentTable(contentList[1]);
   };
 
   return (
@@ -650,17 +605,108 @@ export default function Main() {
                     </p>
                   </li>
                 </ul>
-                <div className="buttons">
-                  <button onClick={() => up()}>
-                    <i class="fi fi-rr-angle-small-up"></i>
-                  </button>
-                  <button onClick={() => down()}>
-                    <i class="fi fi-rr-angle-small-down"></i>
-                  </button>
-                </div>
               </div>
             </section>
           </div>
+        </div>
+      </section>
+      <section id="integrations">
+        <br />
+        <br />
+        <br />
+        <div
+          id="title"
+          style={{
+            textAlign: "center",
+            color: "#fff",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
+          }}
+        >
+          <h1>Integrações do Git em outras tecnologias</h1>
+        </div>
+        <br />
+        <br />
+        <div id="text-content">
+          <div id="text" data-aos="fade-down">
+            <div
+              id="logo"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src={GithubLogo}
+                style={{ height: "100px", width: "100px" }}
+                alt="logo do Github"
+              />
+            </div>
+            <h2>Github</h2>
+            <br />
+            <br />
+            <p>
+              O Github é uma plataforma de hospedagem de código-fonte e controle
+              de versão que utiliza o Git como tecnologia subjacente.
+            </p>
+          </div>
+          <div id="text" data-aos="fade-down">
+            <div
+              id="logo"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src={GithubDesktopLogo}
+                style={{ height: "100px", width: "100px" }}
+                alt="logo do Github Desktop"
+              />
+            </div>
+            <h2>Github Desktop</h2>
+            <br />
+            <br />
+            <p>
+              O Github Desktop é uma aplicação gráfica que facilita o uso do Git
+              e do Github para desenvolvedores.
+            </p>
+          </div>
+          <div id="text" data-aos="fade-down">
+            <div
+              id="logo"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src={Vercel}
+                style={{ height: "100px", width: "100px" }}
+                alt="logo da vercel"
+              />
+            </div>
+            <h2>Vercel</h2>
+            <br />
+            <br />
+            <p>A Vercel é uma plataforma de hospedagem focada em oferecer uma experiência simplificada e eficiente para o desenvolvimento, o deploy e a entrega de aplicações web modernas.</p>
+          </div>
+        </div>
+      </section>
+      <section id="reports">
+        <div id="reports-area">
+          <button><i class="fi fi-br-angle-left"></i></button>
+          <div id="reports-table">
+            <h2 style={{color: "#fff", padding: "10px", textShadow: "2px 2px 4px rgba(0,0,0,0.4)"}}>Relatos</h2>
+            <div id="report">
+              <p>Gosto do Git por ser fácil e prático de usar!</p>
+              <br />
+              <p><strong>Gabriel Fonseca</strong></p>
+            </div>
+          </div>
+          <button><i class="fi fi-br-angle-right"></i></button>
         </div>
       </section>
     </main>

@@ -36,11 +36,13 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a
-              href="#contacts"
-              id="button-contacts"
-            >
-              Contatos
+            <a href="#integrations" id="button-integrations">
+              Integrações
+            </a>
+          </li>
+          <li>
+            <a href="#reports" id="button-reports">
+              Relatos              
             </a>
           </li>
         </ul>
