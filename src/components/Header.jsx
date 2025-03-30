@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header id="header">
       <div id="header_title">
-        <a href="#">
+        <a href="#" id="button-introduction">
           <img src={Logo} id="logo" />
         </a>
         <br />
@@ -17,7 +17,7 @@ export default function Header() {
           <li>
             <a
               href="#installations"
-              id="#installations"
+              id="button-installations"
             >
               Instalação
             </a>

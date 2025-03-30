@@ -19,12 +19,12 @@ body {
 div.sidebar {
   background-color: #1a1a1a;
   height: 100%;
-  width: 300px;
+  width: 380px;
   z-index: 2;
   padding: 18px;
   position: fixed;
   top: 0%;
-  left: -300px;
+  left: -380px;
   transition: all .6s;
 
   & section {
@@ -57,10 +57,28 @@ div.sidebar {
       gap: 12px;
       cursor: pointer;
       transform: rotate(180deg);
+      transition: all .3s;
+
+      &:hover {
+        transform: scale(1.1) rotate(180deg);
+      }
 
       & h4 {
-        color: #fff;
+        color: #000;
         transform: rotate(180deg);
+        opacity: 1;
+        display: inline;
+        transition: all .3s;
+        pointer-events: none;
+
+        &::before {
+          content: "•";
+          margin: 5px;
+        }
+      }
+
+      & img {
+        pointer-events: none;
       }
     }
   }

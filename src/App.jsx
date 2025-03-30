@@ -197,7 +197,7 @@ const sidebar = () => {
 
   if (sidebar.style.left == "") {
     sidebar.style.left = "0%";
-    buttonSidebar.style.left = "300px";
+    buttonSidebar.style.left = "380px";
     body.style.overflowY = "hidden";
     body.appendChild(area);
     reports.style.zIndex = "0";
@@ -226,10 +226,69 @@ const naveMove = (event) => {
   );
   const pointerClicked = event.target;
   pointerSelected.removeChild(pointerSelected.querySelector("img"));
-  pointerClicked.appendChild(img);
+  pointerClicked.insertBefore(img, pointerClicked.children[1]);
 
   console.log(pointerClicked);
+
+  if (img && img.previousElementSibling) {
+    const titleSelected = img.previousElementSibling;
+    const titles = [...document.querySelectorAll("div.pointer > h4")];
+    titles.forEach((title) => {
+      title.style.color = "#000";
+    });
+    titleSelected.style.color = "#e84d30";
+
+    switch (titleSelected.innerHTML) {
+      case "Introdução":
+        let buttonIntroduction = document.querySelector("#button-introduction");
+        buttonIntroduction.style.color = "#e84d30";
+        console.log(buttonIntroduction);
+        buttonIntroduction.click();
+        break;
+      case "Instalação":
+        let buttonInstallations = document.querySelector("#button-installations");
+        buttonInstallations.click();
+        if(buttonInstallations.style.color == "") {
+          buttonInstallations.style.color = "#e84d30";
+          console.log(buttonInstallations.style.color)
+        }else if(buttonInstallations.style.color == "rgb(232, 77, 48)") {
+          buttonInstallations.style.color = "#fff";
+        }
+        break;
+      case "Expressões":
+        let buttonExpressions = document.querySelector("#button-expressions");
+        buttonExpressions.click();
+        break;
+      case "Comandos":
+        let buttonComands = document.querySelector("#button-comands");
+        buttonComands.click();
+        break;
+      case "Integrações":
+        let buttonIntegrations = document.querySelector("#button-integrations");
+        buttonIntegrations.click();
+        break;
+      case "Relatos":
+        let buttonReports = document.querySelector("#button-reports");
+        buttonReports.click();
+        break;
+    }
+  } else {
+    const titleSelected = img.previousElementSibling;
+    const titles = [...document.querySelectorAll("div.pointer > h4")];
+    const title01 = titles[0];
+    title01.style.color = "#000";
+    titleSelected.style.color = "#000";
+  }
 };
+
+const titleFunction = (event) => {
+  window.alert("Ola");
+};
+
+const titles = [...document.querySelectorAll("div.pointer > h4")];
+titles.forEach((title) => {
+  title.addEventListener("click", titleFunction);
+});
 
 export default function App() {
   return (
@@ -242,27 +301,30 @@ export default function App() {
         <div className="sidebar">
           <section>
             <div className="line">
-              <div className="pointer" onClick={(event) => naveMove(event)}>
+              <div className="pointer " onClick={(event) => naveMove(event)}>
+                <h4 style={{ color: "#e84d30" }}>Introdução</h4>
+                <img src={NaveIcone} width="50px" />
+                <h4 style={{ opacity: 0 }}>Introdução</h4>
+              </div>
+              <div className="pointer " onClick={(event) => naveMove(event)}>
                 <h4>Instalação</h4>
-                <img src={ NaveIcone } width="50px" />
-                <h4>Instalação</h4>
+                <h4 style={{ opacity: 0 }}>Instalação</h4>
               </div>
               <div className="pointer" onClick={(event) => naveMove(event)}>
                 <h4>Expressões</h4>
-                <h4>Expressões</h4>
+                <h4 style={{ opacity: 0 }}>Expressões</h4>
               </div>
               <div className="pointer" onClick={(event) => naveMove(event)}>
                 <h4>Comandos</h4>
-                <h4>Comandos</h4>
+                <h4 style={{ opacity: 0 }}>Comandos</h4>
               </div>
               <div className="pointer" onClick={(event) => naveMove(event)}>
                 <h4>Integrações</h4>
-                <h4>Integrações</h4>
+                <h4 style={{ opacity: 0 }}>Integrações</h4>
               </div>
               <div className="pointer" onClick={(event) => naveMove(event)}>
                 <h4>Relatos</h4>
-                <h4 sty
-                >Relatos</h4>
+                <h4 style={{ opacity: 0 }}>Relatos</h4>
               </div>
             </div>
           </section>
