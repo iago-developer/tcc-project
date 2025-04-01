@@ -276,7 +276,6 @@ const naveMove = (event) => {
     switch (titleSelected.innerHTML) {
       case "Introdução":
         let buttonIntroduction = document.querySelector("#button-introduction");
-        buttonIntroduction.style.color = "#e84d30";
         buttonIntroduction.click();
         break;
       case "Instalação":
