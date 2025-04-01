@@ -170,6 +170,32 @@ function pop_up(Interface) {
 
   box.appendChild(main);
 }
+const removeSidebar = () => {
+  const body = document.querySelector("body");
+  const buttonSidebar = document.querySelector("button.buttonSidebar");
+  const sidebar = document.querySelector("div.sidebar");
+  const area = document.createElement("div");
+  const style_area = `
+   background-color: rgba(0,0,0,0.8);
+   height: 1000dvh;
+   width: 1000dvw;
+   top: 0%;
+   position: absolute;
+   z-index: 1;
+  `;
+  area.setAttribute("style", style_area);
+  area.setAttribute("id", "area");
+  const reports = document.querySelector("section#reports");
+  const i = document.querySelector("button.buttonSidebar>i");
+  const pointers = [...document.querySelectorAll("div.pointer")];
+  sidebar.style.left = "";
+  buttonSidebar.style.left = "0%";
+  body.style.overflowY = "";
+  body.removeChild(document.querySelector("div#area"));
+  reports.style.zIndex = "";
+  i.classList.remove("fi-rr-angle-left");
+  i.classList.add("fi-rr-angle-right");
+}
 
 const sidebar = () => {
   const body = document.querySelector("body");
@@ -195,6 +221,10 @@ const sidebar = () => {
   );
   pointerSelected.style.opacity = 1;
 
+  area.addEventListener("click", () => {
+    removeSidebar();
+  });
+
   if (sidebar.style.left == "") {
     sidebar.style.left = "0%";
     buttonSidebar.style.left = "380px";
@@ -204,13 +234,7 @@ const sidebar = () => {
     i.classList.remove("fi-rr-angle-right");
     i.classList.add("fi-rr-angle-left");
   } else {
-    sidebar.style.left = "";
-    buttonSidebar.style.left = "0%";
-    body.style.overflowY = "";
-    body.removeChild(document.querySelector("div#area"));
-    reports.style.zIndex = "";
-    i.classList.remove("fi-rr-angle-left");
-    i.classList.add("fi-rr-angle-right");
+    removeSidebar();
   }
 };
 
@@ -220,15 +244,26 @@ const naveMove = (event) => {
   const img = document.createElement("img");
   img.setAttribute("src", "./naveIcone.avif");
   img.style.width = "50px";
+  img.style.opacity = 0; 
 
   const pointerSelected = pointers.find((pointer) =>
     pointer.querySelector("img")
   );
   const pointerClicked = event.target;
+  const naveID = document.querySelector("#nave");
+  const positionPointerClicked = pointerClicked.offsetTop;
+  const positionNaveID = naveID.offsetTop;
+  
+  naveID.style.top = `${positionPointerClicked-20}px`;
+  if(positionPointerClicked > positionNaveID)  {
+    naveID.style.cssText += "transform: rotate(180deg);";
+  }else if(positionPointerClicked < positionNaveID) {
+    naveID.style.cssText += "transform: rotate(0deg);";
+  }
+
   pointerSelected.removeChild(pointerSelected.querySelector("img"));
   pointerClicked.insertBefore(img, pointerClicked.children[1]);
 
-  console.log(pointerClicked);
 
   if (img && img.previousElementSibling) {
     const titleSelected = img.previousElementSibling;
@@ -242,18 +277,11 @@ const naveMove = (event) => {
       case "Introdução":
         let buttonIntroduction = document.querySelector("#button-introduction");
         buttonIntroduction.style.color = "#e84d30";
-        console.log(buttonIntroduction);
         buttonIntroduction.click();
         break;
       case "Instalação":
         let buttonInstallations = document.querySelector("#button-installations");
         buttonInstallations.click();
-        if(buttonInstallations.style.color == "") {
-          buttonInstallations.style.color = "#e84d30";
-          console.log(buttonInstallations.style.color)
-        }else if(buttonInstallations.style.color == "rgb(232, 77, 48)") {
-          buttonInstallations.style.color = "#fff";
-        }
         break;
       case "Expressões":
         let buttonExpressions = document.querySelector("#button-expressions");
@@ -306,6 +334,7 @@ export default function App() {
                 <img src={NaveIcone} width="50px" />
                 <h4 style={{ opacity: 0 }}>Introdução</h4>
               </div>
+                <img src={NaveIcone} width="50px" id="nave"/>
               <div className="pointer " onClick={(event) => naveMove(event)}>
                 <h4>Instalação</h4>
                 <h4 style={{ opacity: 0 }}>Instalação</h4>
