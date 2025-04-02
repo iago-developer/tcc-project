@@ -46,6 +46,7 @@ div.sidebar {
     color: #fff;
     width: 100%;
     padding: 10px;
+    padding-top: 15px;
     text-align: center;
   }
 
@@ -81,8 +82,7 @@ div.sidebar {
       }
 
       & h4 {
-        color: #fff;
-        transform: rotate(180deg);
+        color: #000;
         opacity: 1;
         display: inline;
         transition: all .3s;

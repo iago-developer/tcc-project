@@ -264,12 +264,13 @@ const naveMove = (event) => {
   pointerSelected.removeChild(pointerSelected.querySelector("img"));
   pointerClicked.insertBefore(img, pointerClicked.children[1]);
 
-  if (img && img.previousElementSibling) {
-    const titleSelected = img.previousElementSibling;
+  if (img && img.nextElementSibling) {
+    const titleSelected = img.nextElementSibling;
     const titles = [...document.querySelectorAll("div.pointer > h4")];
     titles.forEach((title) => {
       title.style.color = "#000";
     });
+    console.log(titleSelected)
     titleSelected.style.color = "#fff";
 
     switch (titleSelected.innerHTML) {
@@ -304,19 +305,10 @@ const naveMove = (event) => {
     const titleSelected = img.previousElementSibling;
     const titles = [...document.querySelectorAll("div.pointer > h4")];
     const title01 = titles[0];
-    title01.style.color = "#000";
+    title01.style.color = "#fff";
     titleSelected.style.color = "#000";
   }
 };
-
-const titleFunction = (event) => {
-  window.alert("Ola");
-};
-
-const titles = [...document.querySelectorAll("div.pointer > h4")];
-titles.forEach((title) => {
-  title.addEventListener("click", titleFunction);
-});
 
 export default function App() {
   return (
@@ -333,30 +325,30 @@ export default function App() {
           <section>
             <div className="line">
               <div className="pointer " onClick={(event) => naveMove(event)}>
-                <h4 style={{ color: "#e84d30" }}>Introdução</h4>
-                <img src={NaveIcone} width="50px" />
                 <h4 style={{ opacity: 0 }}>Introdução</h4>
+                <img src={NaveIcone} width="50px" />
+                <h4 style={{ color: "#fff" }}>Introdução</h4>
               </div>
               <img src={NaveIcone} width="50px" id="nave" />
               <div className="pointer " onClick={(event) => naveMove(event)}>
-                <h4>Instalação</h4>
                 <h4 style={{ opacity: 0 }}>Instalação</h4>
+                <h4>Instalação</h4>
               </div>
               <div className="pointer" onClick={(event) => naveMove(event)}>
-                <h4>Expressões</h4>
                 <h4 style={{ opacity: 0 }}>Expressões</h4>
+                <h4>Expressões</h4>
               </div>
               <div className="pointer" onClick={(event) => naveMove(event)}>
-                <h4>Comandos</h4>
                 <h4 style={{ opacity: 0 }}>Comandos</h4>
+                <h4>Comandos</h4>
               </div>
               <div className="pointer" onClick={(event) => naveMove(event)}>
-                <h4>Integrações</h4>
                 <h4 style={{ opacity: 0 }}>Integrações</h4>
+                <h4>Integrações</h4>
               </div>
               <div className="pointer" onClick={(event) => naveMove(event)}>
-                <h4>Relatos</h4>
                 <h4 style={{ opacity: 0 }}>Relatos</h4>
+                <h4>Relatos</h4>
               </div>
             </div>
           </section>
