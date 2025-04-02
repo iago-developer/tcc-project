@@ -195,7 +195,7 @@ const removeSidebar = () => {
   reports.style.zIndex = "";
   i.classList.remove("fi-rr-angle-left");
   i.classList.add("fi-rr-angle-right");
-}
+};
 
 const sidebar = () => {
   const body = document.querySelector("body");
@@ -244,7 +244,7 @@ const naveMove = (event) => {
   const img = document.createElement("img");
   img.setAttribute("src", "./naveIcone.avif");
   img.style.width = "50px";
-  img.style.opacity = 0; 
+  img.style.opacity = 0;
 
   const pointerSelected = pointers.find((pointer) =>
     pointer.querySelector("img")
@@ -253,17 +253,16 @@ const naveMove = (event) => {
   const naveID = document.querySelector("#nave");
   const positionPointerClicked = pointerClicked.offsetTop;
   const positionNaveID = naveID.offsetTop;
-  
-  naveID.style.top = `${positionPointerClicked-20}px`;
-  if(positionPointerClicked > positionNaveID)  {
+
+  naveID.style.top = `${positionPointerClicked - 20}px`;
+  if (positionPointerClicked > positionNaveID) {
     naveID.style.cssText += "transform: rotate(180deg);";
-  }else if(positionPointerClicked < positionNaveID) {
+  } else if (positionPointerClicked < positionNaveID) {
     naveID.style.cssText += "transform: rotate(0deg);";
   }
 
   pointerSelected.removeChild(pointerSelected.querySelector("img"));
   pointerClicked.insertBefore(img, pointerClicked.children[1]);
-
 
   if (img && img.previousElementSibling) {
     const titleSelected = img.previousElementSibling;
@@ -271,7 +270,7 @@ const naveMove = (event) => {
     titles.forEach((title) => {
       title.style.color = "#000";
     });
-    titleSelected.style.color = "#e84d30";
+    titleSelected.style.color = "#fff";
 
     switch (titleSelected.innerHTML) {
       case "Introdução":
@@ -279,7 +278,9 @@ const naveMove = (event) => {
         buttonIntroduction.click();
         break;
       case "Instalação":
-        let buttonInstallations = document.querySelector("#button-installations");
+        let buttonInstallations = document.querySelector(
+          "#button-installations"
+        );
         buttonInstallations.click();
         break;
       case "Expressões":
@@ -326,6 +327,9 @@ export default function App() {
         <Main />
         <Footer />
         <div className="sidebar">
+              <header>
+                <h2>Mapa de Navegação</h2>
+              </header>
           <section>
             <div className="line">
               <div className="pointer " onClick={(event) => naveMove(event)}>
@@ -333,7 +337,7 @@ export default function App() {
                 <img src={NaveIcone} width="50px" />
                 <h4 style={{ opacity: 0 }}>Introdução</h4>
               </div>
-                <img src={NaveIcone} width="50px" id="nave"/>
+              <img src={NaveIcone} width="50px" id="nave" />
               <div className="pointer " onClick={(event) => naveMove(event)}>
                 <h4>Instalação</h4>
                 <h4 style={{ opacity: 0 }}>Instalação</h4>
