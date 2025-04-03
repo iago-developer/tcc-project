@@ -170,19 +170,20 @@ function pop_up(Interface) {
 
   box.appendChild(main);
 }
+
 const removeSidebar = () => {
   const body = document.querySelector("body");
   const buttonSidebar = document.querySelector("button.buttonSidebar");
   const sidebar = document.querySelector("div.sidebar");
   const area = document.createElement("div");
   const style_area = `
-   background-color: rgba(0,0,0,0.8);
-   height: 1000dvh;
-   width: 1000dvw;
-   top: 0%;
-   position: absolute;
-   z-index: 1;
-  `;
+     background-color: rgba(0,0,0,0.8);
+     height: 1000dvh;
+     width: 1000dvw;
+     top: 0%;
+     position: absolute;
+     z-index: 1;
+    `;
   area.setAttribute("style", style_area);
   area.setAttribute("id", "area");
   const reports = document.querySelector("section#reports");
@@ -203,13 +204,13 @@ const sidebar = () => {
   const sidebar = document.querySelector("div.sidebar");
   const area = document.createElement("div");
   const style_area = `
-   background-color: rgba(0,0,0,0.8);
-   height: 1000dvh;
-   width: 1000dvw;
-   top: 0%;
-   position: absolute;
-   z-index: 1;
-  `;
+     background-color: rgba(0,0,0,0.8);
+     height: 1000dvh;
+     width: 1000dvw;
+     top: 0%;
+     position: absolute;
+     z-index: 1;
+    `;
   area.setAttribute("style", style_area);
   area.setAttribute("id", "area");
   const reports = document.querySelector("section#reports");
@@ -270,7 +271,7 @@ const naveMove = (event) => {
     titles.forEach((title) => {
       title.style.color = "#000";
     });
-    console.log(titleSelected)
+    console.log(titleSelected);
     titleSelected.style.color = "#fff";
 
     switch (titleSelected.innerHTML) {
@@ -319,9 +320,9 @@ export default function App() {
         <Main />
         <Footer />
         <div className="sidebar">
-              <header>
-                <h2>Mapa de Navegação</h2>
-              </header>
+          <header>
+            <h2>Mapa de Navegação</h2>
+          </header>
           <section>
             <div className="line">
               <div className="pointer " onClick={(event) => naveMove(event)}>
