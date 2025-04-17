@@ -175,6 +175,53 @@ body > #root > .container {
   overflow: visible;
 }
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(350deg);}
+  100% { transform: rotate(400deg);}
+}
+
+.container > div.intro {
+  background-color: #252525;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & div.title {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+    & img {
+      margin: 5px;
+      background-color: #fff;
+    }
+  }
+
+  & div.load-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & div.loader {
+      border: 5px solid #fff;
+      border-radius: 50%;
+      border-top: 5px solid #ffffff00;
+      border-bottom: 5px solid #ffffff00;
+      height: 60px;
+      width: 60px;
+      animation: spin 1.1s ease-in-out infinite;
+    }
+  }
+}
+
 .container > header {
   background-color: #1a1a1a;
   width: 100%;
@@ -270,8 +317,8 @@ body > #root > .container {
   justify-content: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding: 8px;
-  grid-gap: 10px 10px;
+  padding: 30px !important;
+  grid-gap: 30px 30px !important;
 }
 
 .container > main > section#introduction > #image {
@@ -394,7 +441,7 @@ body > #root > .container {
   border-radius: 10px;
   font-size: 1.4rem;
   grid-column: 1;
-  margin: 6px;
+  margin: 18px;
   padding: 30px;
   display: flex;
   justify-content: center;
@@ -862,22 +909,22 @@ li:hover {
 }
 
 .container > main > section#reports {
-  height: 100%;
+  height: 50vh;
   width: 100%;
   padding: 10px;
   z-index: 2;
 }
 
 .container > main > section#reports > div#reports-area {
-  background-color: #fff;
+  background-color: #ffffff00;
   border-radius: 10px;
   padding: 30px;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 10px;
+  justify-content: center;
+  gap: 30px;
 }
 
 .container > main > section#reports > div#reports-area > button {
@@ -897,21 +944,35 @@ li:hover {
 
 .container > main > section#reports > div#reports-area > #reports-table {
   background-color: #e84d30;
+  height: 180px;
   width: 600px;
   border: none;
   border-radius: 6px;
-  padding: 10px;
+  padding: 20px;
   cursor: pointer;
   transition: all .6s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
 }
 
-.container > main > section#reports > div#reports-area > #reports-table > #report {
+.container > main > section#reports > div#reports-area > #reports-table > .reports {
+  display: flex;
+  gap: 60px;
+  transition: transform 0.5s ease;
+}
+
+.container > main > section#reports > div#reports-area > #reports-table > .reports > .report {
   background-color: #fff;
   border: none;
   border-radius: 6px;
   padding: 10px;
   cursor: pointer;
-  transition: all .6s;
+  min-width: 300px;
+  transition: all .6s; 
 }
 
 .container > footer {

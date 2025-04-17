@@ -129,8 +129,45 @@ export default function Main() {
     code_content.appendChild(icon_copy);
   };
 
+  
+  const updateReports = () => {
+    const buttonNext = document.querySelector("button#buttonNextReport");
+    const buttonPrev = document.querySelector("button#buttonPrevReport");
+    console.log(buttonNext);
+    console.log(buttonPrev);
+    const reports = document.querySelector(".reports");
+    const reportsItems = document.querySelectorAll(".report");
+    let currentIndex = 0;
+
+    function nextReport() {
+      const offset = -currentIndex * 300;
+      console.log(reports);
+      reports.style.transform = `translateX(${offset}px)`;
+    }
+
+    buttonPrev.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = reportsItems.length - 1;
+      }
+
+      nextReport();
+    });
+
+    buttonNext.addEventListener("click", () => {
+      if (currentIndex < reportsItems.length - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+
+      nextReport();
+    });
+  };
+
   return (
-    <main>
+    <main onLoad={ () => { updateReports() }}>
       <section id="introduction">
         <div data-aos="fade-down" className="txt01" id="text">
           <h2>&bull; Definição do Git</h2>
@@ -691,22 +728,72 @@ export default function Main() {
             <h2>Vercel</h2>
             <br />
             <br />
-            <p>A Vercel é uma plataforma de hospedagem focada em oferecer uma experiência simplificada e eficiente para o desenvolvimento, o deploy e a entrega de aplicações web modernas.</p>
+            <p>
+              A Vercel é uma plataforma de hospedagem focada em oferecer uma
+              experiência simplificada e eficiente para o desenvolvimento, o
+              deploy e a entrega de aplicações web modernas.
+            </p>
           </div>
         </div>
       </section>
       <section id="reports">
         <div id="reports-area">
-          <button><i class="fi fi-br-angle-left"></i></button>
+          <button id="buttonPrevReport">
+            <i class="fi fi-br-angle-left"></i>
+          </button>
           <div id="reports-table">
-            <h2 style={{color: "#fff", padding: "10px", textShadow: "2px 2px 4px rgba(0,0,0,0.4)"}}>Relatos</h2>
-            <div id="report">
-              <p>Gosto do Git por ser fácil e prático de usar!</p>
-              <br />
-              <p><strong>Gabriel Fonseca</strong></p>
+            <h2
+              style={{
+                color: "#fff",
+                padding: "10px",
+                paddingTop: "0px",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.4)",
+              }}
+            >
+              Relatos
+            </h2>
+            <br />
+            <div className="reports">
+              <div className="report">
+                <p>Gosto do Git por ser fácil e prático de usar!</p>
+                <br />
+                <p>
+                  <strong>Gabriel Fonseca</strong>
+                </p>
+              </div>
+              <div className="report">
+                <p>Gosto do Git por ser fácil e prático de usar!</p>
+                <br />
+                <p>
+                  <strong>Gabriel Fonseca</strong>
+                </p>
+              </div>
+              <div className="report">
+                <p>Gosto do Git por ser fácil e prático de usar!</p>
+                <br />
+                <p>
+                  <strong>Gabriel Fonseca</strong>
+                </p>
+              </div>
+              <div className="report">
+                <p>O Git Learning é muito prático e didático.</p>
+                <br />
+                <p>
+                  <strong>Júlia Ribeiro</strong>
+                </p>
+              </div>
+              <div className="report">
+                <p>Aplicativo fácil e prático de se usar!</p>
+                <br />
+                <p>
+                  <strong>Bruno Roberto</strong>
+                </p>
+              </div>
             </div>
           </div>
-          <button><i class="fi fi-br-angle-right"></i></button>
+          <button id="buttonNextReport">
+            <i class="fi fi-br-angle-right"></i>
+          </button>
         </div>
       </section>
     </main>

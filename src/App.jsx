@@ -4,6 +4,7 @@ import "./medias/Mobile.css";
 import "./medias/Laptop.css";
 import "./medias/Desktop.css";
 import "./medias/Smart.css";
+import Intro from "./components/Intro.jsx";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
@@ -311,11 +312,27 @@ const naveMove = (event) => {
   }
 };
 
+const intro = () => {
+  const intro = document.querySelector("div.intro");
+  const skipIntro = () => {
+    const intro = document.querySelector("div.intro");
+    intro.style.opacity = "0%";
+  }
+  setTimeout(skipIntro, 3000);
+  const removeIntro = () => {
+    const intro = document.querySelector("div.intro");
+    intro.style.display = "none";
+  }
+  setTimeout(removeIntro, 3400)
+};
+
 export default function App() {
   return (
     <>
       <div className="container" id="container">
         <br />
+        {intro()}
+        <Intro />
         <Header />
         <Main />
         <Footer />
