@@ -136,7 +136,7 @@ export default function Main() {
     console.log(buttonNext);
     console.log(buttonPrev);
     const reports = document.querySelector(".reports");
-    const reportsItems = document.querySelectorAll(".report");
+    const reportsItems = [...document.querySelectorAll(".report")];
     let currentIndex = 0;
 
     function nextReport() {
@@ -752,6 +752,7 @@ export default function Main() {
             >
               Relatos
             </h2>
+            <hr />
             <br />
             <div className="reports">
               <div className="report">

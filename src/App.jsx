@@ -313,7 +313,18 @@ const naveMove = (event) => {
 };
 
 const intro = () => {
+  const body = document.querySelector("body");
   const intro = document.querySelector("div.intro");
+  console.log(intro.style.display)
+  if(intro.style.display == "") {
+    const hidden = () => {
+      body.style.overflow = "hidden";
+    }
+
+    setTimeout(hidden, 3000);
+  }else {
+    body.style.overflow = "";
+  }
   const skipIntro = () => {
     const intro = document.querySelector("div.intro");
     intro.style.opacity = "0%";
@@ -329,9 +340,8 @@ const intro = () => {
 export default function App() {
   return (
     <>
-      <div className="container" id="container">
+      <div className="container" id="container" onLoad={() => intro() }>
         <br />
-        {intro()}
         <Intro />
         <Header />
         <Main />
