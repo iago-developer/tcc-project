@@ -315,15 +315,16 @@ const naveMove = (event) => {
 const intro = () => {
   const body = document.querySelector("body");
   const intro = document.querySelector("div.intro");
-  console.log(intro.style.display)
+  
   if(intro.style.display == "") {
     const hidden = () => {
-      body.style.overflow = "hidden";
+      body.style.overflowY = "visible";
     }
 
-    setTimeout(hidden, 3000);
+    setTimeout(hidden, 3000)
   }else {
-    body.style.overflow = "";
+    window.alert("o")
+    body.style.overflowY = "";
   }
   const skipIntro = () => {
     const intro = document.querySelector("div.intro");
