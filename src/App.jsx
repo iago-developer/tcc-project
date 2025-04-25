@@ -74,7 +74,7 @@ function pop_up(Interface) {
   button.setAttribute("id", "button-box02");
   button.innerHTML = "<i class='fi fi-br-cross'></i>";
   button.addEventListener("click", () => {
-    body.style.overflowY = "";
+    body.style.overflowY = "visible";
     body.removeChild(document.querySelector("div#area"));
     buttonSidebar.style.zIndex = "";
     reports.style.zIndex = "";
@@ -197,6 +197,7 @@ const removeSidebar = () => {
   reports.style.zIndex = "";
   i.classList.remove("fi-rr-angle-left");
   i.classList.add("fi-rr-angle-right");
+  body.style.overflowY = "visible";
 };
 
 const sidebar = () => {
@@ -206,12 +207,17 @@ const sidebar = () => {
   const area = document.createElement("div");
   const style_area = `
      background-color: rgba(0,0,0,0.8);
+     color: #fff;
      height: 1000dvh;
      width: 1000dvw;
      top: 0%;
      position: absolute;
      z-index: 1;
-    `;
+     cursor: pointer; 
+     display: flex;
+     align-items: start;
+     justify-content: end;
+     `;
   area.setAttribute("style", style_area);
   area.setAttribute("id", "area");
   const reports = document.querySelector("section#reports");
@@ -278,6 +284,24 @@ const naveMove = (event) => {
     switch (titleSelected.innerHTML) {
       case "Introdução":
         let buttonIntroduction = document.querySelector("#button-introduction");
+        // const area = document.querySelector("#area");
+        // const titleArea = document.createElement("div");
+        // const style_titleArea = `
+        // background-color: #fff;
+        // color: #000;
+        // height:100%;
+        // width: 100%;
+        // color: #fff;
+        // display: flex;
+        // align-items: start;
+        // justify-content: end;
+        // text-align: end;
+        // `;
+        // titleArea.setAttribute("style", style_titleArea);
+        // const text = "Ola";
+        // titleArea.innerHTML = text;
+        // console.log(area);
+        // area.prepend(titleArea);
         buttonIntroduction.click();
         break;
       case "Instalação":
@@ -315,33 +339,30 @@ const naveMove = (event) => {
 const intro = () => {
   const body = document.querySelector("body");
   const intro = document.querySelector("div.intro");
-  
-  if(intro.style.display == "") {
-    const hidden = () => {
+  if (intro.style.display == "") {
+    const visible = () => {
       body.style.overflowY = "visible";
-    }
-
-    setTimeout(hidden, 3000)
-  }else {
-    window.alert("o")
+    };
+    setTimeout(visible, 3000);
+  } else {
     body.style.overflowY = "";
   }
   const skipIntro = () => {
     const intro = document.querySelector("div.intro");
     intro.style.opacity = "0%";
-  }
+  };
   setTimeout(skipIntro, 3000);
   const removeIntro = () => {
     const intro = document.querySelector("div.intro");
     intro.style.display = "none";
-  }
-  setTimeout(removeIntro, 3400)
+  };
+  setTimeout(removeIntro, 3400);
 };
 
 export default function App() {
   return (
     <>
-      <div className="container" id="container" onLoad={() => intro() }>
+      <div className="container" id="container" onLoad={() => intro()}>
         <br />
         <Intro />
         <Header />

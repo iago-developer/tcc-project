@@ -49,6 +49,11 @@ div.sidebar {
     padding: 10px;
     padding-top: 15px;
     text-align: center;
+
+    & h2 {
+      border-bottom: 3px solid #fff;
+      padding-bottom: 12px;
+    }
   }
 
   & section > div.line {
@@ -90,7 +95,7 @@ div.sidebar {
         pointer-events: none;
 
         &::before {
-          content: "•";
+          content: "";
           margin: 5px;
         }
       }
@@ -122,6 +127,23 @@ div.sidebar {
   100% {
     top: 96%;
   }
+}
+
+@keyframes introNave {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: translateY(1.1);
+  }
+}
+
+.naveAnimation {
+  transition: all .8s;
+  animation: introNave 1.6s ease infinite alternate-reverse;
 }
 
 #nave {

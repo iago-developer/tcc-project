@@ -288,7 +288,7 @@ export default function Main() {
         <br />
         <br />
         <div id="text-content">
-          <div id="text" data-aos="fade-down">
+          <div id="text" data-aos="fade-up">
             <div
               id="logo"
               style={{
@@ -309,7 +309,7 @@ export default function Main() {
             </p>
             <br />
           </div>
-          <div id="text" data-aos="fade-down">
+          <div id="text" data-aos="fade-up">
             <div
               id="logo"
               style={{
@@ -329,7 +329,7 @@ export default function Main() {
               projeto e uma mensagem explicativa sobre o que foi alterado.
             </p>
           </div>
-          <div id="text" data-aos="fade-down">
+          <div id="text" data-aos="fade-up">
             <div
               id="logo"
               style={{
@@ -737,7 +737,7 @@ export default function Main() {
         </div>
       </section>
       <section id="reports">
-        <div id="reports-area">
+        <div id="reports-area" data-aos="fade-up">
           <button id="buttonPrevReport">
             <i class="fi fi-br-angle-left"></i>
           </button>
