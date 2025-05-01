@@ -15,7 +15,7 @@ export default function Intro() {
         <div className="loader"></div>
       </div>
       <br />
-      <img src={ Nave } alt="nave" width="70px" className="naveAnimation"/>
+      <img src={Nave} alt="nave" width="70px" className="naveAnimation" />
     </div>
   );
 }

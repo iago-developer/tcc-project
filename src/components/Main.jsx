@@ -129,7 +129,6 @@ export default function Main() {
     code_content.appendChild(icon_copy);
   };
 
-  
   const updateReports = () => {
     const buttonNext = document.querySelector("button#buttonNextReport");
     const buttonPrev = document.querySelector("button#buttonPrevReport");
@@ -167,7 +166,11 @@ export default function Main() {
   };
 
   return (
-    <main onLoad={ () => { updateReports() }}>
+    <main
+      onLoad={() => {
+        updateReports();
+      }}
+    >
       <section id="introduction">
         <div data-aos="fade-down" className="txt01" id="text">
           <h2>&bull; Definição do Git</h2>

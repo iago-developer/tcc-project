@@ -174,26 +174,20 @@ function pop_up(Interface) {
 
 const removeSidebar = () => {
   const body = document.querySelector("body");
+  const sessionArea = document.querySelector("div#session-area");
   const buttonSidebar = document.querySelector("button.buttonSidebar");
   const sidebar = document.querySelector("div.sidebar");
-  const area = document.createElement("div");
-  const style_area = `
-     background-color: rgba(0,0,0,0.8);
-     height: 1000dvh;
-     width: 1000dvw;
-     top: 0%;
-     position: absolute;
-     z-index: 1;
-    `;
-  area.setAttribute("style", style_area);
-  area.setAttribute("id", "area");
+  const area = document.querySelector("div#area");
   const reports = document.querySelector("section#reports");
   const i = document.querySelector("button.buttonSidebar>i");
   const pointers = [...document.querySelectorAll("div.pointer")];
   sidebar.style.left = "";
   buttonSidebar.style.left = "0%";
   body.style.overflowY = "";
-  body.removeChild(document.querySelector("div#area"));
+  if(area != null) {
+    body.removeChild(document.querySelector("div#area"));
+    sessionArea.style.display = "none";
+  }
   reports.style.zIndex = "";
   i.classList.remove("fi-rr-angle-left");
   i.classList.add("fi-rr-angle-right");
@@ -227,7 +221,16 @@ const sidebar = () => {
   const pointerSelected = pointers.find((pointer) =>
     pointer.querySelector("img")
   );
+  const sessionArea = document.querySelector("div#session-area");
+  sessionArea.style.display = "flex";
+  const h2 = sessionArea.querySelector("h2");
+  h2.innerHTML = "Introdução";
   pointerSelected.style.opacity = 1;
+  
+  sessionArea.addEventListener("click", () => {
+    sessionArea.style.display = "none";
+    removeSidebar();
+  });
 
   area.addEventListener("click", () => {
     removeSidebar();
@@ -247,17 +250,21 @@ const sidebar = () => {
 };
 
 const naveMove = (event) => {
+  const body = document.body;
+  const sessionArea = document.querySelector("div#session-area");
+  sessionArea.style.display = "flex";
+  const h2 = sessionArea.querySelector("h2");
   const line = document.querySelector("div.line");
   const pointers = [...document.querySelectorAll("div.pointer")];
   const img = document.createElement("img");
   img.setAttribute("src", "./naveIcone.avif");
   img.style.width = "50px";
   img.style.opacity = 0;
-
+  
   const pointerSelected = pointers.find((pointer) =>
     pointer.querySelector("img")
-  );
-  const pointerClicked = event.target;
+);
+const pointerClicked = event.target;
   const naveID = document.querySelector("#nave");
   const positionPointerClicked = pointerClicked.offsetTop;
   const positionNaveID = naveID.offsetTop;
@@ -272,6 +279,7 @@ const naveMove = (event) => {
   pointerSelected.removeChild(pointerSelected.querySelector("img"));
   pointerClicked.insertBefore(img, pointerClicked.children[1]);
 
+
   if (img && img.nextElementSibling) {
     const titleSelected = img.nextElementSibling;
     const titles = [...document.querySelectorAll("div.pointer > h4")];
@@ -284,46 +292,34 @@ const naveMove = (event) => {
     switch (titleSelected.innerHTML) {
       case "Introdução":
         let buttonIntroduction = document.querySelector("#button-introduction");
-        // const area = document.querySelector("#area");
-        // const titleArea = document.createElement("div");
-        // const style_titleArea = `
-        // background-color: #fff;
-        // color: #000;
-        // height:100%;
-        // width: 100%;
-        // color: #fff;
-        // display: flex;
-        // align-items: start;
-        // justify-content: end;
-        // text-align: end;
-        // `;
-        // titleArea.setAttribute("style", style_titleArea);
-        // const text = "Ola";
-        // titleArea.innerHTML = text;
-        // console.log(area);
-        // area.prepend(titleArea);
+        h2.innerHTML = titleSelected.innerHTML;
         buttonIntroduction.click();
         break;
       case "Instalação":
         let buttonInstallations = document.querySelector(
           "#button-installations"
         );
+        h2.innerHTML = titleSelected.innerHTML;
         buttonInstallations.click();
         break;
       case "Expressões":
         let buttonExpressions = document.querySelector("#button-expressions");
+        h2.innerHTML = titleSelected.innerHTML;
         buttonExpressions.click();
         break;
       case "Comandos":
         let buttonComands = document.querySelector("#button-comands");
+        h2.innerHTML = titleSelected.innerHTML;
         buttonComands.click();
         break;
       case "Integrações":
         let buttonIntegrations = document.querySelector("#button-integrations");
+        h2.innerHTML = titleSelected.innerHTML;
         buttonIntegrations.click();
         break;
       case "Relatos":
         let buttonReports = document.querySelector("#button-reports");
+        h2.innerHTML = titleSelected.innerHTML;
         buttonReports.click();
         break;
     }
@@ -362,9 +358,22 @@ const intro = () => {
 export default function App() {
   return (
     <>
-      <div className="container" id="container" onLoad={() => intro()}>
+      <div className="container" id="container">
+        {/* <div className="container" id="container" onLoad={() => intro()}> */}
         <br />
-        <Intro />
+        {/* {<Intro />} */}
+        <div id="session-area">
+          <div id="title-session-area">
+            <h2>Introdução</h2>
+            <hr />
+          </div>
+          <div id="content-session-area">
+            <section>
+              <p>Nesta seção serão abordados temas como:</p>
+              <p>Definição e Origem do <i>Software</i> a ser estudado e também a finalidade do nosso guia de estudos online.</p> 
+            </section>
+          </div>
+        </div>
         <Header />
         <Main />
         <Footer />

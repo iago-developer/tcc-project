@@ -1,3 +1,5 @@
+@import "./animations/animations.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -17,10 +19,53 @@ body {
   overflow-y: hidden;
 }
 
+div#session-area {
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  display: none;
+  cursor: pointer;
+  align-items: end;
+  justify-content: start;
+  flex-direction: column;
+  & div#title-session-area {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 60px;
+    cursor: pointer;
+
+    & hr {
+      background-color: #fff;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      height: 2px;
+      width: 500px;
+    }
+  }
+  & div#content-session-area {
+    height: 100%;
+    width: 100%;
+
+    & section {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: start;
+      justify-content: end;
+      padding: 60px;
+    }
+  }
+}
+
 div.sidebar {
-  /* background-image: url('./components/images/fundoSidebar.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%; */
   background-color: #1a1a1a;
   border: 6px solid #e84d30;
   border-radius: 10px;
@@ -108,41 +153,8 @@ div.sidebar {
   }
 }
 
-@keyframes animationNave {
-  0% {
-    top: -3.1%;
-  }
-  25% {
-    top: 17%;
-  }
-  50% {
-    top: 36%;
-  }
-  75% {
-    top: 56%;
-  }
-  85% {
-    top: 76%;
-  }
-  100% {
-    top: 96%;
-  }
-}
-
-@keyframes introNave {
-  0% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: translateY(1.1);
-  }
-}
-
 .naveAnimation {
-  transition: all .8s;
+  transition: all 0.8s;
   animation: introNave 1.6s ease infinite alternate-reverse;
 }
 
@@ -195,18 +207,6 @@ body > #root > .container {
   display: grid;
   grid-template-rows: 100px 1fr;
   overflow: visible;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(350deg);
-  }
-  100% {
-    transform: rotate(400deg);
-  }
 }
 
 .container > div.intro {
@@ -371,94 +371,6 @@ body > #root > .container {
   background-color: #ffffff;
   height: 260px;
   width: 280px;
-}
-
-.container > main > section#history {
-  color: #fff;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 50px;
-}
-
-.container > main > section#history > div.area-timeline {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-.container > main > section#history > div.area-timeline > .timeline {
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  height: 100%;
-  width: 7px;
-  transition: all 0.6s;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-.container > main > section#history > div.area-timeline > div.state-moment01 {
-  border-radius: 10px;
-  height: 100%;
-  width: 100%;
-  transition: all 0.6s;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-.container
-  > main
-  > section#history
-  > div.area-timeline
-  > div.timeline
-  > span.moment {
-  background-color: #e84d30;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-  transition: all 0.6s;
-  display: block;
-}
-
-.container
-  > main
-  > section#history
-  > div.area-timeline
-  > div.timeline
-  > span.moment:hover {
-  background-color: #6e1100;
-  transform: scale(0.9);
-}
-
-.container
-  > main
-  > section#history
-  > div.area-timeline
-  > div.timeline
-  > span.moment:active {
-  transform: scale(1.1);
-}
-
-.container > main > section#history > div.area-timeline > div.state-moment02 {
-  border-radius: 10px;
-  height: 100%;
-  width: 100%;
-  transition: all 0.6s;
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  flex-direction: column;
 }
 
 .container > main > section#introduction > #text {
@@ -1001,7 +913,7 @@ li:hover {
   > #reports-table
   > .reports {
   width: 100%;
-  display: flex;  
+  display: flex;
   gap: 60px;
   transition: transform 0.5s ease;
 }
@@ -1111,6 +1023,7 @@ button#chatbot-button:active {
 #button-box02:hover {
   transform: scale(0.9);
 }
+
 #button-box02:active {
   transform: scale(0.85);
 }
@@ -1144,16 +1057,4 @@ button#tutorial-button:hover {
 
 button#tutorial-button:active {
   transform: scale(0.85);
-}
-
-.c1 {
-  background-color: red;
-}
-
-.c2 {
-  background-color: green;
-}
-
-.c3 {
-  background-color: blue;
 }

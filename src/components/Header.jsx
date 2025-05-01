@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Logo from "./images/git-logo.png";
 
 export default function Header() {
-
   return (
     <header id="header">
       <div id="header_title">
@@ -15,18 +14,12 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <a
-              href="#installations"
-              id="button-installations"
-            >
+            <a href="#installations" id="button-installations">
               Instalação
             </a>
           </li>
           <li>
-            <a
-              href="#expressions"
-              id="button-expressions"
-            >
+            <a href="#expressions" id="button-expressions">
               Expressões
             </a>
           </li>
@@ -42,7 +35,7 @@ export default function Header() {
           </li>
           <li>
             <a href="#reports" id="button-reports">
-              Relatos              
+              Relatos
             </a>
           </li>
         </ul>
