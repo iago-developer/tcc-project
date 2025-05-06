@@ -20,7 +20,7 @@ body {
 }
 
 div#session-area {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   height: 100%;
   width: 100%;
@@ -31,6 +31,7 @@ div#session-area {
   align-items: end;
   justify-content: start;
   flex-direction: column;
+
   & div#title-session-area {
     color: #fff;
     width: 100%;
@@ -53,14 +54,19 @@ div#session-area {
   & div#content-session-area {
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: end;
 
     & section {
       height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: start;
-      justify-content: end;
+      width: 600px;
       padding: 60px;
+      padding-top: 10px;
+      text-align: start;
+      line-height: 2rem;
+      font-size: 1.3rem;
+      font-weight: 700;
     }
   }
 }
@@ -93,6 +99,7 @@ div.sidebar {
     width: 100%;
     padding: 10px;
     padding-top: 15px;
+    padding-bottom: 0px;
     text-align: center;
 
     & h2 {
@@ -980,20 +987,22 @@ a:hover {
 }
 
 div.buttons {
-  margin-bottom: 10px;
-  height: 150px;
-  width: 180px;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  height: 300px;
+  width: 300px;
   position: fixed;
-  right: 0;
-  bottom: 0;
+  right: -100px;
+  bottom: -3px;
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: all .6s;
 }
 
 button#chatbot-button {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 2;
   background-color: #e84d30;
   border: none;
@@ -1030,7 +1039,7 @@ button#chatbot-button:active {
 
 button#tutorial-button {
   grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
   background-color: #e84d30;
   border: none;
   border-radius: 50%;
@@ -1056,5 +1065,68 @@ button#tutorial-button:hover {
 }
 
 button#tutorial-button:active {
+  transform: scale(0.85);
+}
+
+button#more-button {
+  grid-column: 2;
+  grid-row: 2;
+  z-index: 1;
+  background-color: #e84d30;
+  border: none;
+  border-radius: 50%;
+  text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  color: #fff;
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+  transition: all 0.4s;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+button#more-button:hover {
+  transform: scale(1.08);
+  color: #000;
+  text-shadow: 2px 2px 4px #fff;
+}
+
+button#more-button:active {
+  transform: scale(0.85);
+}
+
+button#quiz-button {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #e84d30;
+  border: none;
+  border-radius: 50%;
+  text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  color: #fff;
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+  transition: all 0.4s;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+button#quiz-button:hover {
+  transform: scale(0.9);
+  color: #000;
+  text-shadow: 2px 2px 4px #fff;
+}
+
+button#quiz-button:active {
   transform: scale(0.85);
 }

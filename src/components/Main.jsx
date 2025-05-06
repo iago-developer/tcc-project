@@ -759,14 +759,14 @@ export default function Main() {
             <br />
             <div className="reports">
               <div className="report">
-                <p>Gosto do Git por ser fácil e prático de usar!</p>
+                <p>Gosto do <i>Git Learning</i> por ser prático de usar!</p>
                 <br />
                 <p>
                   <strong>Gabriel Fonseca</strong>
                 </p>
               </div>
               <div className="report">
-                <p>Gosto do Git por ser fácil e prático de usar!</p>
+                <p>O <i>Git Learning</i> me fez aprender sobre versionamento de código de maneira incrível!</p>
                 <br />
                 <p>
                   <strong>Gabriel Fonseca</strong>
