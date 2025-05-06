@@ -84,8 +84,11 @@ div.sidebar {
   top: 0%;
   left: -380px;
   transition: all 0.6s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-  & section {
+  & section.sectionSidebar {
     height: 100%;
     width: 100%;
     display: flex;

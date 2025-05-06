@@ -415,7 +415,7 @@ export default function App() {
           <header>
             <h2>Mapa de Navegação</h2>
           </header>
-          <section>
+          <section class="sectionSidebar">
             <div className="line">
               <div className="pointer " onClick={(event) => naveMove(event)}>
                 <h4 style={{ opacity: 0 }}>Introdução</h4>
