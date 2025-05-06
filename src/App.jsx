@@ -227,7 +227,9 @@ const sidebar = () => {
   });
 
   if (sidebar.style.left == "") {
+    console.log(sidebar.style.display)
     sidebar.style.left = "0%";
+    console.log(sidebar.style)
     buttonSidebar.style.left = "380px";
     body.style.overflowY = "hidden";
     body.appendChild(area);
