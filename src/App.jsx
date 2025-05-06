@@ -129,36 +129,39 @@ function pop_up(Interface) {
       box.appendChild(main);
       main.appendChild(iframe);
       break;
-    case "More":
-      const buttons = [...document.querySelectorAll(":not(.button-interface)")];
-      console.table(buttons)
-      const moreButton = document.querySelector("button#more-button")
-      const chatBotButton = document.querySelector("button#chatbot-button");
-      const tutorialButton = document.querySelector("button#tutorial-button");
-      const quizButton = document.querySelector("button#quiz-button");
-      const areaButtons = document.querySelector(".buttons");
-      tutorialButton.style.gridRow = "1";
-      tutorialButton.style.gridColumn = "2";
-      chatBotButton.style.gridRow = "2";
-      chatBotButton.style.gridColumn = "1";
-      quizButton.style.gridRow = "3";
-      quizButton.style.gridColumn = "2";
-      body.style.overflowY = "visible";
-      moreButton.style.opacity = 0;
-      buttons.forEach(button => {
-        button.addEventListener("mouseenter", () => {
-          console.log(areaButtons)
-          tutorialButton.style.gridRow = "2";
-          tutorialButton.style.gridColumn = "2";
-          chatBotButton.style.gridRow = "2";
-          chatBotButton.style.gridColumn = "2";
-          quizButton.style.gridRow = "2";
-          quizButton.style.gridColumn = "2";
-          moreButton.style.opacity = 1;
+      case "More":
+        const buttons = [...document.querySelectorAll(":not(.button-interface)")];
+        const moreButton = document.querySelector("button#more-button")
+        const chatBotButton = document.querySelector("button#chatbot-button");
+        const tutorialButton = document.querySelector("button#tutorial-button");
+        const quizButton = document.querySelector("button#quiz-button");
+        const areaButtons = document.querySelector(".buttons");
+        tutorialButton.style.gridRow = "1";
+        tutorialButton.style.gridColumn = "2";
+        chatBotButton.style.gridRow = "2";
+        chatBotButton.style.gridColumn = "1";
+        quizButton.style.gridRow = "3";
+        quizButton.style.gridColumn = "2";
+        body.style.overflowY = "visible";
+        moreButton.style.opacity = 0;
+        buttons.forEach(button => {
+          button.addEventListener("mouseenter", () => {
+            tutorialButton.style.gridRow = "2";
+            tutorialButton.style.gridColumn = "2";
+            chatBotButton.style.gridRow = "2";
+            chatBotButton.style.gridColumn = "2";
+            quizButton.style.gridRow = "2";
+            quizButton.style.gridColumn = "2";
+            moreButton.style.opacity = 1;
+          });
         });
-      });
-      break;
-    case "Quiz":
+        break;
+        case "Quiz":
+          window.alert("Quiz")
+          body.prepend(area);
+          area.prepend(box);
+          box.appendChild(main);
+          main.appendChild(iframe);
       break;
   }
 }
