@@ -157,7 +157,6 @@ function pop_up(Interface) {
         });
         break;
         case "Quiz":
-          window.alert("Quiz")
           body.prepend(area);
           area.prepend(box);
           box.appendChild(main);
