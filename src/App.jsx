@@ -311,7 +311,7 @@ const naveMove = (event) => {
         section.innerHTML = `
         <p>A seção de Expressões irá apresentar ao usuário algumas palavras-chave utilizadas pelo <i>Git</i>, que podem ser de difícil entendimento.</p>
         <br />
-        <p>É importante enfatizar que o desenvolvedor ao utilizar desta ferramenta, precisa conhece-la e dominar o uso de certas expressões que irá utilizar em seu cotidiano profissional.</p>
+        <p>É importante enfatizar ao desenvolvedor que irá utilizar desta ferramenta, que ele precisa conhecê-la bem e também dominar o uso de certas expressões que irá utilizar em seu cotidiano profissional.</p>
       `;
         buttonExpressions.click();
         break;
