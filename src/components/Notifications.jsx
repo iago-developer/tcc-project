@@ -13,7 +13,7 @@ const Notifications = () => {
                 if(permissao === "granted") {
                     new Notification("Git L!", {
                         body: "Bem-Vindo ao  Git L!",
-                        icon: "https://via.placeholder.com/50",
+                        // icon: "https://via.placeholder.com/50",
                     });
                 }
             });
