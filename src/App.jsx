@@ -4,11 +4,40 @@ import "./medias/Mobile.css";
 import "./medias/Laptop.css";
 import "./medias/Desktop.css";
 import "./medias/Smart.css";
+import Notifications from "./components/Notifications.jsx";
 import Intro from "./components/Intro.jsx";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import NaveIcone from "./naveIcone.avif";
+
+const NotificationApp = () => {
+  const requestNotificationPermission = () => {
+    if(!("Notification" in window)) {
+      alert("Seu navegador não suporta notificações.");
+      return;
+    }
+
+    Notification.requestPermission().then((permission) => {
+      if(permission === "granted") {
+        alert("Permissão concedida! Você pode receber notificações.");
+      }else {
+        alert("Permissão negada para notificações.");
+      }
+    });
+  }
+}
+
+const sendNotification = () => {
+  if(Notification.permission === "granted") {
+    new Notification("Olá", {
+      body: "Esta é uma notificação de teste.",
+      icon: "https://via.placeholder.com/100"
+    });
+    } else {
+      alert("Você precisa permitir notificações primeiro.");
+    }
+}
 
 function pop_up(Interface) {
   const body = document.querySelector("body");
@@ -161,6 +190,7 @@ function pop_up(Interface) {
           area.prepend(box);
           box.appendChild(main);
           main.appendChild(iframe);
+          iframe.src = "http://127.0.0.1:5500/";
       break;
   }
 }
@@ -223,15 +253,13 @@ const sidebar = () => {
     sessionArea.style.display = "none";
     removeSidebar();
   });
-
+  
   area.addEventListener("click", () => {
     removeSidebar();
   });
-
+  
   if (sidebar.style.left == "") {
-    console.log(sidebar.style.display)
     sidebar.style.left = "0%";
-    console.log(sidebar.style)
     buttonSidebar.style.left = "380px";
     body.style.overflowY = "hidden";
     body.appendChild(area);
@@ -392,6 +420,7 @@ export default function App() {
       <div className="container" id="container" onLoad={() => intro()}>
         <br />
         {<Intro />}
+        <Notifications />
         <div id="session-area">
           <div id="title-session-area">
             <h2>Introdução</h2>

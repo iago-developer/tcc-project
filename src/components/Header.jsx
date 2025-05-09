@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header id="header">
       <div id="header_title">
-        <a href="#" id="button-introduction">
+        <a href="#" className="link" id="button-introduction">
           <img src={Logo} id="logo" />
         </a>
         <br />
@@ -14,27 +14,27 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <a href="#installations" id="button-installations">
+            <a href="#installations" className="link" id="button-installations">
               Instalação
             </a>
           </li>
           <li>
-            <a href="#expressions" id="button-expressions">
+            <a href="#expressions" className="link" id="button-expressions">
               Expressões
             </a>
           </li>
           <li>
-            <a href="#comands" id="button-comands">
+            <a href="#comands" className="link" id="button-comands">
               Comandos
             </a>
           </li>
           <li>
-            <a href="#integrations" id="button-integrations">
+            <a href="#integrations" className="link" id="button-integrations">
               Integrações
             </a>
           </li>
           <li>
-            <a href="#reports" id="button-reports">
+            <a href="#reports" className="link" id="button-reports">
               Relatos
             </a>
           </li>
