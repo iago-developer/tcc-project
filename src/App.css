@@ -29,7 +29,7 @@ div.notifications {
   position: fixed;
   padding: 30px;
   bottom: 0;
-  z-index: 4;
+  z-index: 2;
   text-align: end;
   animation: animationNotificationsRequest 5s ease;
 
@@ -62,7 +62,7 @@ div#session-area {
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 5;
+  z-index: 3;
   display: none;
   cursor: pointer;
   align-items: end;
@@ -261,7 +261,7 @@ body > #root > .container {
   height: 100%;
   width: 100%;
   position: absolute;
-  z-index: 5;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -899,7 +899,7 @@ li:hover {
   height: 50vh;
   width: 100%;
   padding: 10px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .container > main > section#reports > div#reports-area {
