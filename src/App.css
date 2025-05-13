@@ -29,7 +29,7 @@ div.notifications {
   position: fixed;
   padding: 30px;
   bottom: 0;
-  z-index: 4;
+  z-index: 2;
   text-align: end;
   animation: animationNotificationsRequest 5s ease;
 
@@ -62,7 +62,7 @@ div#session-area {
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   display: none;
   cursor: pointer;
   align-items: end;
@@ -261,7 +261,7 @@ body > #root > .container {
   height: 100%;
   width: 100%;
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1034,7 +1034,7 @@ div.buttons {
   position: fixed;
   right: -100px;
   bottom: -3px;
-  z-index: 3;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
