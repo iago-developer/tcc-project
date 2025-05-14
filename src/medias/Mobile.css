@@ -17,8 +17,20 @@
   div.buttons.button-interface, .container > main > section#reports {
     display: none;
   }
-
   /* Fim dos componentes descartados para a versão mobile */
+
+  .txt01 {
+    grid-row: 2 !important;
+    grid-column: 1 !important;
+  }
+  .txt02 {
+    grid-row: 3 !important;
+    grid-column: 1 !important;
+  }
+  .txt03 {
+    grid-row: 4 !important;
+    grid-column: 1 !important;
+  }
 
   body > #root > .container {
     background-color: #252525;
@@ -61,18 +73,6 @@
     width: 93%;
   }
 
-  .txt01 {
-    grid-row: 2 !important;
-    grid-column: 1 !important;
-  }
-  .txt02 {
-    grid-row: 3 !important;
-    grid-column: 1 !important;
-  }
-  .txt03 {
-    grid-row: 4 !important;
-    grid-column: 1 !important;
-  }
   #image {
     grid-row: 1 !important;
     grid-column: 1 !important;
@@ -179,6 +179,10 @@
 
   .box-installations {
     width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .container
