@@ -1,6 +1,5 @@
 @media (max-width: 767px) {
   /* Componentes descartados para a versão mobile */
-  div.sidebar,
   .container
     > main
     > section#comands
@@ -12,7 +11,6 @@
   .container > header > nav > ul > li > div#button-header > input,
   a#button-reports,
   .container > header > #header_title > br,
-  button.buttonSidebar,
   div.notifications,
   div.buttons.button-interface, .container > main > section#reports {
     display: none;
