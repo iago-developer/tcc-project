@@ -1,6 +1,6 @@
 @media (max-width: 767px) {
   /* Componentes descartados para a versão mobile */
-  .container
+  div.sidebar, button.buttonSidebar, .container
     > main
     > section#comands
     > div#area-comands-table
