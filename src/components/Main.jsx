@@ -265,9 +265,7 @@ export default function Main() {
             >
               <img src={Logo} alt="logo git" width="100" />
             </div>
-            <a href="https://git-scm.com/downloads" target="_blank">
-              Download
-            </a>
+            <a href="https://git-scm.com/downloads" target="_blank">Download</a>
           </div>
         </div>
       </section>
