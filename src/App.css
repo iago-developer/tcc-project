@@ -248,7 +248,7 @@ button.buttonSidebar {
 }
 
 body > #root > .container {
-  background-color: #1a1a1a;
+  background-color: #252525;
   height: 100%;
   width: 100%;
   display: grid;
@@ -651,20 +651,6 @@ li {
 
 li:hover {
   color: #000;
-}
-
-.container
-  > main
-  > section#comands
-  > div#area-comands-table
-  > div#comands-table
-  > section#table-sidebar
-  > div#list-comands
-  > ul
-  > li
-  > p:hover::after {
-  color: #000000 !important;
-  width: 100%;
 }
 
 .container
