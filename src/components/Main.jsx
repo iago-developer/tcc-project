@@ -137,7 +137,7 @@ export default function Main() {
     let currentIndex = 0;
 
     function nextReport() {
-      const offset = -currentIndex * 300;
+      const offset = -currentIndex * 550;
       reports.style.transform = `translateX(${offset}px)`;
     }
 
@@ -265,7 +265,9 @@ export default function Main() {
             >
               <img src={Logo} alt="logo git" width="100" />
             </div>
-            <a href="https://git-scm.com/downloads" target="_blank">Download</a>
+            <a href="https://git-scm.com/downloads" target="_blank">
+              Download
+            </a>
           </div>
         </div>
       </section>
@@ -754,14 +756,35 @@ export default function Main() {
             <br />
             <div className="reports">
               <div className="report">
-                <p>Gosto do <i>Git Learning</i> por ser prático de usar!</p>
+                <p>
+                  Gosto do <i>Git Learning</i> por ser prático de usar!
+                </p>
+                <br />
+                <p>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                </p>
                 <br />
                 <p>
                   <strong>Gabriel Fonseca</strong>
                 </p>
               </div>
               <div className="report">
-                <p>O <i>Git Learning</i> me fez aprender sobre versionamento de código de maneira incrível!</p>
+                <p>
+                  O <i>Git Learning</i> me fez aprender sobre versionamento de
+                  código de maneira incrível!
+                </p>
+                <br />
+                <p>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-rr-star"></i>
+                  <i class="fi fi-rr-star"></i>
+                </p>
                 <br />
                 <p>
                   <strong>Gabriel Fonseca</strong>
@@ -771,6 +794,14 @@ export default function Main() {
                 <p>Gosto do Git por ser fácil e prático de usar!</p>
                 <br />
                 <p>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-rr-star"></i>
+                  <i class="fi fi-rr-star"></i>
+                  <i class="fi fi-rr-star"></i>
+                </p>
+                <br />
+                <p>
                   <strong>Gabriel Fonseca</strong>
                 </p>
               </div>
@@ -778,11 +809,27 @@ export default function Main() {
                 <p>O Git Learning é muito prático e didático.</p>
                 <br />
                 <p>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                </p>
+                <br />
+                <p>
                   <strong>Júlia Ribeiro</strong>
                 </p>
               </div>
               <div className="report">
                 <p>Aplicativo fácil e prático de se usar!</p>
+                <br />
+                <p>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-sr-star"></i>
+                  <i class="fi fi-rr-star"></i>
+                </p>
                 <br />
                 <p>
                   <strong>Bruno Roberto</strong>
